@@ -2,935 +2,636 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Our Services | Glamora — Premium Salon &amp; Beauty Parlour</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" href="assests/fav.png" type="image/jpeg">
-    <meta name="description"
-        content="Glamora services — Hair styling, skin treatments, makeup artistry, bridal packages, and full beauty parlour experiences. Expert artists, premium products.">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <title>Glamora | 404 — Glow Not Found</title>
+<link rel="icon" href="assets/fav.png" type="image/jpeg">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description"
+    content="Page not found — This beauty page has faded away. Return to Glamora for premium salon & beauty parlour services.">
 
-    <!-- Font Awesome + Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+      <script src="tailwind.js"></script>
 
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        'salon-rose': '#C9737E',
-                        'salon-plum': '#4A2545',
-                        'salon-cream': '#FBF7F2',
-                        'salon-blush': '#F5E1DE',
-                        'salon-gold': '#C9A227',
-                        'salon-charcoal': '#2B2226',
-                        'salon-sage': '#8FA88F',
-                        'dark-gray': '#111111',
-                        'warm-gray': '#FDF9F2'
-                    },
-                    fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Jost"', 'sans-serif'],
-                    },
-                    letterSpacing: {
-                        'widest-xl': '0.3em',
-                    }
-                }
-            }
-        }
-    </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        [dir="rtl"] { direction: rtl; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fadeInUp 1.2s ease-out forwards; }
+  <style>
+    /* Static, fully responsive 404 page — no animations, matches Glamora brand */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.02); }
-        }
-        .animate-float { animation: float 8s ease-in-out infinite; }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #0A050A;
+    }
 
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-100% - 1rem)); }
-        }
-        .animate-marquee { animation: marquee 22s linear infinite; }
-        .pause-marquee:hover .animate-marquee { animation-play-state: paused; }
+    body {
+      font-family: 'Jost', sans-serif;
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
 
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        body { overflow-x: hidden; }
+    /* Background: perfectly static, responsive cover */
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
 
-        #mobile-menu {
-            max-height: calc(100vh - 80px);
-            overflow-y: auto;
-            transition: all 0.3s ease;
-            transform: translateZ(0);
-            -webkit-overflow-scrolling: touch;
-        }
+    .background-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      pointer-events: none;
+    }
 
-        .mobile-dropdown-icon { transition: transform 0.3s ease; }
-        .mobile-dropdown-icon.rotate { transform: rotate(180deg); }
+    /* Static gradient overlays — deep plum/rose theme */
+    .overlay-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(10, 5, 10, 0.94) 0%, rgba(74, 37, 69, 0.85) 50%, rgba(10, 5, 10, 0.94) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
 
-        .img-zoom-container { overflow: hidden; }
-        .img-zoom-container img {
-            transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .img-zoom-container:hover img { transform: scale(1.08); }
+    .overlay-gradient-bottom {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(10, 5, 10, 0.6) 0%, transparent 60%);
+      z-index: 1;
+      pointer-events: none;
+    }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s ease-out;
-        }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+    /* MAIN CONTENT CONTAINER — absolute centering, responsive */
+    .fixed-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      overflow: hidden;
+      padding: clamp(12px, 4vw, 32px);
+      pointer-events: auto;
+    }
 
-        .bg-grain {
-            background-image: radial-gradient(rgba(74, 37, 69, 0.03) 1.5px, transparent 1.5px);
-            background-size: 28px 28px;
-        }
+    .content-wrapper {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: clamp(0.75rem, 4vw, 1.8rem);
+      background: transparent;
+      overflow: visible;
+    }
 
-        /* Dark mode overrides */
-        .dark .dark\:text-white { color: #ffffff !important; }
-        .dark .dark\:text-gray-200 { color: #e5e5e5 !important; }
-        .dark .dark\:text-gray-300 { color: #d1d1d1 !important; }
-        .dark .dark\:text-gray-400 { color: #a3a3a3 !important; }
-        .dark p, .dark li, .dark span:not(.text-salon-gold):not(.text-salon-rose):not(.text-salon-sage), .dark .text-gray-600 { color: #cbd5e1 !important; }
-        .dark h1, .dark h2, .dark h3, .dark h4, .dark .font-serif { color: #ffffff !important; }
-        .dark .bg-white\/80, .dark .bg-white\/95 { background-color: #0a0a0a !important; }
-        .dark .border-gray-200 { border-color: rgba(255, 255, 255, 0.1) !important; }
-        .dark .bg-gray-50 { background-color: #1a1a1a !important; }
-        .dark .hover\:bg-gray-100:hover { background-color: #2a2a2a !important; }
-        .dark .text-dark-gray { color: #ffffff !important; }
-        .dark .bg-warm-gray { background-color: #0a0a0a !important; }
-        .dark .bg-white { background-color: #0f0f0f !important; }
-        .dark input[type="date"]::-webkit-calendar-picker-indicator,
-        .dark input[type="time"]::-webkit-calendar-picker-indicator {
-            filter: invert(1);
-            opacity: 0.6;
-        }
+    /* 404 Number - responsive, brand rose/plum gradient */
+    .four-zero-four {
+      position: relative;
+      margin-bottom: clamp(0.5rem, 3vw, 1.25rem);
+      text-align: center;
+    }
 
-        @media (max-width: 1280px) {
-            .nav-menu-container { display: none; }
-        }
+    .glow-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: clamp(70px, 15vw, 170px);
+      line-height: 1;
+      display: inline-block;
+      position: relative;
+      z-index: 10;
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, #C9737E 0%, #4A2545 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 20px rgba(201, 115, 126, 0.35));
+    }
 
-        body.menu-open {
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-        }
+    /* Decorative beauty sparkle elements — static, rose/plum */
+    .decor-left,
+    .decor-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(4px, 1.4vw, 9px);
+      pointer-events: none;
+    }
 
-        button:active { transform: scale(0.97); }
+    .decor-left {
+      left: clamp(-28px, -6vw, -15px);
+    }
 
-        .salon-glow {
-            box-shadow: 0 0 40px rgba(201, 115, 126, 0.15), 0 0 80px rgba(201, 115, 126, 0.05);
-        }
-        .dark .salon-glow {
-            box-shadow: 0 0 40px rgba(201, 115, 126, 0.25), 0 0 80px rgba(201, 115, 126, 0.1);
-        }
+    .decor-right {
+      right: clamp(-28px, -6vw, -15px);
+    }
 
-        @keyframes float-badge {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(2deg); }
-        }
-        .float-badge { animation: float-badge 6s ease-in-out infinite; }
-        .float-badge-delay { animation: float-badge 6s ease-in-out 2s infinite; }
+    @media (max-width: 640px) {
+      .decor-left {
+        left: clamp(-18px, -4vw, -10px);
+      }
 
-        /* Decorative patterns */
-        .pattern-dots {
-            background-image: radial-gradient(#C9737E 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.08;
-        }
-        .pattern-grid {
-            background-image:
-                linear-gradient(rgba(201, 115, 126, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(201, 115, 126, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-    </style>
+      .decor-right {
+        right: clamp(-18px, -4vw, -10px);
+      }
+
+      .decor-dot {
+        width: 4px;
+        height: 4px;
+      }
+    }
+
+    .decor-dot {
+      width: clamp(3px, 0.9vw, 5px);
+      height: clamp(3px, 0.9vw, 5px);
+      background: linear-gradient(135deg, #C9737E, #4A2545);
+      border-radius: 50%;
+    }
+
+    .decor-dot:nth-child(1),
+    .decor-dot:nth-child(5) {
+      opacity: 0.3;
+      transform: scale(0.7);
+    }
+
+    .decor-dot:nth-child(2),
+    .decor-dot:nth-child(4) {
+      opacity: 0.6;
+      transform: scale(0.85);
+    }
+
+    .decor-dot:nth-child(3) {
+      opacity: 1;
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(201, 115, 126, 0.6);
+    }
+
+    /* Navigation cards — Glamora style */
+    .nav-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+      border-radius: clamp(0.6rem, 1.8vw, 0.9rem);
+      padding: clamp(0.5rem, 1.8vw, 0.85rem);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(3px, 1.2vw, 6px);
+    }
+
+    .nav-card:hover {
+      border-color: #C9737E;
+      background-color: rgba(201, 115, 126, 0.1);
+    }
+
+    .nav-card i {
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      color: #E09EA6;
+    }
+
+    .nav-card span {
+      font-size: clamp(7px, 2.5vw, 10px);
+      color: #d1d5db;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    /* Button — Glamora gradient */
+    .btn-shine {
+      background: linear-gradient(135deg, #C9737E 0%, #4A2545 100%);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(0.4rem, 1.8vw, 0.65rem);
+      text-decoration: none;
+      border-radius: 9999px;
+      padding: clamp(0.55rem, 2.2vw, 0.85rem) clamp(1rem, 3.5vw, 1.6rem);
+      font-size: clamp(0.6rem, 2.2vw, 0.8rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: white;
+      box-shadow: 0 12px 20px -12px rgba(201, 115, 126, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-shine::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      transition: left 0.4s ease;
+      pointer-events: none;
+    }
+
+    .btn-shine:hover::after {
+      left: 100%;
+    }
+
+    .btn-shine:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px -12px rgba(201, 115, 126, 0.6);
+    }
+
+    .btn-shine i {
+      font-size: clamp(0.6rem, 2.2vw, 0.8rem);
+    }
+
+    /* Text responsive */
+    .message-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+      color: white;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .message-title span {
+      background: linear-gradient(135deg, #C9737E, #E09EA6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-style: italic;
+    }
+
+    .message-text {
+      font-size: clamp(0.75rem, 3vw, 0.95rem);
+      color: #d1d5db;
+      line-height: 1.5;
+      max-width: 480px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .help-text {
+      font-size: clamp(0.65rem, 2.6vw, 0.8rem);
+      color: #6b7280;
+      margin-top: clamp(1.2rem, 5vw, 2rem);
+    }
+
+    .help-text a {
+      color: #E09EA6;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .help-text a:hover {
+      text-decoration: underline;
+      color: #C9737E;
+    }
+
+    /* Grid responsive */
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(0.65rem, 2.5vw, 1rem);
+      max-width: 260px;
+      width: 100%;
+      margin: clamp(1.2rem, 5vw, 2rem) auto;
+    }
+
+    /* Ensure no scrollbars */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 480px) {
+      .nav-grid {
+        max-width: 210px;
+        gap: 0.65rem;
+      }
+
+      .btn-shine {
+        white-space: normal;
+        text-align: center;
+        line-height: 1.3;
+        padding: 0.5rem 1rem;
+      }
+
+      .content-wrapper {
+        padding: 0.8rem;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .glow-text {
+        font-size: 170px;
+      }
+
+      .decor-left {
+        left: -38px;
+      }
+
+      .decor-right {
+        right: -38px;
+      }
+
+      .content-wrapper {
+        max-width: 880px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .glow-text {
+        font-size: 60px;
+      }
+
+      .decor-left,
+      .decor-right {
+        gap: 3px;
+      }
+
+      .decor-left {
+        left: -12px;
+      }
+
+      .decor-right {
+        right: -12px;
+      }
+
+      .message-title {
+        font-size: 1.3rem;
+      }
+
+      .message-text {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* No movement anywhere — matches static requirement */
+    .glow-text,
+    .decor-dot,
+    .nav-card i,
+    .btn-shine i {
+      animation: none !important;
+      transform: translateZ(0);
+    }
+
+    .nav-card:hover .nav-icon {
+      transform: none !important;
+    }
+
+    .btn-shine:hover .arrow-icon,
+    .btn-shine:hover .sparkle-icon-btn {
+      transform: none !important;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+    }
+  </style>
 </head>
 
-<body
-    class="font-sans text-gray-800 antialiased transition-colors duration-300 bg-warm-gray dark:bg-dark-gray dark:text-gray-100 bg-grain">
+<body>
 
-    <!-- HEADER — Salon & Beauty Parlour -->
-    <nav
-        class="bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-xl fixed w-full top-0 z-50 border-b border-gray-200/50 dark:border-white/10 transition-all duration-500 shadow-lg">
-        <div class="max-w-[1200px] mx-auto nav-container px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="flex items-center gap-3 group">
-                        <div class="flex flex-col">
-                            <span class="text-2xl md:text-3xl font-serif font-bold text-salon-rose tracking-wide transition-colors"><span class="italic">Glamora</span></span>
-                        </div>
-                    </a>
-                </div>
+  <!-- Background Image Container — using a salon / beauty related image -->
+  <div class="background-container">
+    <img src="assests/salon-hero.jpg" alt="Glamora salon background"
+      onerror="this.style.opacity='0'; this.parentElement.style.backgroundColor='#0A050A';">
+  </div>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-4">
-                    <div
-                        class="flex items-center gap-1 lg:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
-                        <div class="relative group">
-                            <button
-                                class="text-gray-600 dark:text-gray-300 hover:text-salon-rose dark:hover:text-salon-rose font-medium transition px-3 py-2 rounded-full flex items-center gap-1 hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">
-                                <span>Home</span>
-                                <i class="fas fa-chevron-down text-[8px] ms-0.5"></i>
-                            </button>
-                            <div
-                                class="absolute start-0 mt-3 w-40 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/10 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                                <a href="index.html"
-                                    class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Home 1</a>
-                                <a href="home2.html"
-                                    class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Home 2</a>
-                            </div>
-                        </div>
-                        <a href="about.html"
-                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-salon-rose dark:hover:text-salon-rose font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">About</a>
-                        <a href="services.html"
-                            class="nav-link bg-white dark:bg-[#1a1a1a] shadow-sm text-salon-rose dark:text-salon-rose font-bold transition px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">Services</a>
-                        <a href="gallery.html"
-                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-salon-rose dark:hover:text-salon-rose font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Gallery</a>
-                        <a href="team.html"
-                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-salon-rose dark:hover:text-salon-rose font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Team</a>
-                        <a href="pricing.html"
-                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-salon-rose dark:hover:text-salon-rose font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Pricing</a>
-                        <a href="booking.html"
-                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-salon-rose dark:hover:text-salon-rose font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Booking</a>
-                        <a href="contact.html"
-                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-salon-rose dark:hover:text-salon-rose font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Contact</a>
-                    </div>
-                </div>
+  <!-- Static Overlay Gradients -->
+  <div class="overlay-gradient"></div>
+  <div class="overlay-gradient-bottom"></div>
 
-                <!-- Right side actions -->
-                <div class="hidden xl:flex items-center gap-2">
-                    <button id="rtl-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-salon-rose transition-all"><span class="text-[9px] font-black text-dark-gray dark:text-white">RTL</span></button>
-                    <button id="theme-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-salon-rose transition-all"><i class="fas fa-moon dark:hidden text-xs text-dark-gray dark:text-white"></i><i class="fas fa-sun hidden dark:inline text-xs text-dark-gray dark:text-white"></i></button>
-                    <a href="booking.html"
-                        class="bg-salon-rose hover:bg-salon-plum text-white px-5 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-lg hover:-translate-y-0.5 transition duration-300">Book
-                        Now</a>
-                </div>
+  <!-- Fixed Container - Content stays perfectly centered -->
+  <div class="fixed-container">
+    <div class="content-wrapper">
+      <div class="text-center w-full">
 
-                <div class="xl:hidden flex items-center gap-2">
-                    <button id="mobile-menu-button"
-                        class="text-dark-gray dark:text-white p-2 focus:outline-none active:scale-95 transition hover:text-salon-rose">
-                        <i id="menu-icon" class="fas fa-bars text-lg"></i>
-                        <i id="close-icon" class="fas fa-times text-lg hidden"></i>
-                    </button>
-                </div>
-            </div>
+        <!-- 404 Number with Decorative Sparkles -->
+        <div class="four-zero-four">
+          <div class="decor-left">
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+          </div>
+          <div class="glow-text">404</div>
+          <div class="decor-right">
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+            <div class="decor-dot"></div>
+          </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="hidden xl:hidden bg-white dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-white/10 absolute w-full shadow-2xl z-50"
-            style="top: 64px;">
-            <div class="px-5 py-5 pb-8 space-y-1 max-h-[calc(100vh-64px)] overflow-y-auto">
-                <div class="w-full">
-                    <button id="mobile-home-dropdown-btn"
-                        class="w-full flex justify-between items-center px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">
-                        <span>Home</span>
-                        <i id="mobile-home-icon"
-                            class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
-                    </button>
-                    <div id="mobile-home-submenu"
-                        class="hidden pl-4 space-y-1 mt-1 bg-gray-50/50 dark:bg-white/5 rounded-xl py-2">
-                        <a href="index.html"
-                            class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Home 1</a>
-                        <a href="home2.html"
-                            class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Home 2</a>
-                    </div>
-                </div>
-                <a href="about.html"
-                    class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">About</a>
-                <a href="services.html"
-                    class="block px-4 py-3.5 text-salon-rose bg-gray-50 dark:bg-white/5 rounded-xl text-sm font-bold uppercase transition">Services</a>
-                <a href="gallery.html"
-                    class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Gallery</a>
-                <a href="team.html"
-                    class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Team</a>
-                <a href="pricing.html"
-                    class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Pricing</a>
-                <a href="booking.html"
-                    class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Booking</a>
-                <a href="contact.html"
-                    class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Contact</a>
-
-                <div class="pt-5 mt-5 border-t border-gray-200 dark:border-white/10">
-                    <div class="flex items-center justify-between gap-4 mb-4">
-                        <button id="mobile-rtl-toggle" class="flex-1 py-3 rounded-xl border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-salon-rose transition-all">
-                            <span class="text-[10px] font-black text-dark-gray dark:text-white">RTL MODE</span>
-                        </button>
-                        <button id="mobile-theme-toggle" class="flex-1 py-3 rounded-xl border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-salon-rose transition-all">
-                            <span class="text-[10px] font-black text-dark-gray dark:text-white mr-2">THEME</span>
-                            <i class="fas fa-moon dark:hidden text-xs text-dark-gray dark:text-white"></i>
-                            <i class="fas fa-sun hidden dark:inline text-xs text-dark-gray dark:text-white"></i>
-                        </button>
-                    </div>
-                    <a href="booking.html"
-                        class="block mt-4 bg-salon-rose text-white text-center px-4 py-4 rounded-xl text-sm font-black uppercase tracking-widest shadow-lg hover:bg-salon-plum transition">Book
-                        Now</a>
-                </div>
-            </div>
+        <!-- Message adapted for Glamora -->
+        <div>
+          <h1 class="message-title">
+            <span>Glow Not Found</span>
+          </h1>
+          <p class="message-text">
+            This beauty page has faded away, been styled out, or never made it to our studio.
+            Let's get you back to the salon where flawless hair, glowing skin, and radiant transformations await.
+          </p>
         </div>
-    </nav>
 
-    <!-- ============================ HERO SECTION ============================ -->
-    <section class="relative min-h-[95vh] flex items-center py-28 lg:py-36 overflow-hidden bg-white dark:bg-dark-gray">
-        <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-salon-rose/5 to-transparent pointer-events-none"></div>
-        <div class="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-salon-plum/5 rounded-full blur-[100px] pointer-events-none dark:bg-salon-rose/5"></div>
-        <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-salon-rose/5 rounded-full blur-3xl pointer-events-none float-badge"></div>
-        <div class="absolute bottom-1/4 left-1/3 w-56 h-56 bg-salon-plum/5 rounded-full blur-3xl pointer-events-none float-badge-delay"></div>
-
-        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                <div class="flex-1 text-left animate-fade-in opacity-0" style="animation-delay: 0.2s;">
-                    <span class="text-salon-rose text-[10px] sm:text-xs uppercase tracking-[0.3em] font-bold mb-6 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-salon-rose animate-pulse inline-block"></span> OUR SERVICES
-                    </span>
-                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-sans font-black text-dark-gray dark:text-white leading-[1.1] mb-8 tracking-tight">
-                        Beauty Crafted <br>
-                        <span class="font-serif italic font-light text-salon-rose">With Love</span>
-                    </h1>
-                    <p class="text-gray-600 dark:text-gray-300 max-w-lg text-base md:text-lg font-light mb-10 leading-relaxed">
-                        From precision haircuts to radiant facials, flawless bridal makeup to full-body spa rituals — every service at Glamora is designed to celebrate you.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="booking.html"
-                            class="bg-salon-rose hover:bg-salon-plum text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            Book Appointment
-                        </a>
-                        <a href="#services-list"
-                            class="border border-gray-300 dark:border-white/20 hover:border-salon-rose hover:text-salon-rose text-dark-gray dark:text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold transition-all duration-300">
-                            Explore Services <i class="fas fa-arrow-down ml-2 text-[10px]"></i>
-                        </a>
-                    </div>
-
-                    <!-- Trust indicators -->
-                    <div class="flex flex-wrap items-center gap-6 mt-12 text-gray-500 dark:text-gray-400">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-star text-salon-rose text-sm"></i>
-                            <span class="text-[10px] uppercase tracking-widest font-bold">4.9 Client Rating</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-award text-salon-rose text-sm"></i>
-                            <span class="text-[10px] uppercase tracking-widest font-bold">15+ Years Experience</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-heart text-salon-rose text-sm"></i>
-                            <span class="text-[10px] uppercase tracking-widest font-bold">10K+ Happy Clients</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-1 relative animate-fade-in opacity-0" style="animation-delay: 0.4s;">
-                    <div class="relative group">
-                        <div class="absolute -inset-6 bg-salon-rose/15 rounded-[3rem] blur-3xl group-hover:bg-salon-rose/25 transition duration-700"></div>
-                        <div class="relative flex items-center justify-center">
-                            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/10 aspect-square w-full max-w-md salon-glow">
-                                <img src="assests/services-hero.jpg" alt="Glamora Services"
-                                    class="w-full h-full object-cover transform group-hover:scale-105 transition duration-1000">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Quick Navigation Links - Home + Contact -->
+        <div class="nav-grid">
+          <a href="index.html" class="nav-card">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="contact.html" class="nav-card">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
         </div>
-    </section>
 
-    <!-- ============================ SERVICES LIST ============================ -->
-    <section id="services-list" class="py-24 lg:py-32 bg-warm-gray dark:bg-[#050505] relative overflow-hidden">
-        <div class="absolute inset-0 pattern-dots pointer-events-none"></div>
-
-        <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 lg:mb-24">
-                <div class="inline-block px-4 py-1 rounded-full bg-salon-rose/10 border border-salon-rose/20 mb-6">
-                    <span class="text-salon-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">What We Offer</span>
-                </div>
-                <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-                    Our Signature <span class="italic font-light text-salon-rose">Services</span>
-                </h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-base md:text-lg">
-                    Five dedicated departments, one beautiful experience — from hair and skin to bridal artistry and full-body packages.
-                </p>
-                <div class="w-24 h-1 bg-gradient-to-r from-salon-rose to-transparent mx-auto mt-8"></div>
-            </div>
-
-            <!-- ==================== SERVICE 1: Hair Services ==================== -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24 lg:mb-32">
-                <div class="lg:col-span-6 relative order-2 lg:order-1">
-                    <div class="relative">
-                        <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/10 aspect-square w-full max-w-md mx-auto salon-glow">
-                            <img src="assests/service-hair.jpg" alt="Hair Services" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-6 order-1 lg:order-2">
-                    <div class="inline-flex items-center gap-2 mb-4 text-salon-rose text-[10px] uppercase tracking-[0.4em] font-bold">
-                        <span class="w-8 h-px bg-salon-rose"></span>
-                        Service 01
-                    </div>
-                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6 leading-tight">
-                        Hair <span class="italic font-light text-salon-rose">Services</span>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                        From precision cuts and dimensional colour to deep-conditioning treatments and blowout styling — our master stylists craft hair that moves with you and turns heads wherever you go.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Precision cuts &amp; styling</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Balayage &amp; highlights</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Keratin &amp; smoothening</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Hair spa &amp; treatments</div>
-                        </div>
-                    </div>
-
-                    <a href="booking.html" class="inline-flex items-center gap-3 text-salon-rose text-xs uppercase tracking-widest font-bold group">
-                        <span class="relative">
-                            Book Hair Service
-                            <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-salon-rose transition-all duration-300 group-hover:w-full"></span>
-                        </span>
-                        <i class="fas fa-arrow-right text-[10px] transition-transform group-hover:translate-x-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- ==================== SERVICE 2: Skin Treatments ==================== -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24 lg:mb-32">
-                <div class="lg:col-span-6">
-                    <div class="inline-flex items-center gap-2 mb-4 text-salon-rose text-[10px] uppercase tracking-[0.4em] font-bold">
-                        <span class="w-8 h-px bg-salon-rose"></span>
-                        Service 02
-                    </div>
-                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6 leading-tight">
-                        Skin <span class="italic font-light text-salon-rose">Treatments</span>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                        Radiant, healthy skin starts here. Our estheticians use dermatologist-approved techniques and organic products to cleanse, hydrate, and renew — leaving you with a natural glow that lasts.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Hydra-facials &amp; glow</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Anti-aging treatments</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Threading &amp; waxing</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Body polishing &amp; de-tan</div>
-                        </div>
-                    </div>
-
-                    <a href="booking.html" class="inline-flex items-center gap-3 text-salon-rose text-xs uppercase tracking-widest font-bold group">
-                        <span class="relative">
-                            Book Skin Treatment
-                            <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-salon-rose transition-all duration-300 group-hover:w-full"></span>
-                        </span>
-                        <i class="fas fa-arrow-right text-[10px] transition-transform group-hover:translate-x-2"></i>
-                    </a>
-                </div>
-
-                <div class="lg:col-span-6 relative">
-                    <div class="relative">
-                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/10 aspect-[4/3]">
-                            <img src="assests/service-skin.jpg" alt="Skin Treatments" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ==================== SERVICE 3: Makeup Services ==================== -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24 lg:mb-32">
-                <div class="lg:col-span-6 relative order-2 lg:order-1">
-                    <div class="relative">
-                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/10 aspect-[4/3]">
-                            <img src="assests/service-makeup.jpg" alt="Makeup Services" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-6 order-1 lg:order-2">
-                    <div class="inline-flex items-center gap-2 mb-4 text-salon-rose text-[10px] uppercase tracking-[0.4em] font-bold">
-                        <span class="w-8 h-px bg-salon-rose"></span>
-                        Service 03
-                    </div>
-                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6 leading-tight">
-                        Makeup <span class="italic font-light text-salon-rose">Services</span>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                        Whether it's a soft natural look, a bold editorial statement, or a timeless classic — our makeup artists craft every face with premium products and a keen eye for your unique features.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Party &amp; event makeup</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Editorial &amp; photoshoot</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Natural &amp; no-makeup looks</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Airbrush &amp; HD makeup</div>
-                        </div>
-                    </div>
-
-                    <a href="booking.html" class="inline-flex items-center gap-3 text-salon-rose text-xs uppercase tracking-widest font-bold group">
-                        <span class="relative">
-                            Book Makeup Artist
-                            <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-salon-rose transition-all duration-300 group-hover:w-full"></span>
-                        </span>
-                        <i class="fas fa-arrow-right text-[10px] transition-transform group-hover:translate-x-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- ==================== SERVICE 4: Bridal Services ==================== -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24 lg:mb-32">
-                <div class="lg:col-span-6">
-                    <div class="inline-flex items-center gap-2 mb-4 text-salon-rose text-[10px] uppercase tracking-[0.4em] font-bold">
-                        <span class="w-8 h-px bg-salon-rose"></span>
-                        Service 04
-                    </div>
-                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6 leading-tight">
-                        Bridal <span class="italic font-light text-salon-rose">Services</span>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                        Your wedding day deserves perfection. From pre-bridal skin prep to flawless day-of makeup, hair, and draping — our bridal specialists ensure you look breathtakingly beautiful from the first photo to the last dance.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Pre-bridal packages</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Bridal makeup &amp; hair</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Saree/lehenga draping</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Entourage &amp; family styling</div>
-                        </div>
-                    </div>
-
-                    <a href="booking.html" class="inline-flex items-center gap-3 text-salon-rose text-xs uppercase tracking-widest font-bold group">
-                        <span class="relative">
-                            Book Bridal Consultation
-                            <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-salon-rose transition-all duration-300 group-hover:w-full"></span>
-                        </span>
-                        <i class="fas fa-arrow-right text-[10px] transition-transform group-hover:translate-x-2"></i>
-                    </a>
-                </div>
-
-                <div class="lg:col-span-6 relative">
-                    <div class="relative">
-                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/10 aspect-[4/3]">
-                            <img src="assests/service-bridal.jpg" alt="Bridal Services" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ==================== SERVICE 5: Beauty Packages ==================== -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                <div class="lg:col-span-6 relative order-2 lg:order-1">
-                    <div class="relative">
-                        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/10 aspect-[4/3]">
-                            <img src="assests/service-package.jpg" alt="Beauty Packages" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-6 order-1 lg:order-2">
-                    <div class="inline-flex items-center gap-2 mb-4 text-salon-rose text-[10px] uppercase tracking-[0.4em] font-bold">
-                        <span class="w-8 h-px bg-salon-rose"></span>
-                        Service 05
-                    </div>
-                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6 leading-tight">
-                        Beauty <span class="italic font-light text-salon-rose">Packages</span>
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                        Indulge in a complete beauty transformation with our curated packages — perfect for bridal showers, mother-daughter days, birthdays, or simply because you deserve it.
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Bridal shower packages</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Mother-daughter spa</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Girls' day out package</div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-salon-rose/10 flex items-center justify-center shrink-0 mt-0.5">
-                                <i class="fas fa-check text-salon-rose text-xs"></i>
-                            </div>
-                            <div class="text-sm text-gray-600 dark:text-gray-300">Monthly membership plans</div>
-                        </div>
-                    </div>
-
-                    <a href="pricing.html" class="inline-flex items-center gap-3 text-salon-rose text-xs uppercase tracking-widest font-bold group">
-                        <span class="relative">
-                            View All Packages
-                            <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-salon-rose transition-all duration-300 group-hover:w-full"></span>
-                        </span>
-                        <i class="fas fa-arrow-right text-[10px] transition-transform group-hover:translate-x-2"></i>
-                    </a>
-                </div>
-            </div>
+        <!-- Back to Home Button -->
+        <div>
+          <a href="index.html" class="btn-shine">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Glamora</span>
+            <i class="fas fa-spa"></i>
+          </a>
         </div>
-    </section>
 
-    <!-- ============================ QUICK SERVICES MARQUEE ============================ -->
-    <section class="py-20 lg:py-24 bg-white dark:bg-dark-gray relative overflow-hidden">
-        <div class="absolute top-1/2 right-0 w-[400px] h-[400px] bg-salon-rose/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <!-- Help Text -->
+        <p class="help-text">
+          Need assistance? <a href="contact.html">Contact our team</a> and we'll get you back to your glow.
+        </p>
+      </div>
+    </div>
+  </div>
 
-        <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12 lg:mb-16">
-                <div class="inline-block px-4 py-1 rounded-full bg-salon-rose/10 border border-salon-rose/20 mb-6">
-                    <span class="text-salon-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">More Treatments</span>
-                </div>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-4">
-                    Everything <span class="italic font-light text-salon-rose">You Need</span>
-                </h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-                    A complete range of beauty and wellness treatments under one elegant roof.
-                </p>
-            </div>
+  <!-- Static script — locks page, no movement -->
+  <script>
+    (function () {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.documentElement.style.position = 'fixed';
+      document.body.style.top = '0';
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.bottom = '0';
+      document.body.style.width = '100%';
+      document.body.style.height = '100%';
 
-            <div class="overflow-hidden flex gap-4 w-full pause-marquee py-4">
-                <div class="flex shrink-0 gap-4 animate-marquee">
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-cut text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Haircut</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-palette text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Colour</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-hand-sparkles text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Manicure</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-spa text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Spa</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-leaf text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Waxing</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-sun text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">De-Tan</div>
-                    </div>
-                </div>
-                <div class="flex shrink-0 gap-4 animate-marquee" aria-hidden="true">
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-cut text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Haircut</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-palette text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Colour</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-hand-sparkles text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Manicure</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-spa text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Spa</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-leaf text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Waxing</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-sun text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">De-Tan</div>
-                    </div>
-                </div>
-                <div class="flex shrink-0 gap-4 animate-marquee" aria-hidden="true">
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-cut text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Haircut</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-palette text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Colour</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-hand-sparkles text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Manicure</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-spa text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Spa</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-leaf text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">Waxing</div>
-                    </div>
-                    <div class="w-48 group bg-warm-gray dark:bg-[#0f0f0f] rounded-2xl p-6 text-center border border-gray-100 dark:border-white/5 hover:border-salon-rose/30 transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-14 h-14 rounded-2xl bg-salon-rose/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-salon-rose group-hover:scale-110 transition-all duration-500">
-                            <i class="fas fa-sun text-xl text-salon-rose group-hover:text-white transition"></i>
-                        </div>
-                        <div class="text-xs uppercase tracking-widest font-bold text-dark-gray dark:text-white">De-Tan</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      function preventAllMovement(e) {
+        e.preventDefault();
+        return false;
+      }
 
-    <!-- ============================ CTA BANNER ============================ -->
-    <section class="py-20 lg:py-28 bg-warm-gray dark:bg-[#050505] relative overflow-hidden">
-        <div class="absolute inset-0 pattern-dots pointer-events-none"></div>
+      document.body.addEventListener('touchmove', preventAllMovement, { passive: false });
 
-        <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="relative bg-salon-plum dark:bg-[#0a0a0a] rounded-3xl p-8 lg:p-16 overflow-hidden border border-white/5">
-                <div class="absolute inset-0 pattern-grid opacity-40 dark:opacity-20 pointer-events-none"></div>
-                <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-salon-rose/15 rounded-full blur-[120px] pointer-events-none"></div>
-                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 text-center lg:text-left">
-                    <div class="max-w-2xl">
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-salon-rose/20 border border-salon-rose/30 mb-5">
-                            <span class="w-2 h-2 rounded-full bg-salon-rose animate-pulse"></span>
-                            <span class="text-salon-rose text-[10px] uppercase tracking-[0.3em] font-bold">Ready for Your Glow-Up?</span>
-                        </div>
-                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4 leading-tight">
-                            Let's Make You <span class="italic font-light text-salon-rose">Radiant</span>
-                        </h3>
-                        <p class="text-gray-300 text-sm md:text-base max-w-xl">
-                            Book a free consultation with one of our expert artists and discover the perfect service for you.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-4 justify-center lg:justify-end shrink-0">
-                        <a href="booking.html"
-                            class="bg-salon-rose hover:bg-white hover:text-salon-plum text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl transition-all duration-300 hover:-translate-y-1">
-                            Book Appointment
-                        </a>
-                        <a href="pricing.html"
-                            class="border border-white/20 hover:border-salon-rose hover:text-salon-rose text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold transition-all duration-300">
-                            View Pricing
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      window.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        return false;
+      }, { passive: false });
 
-    <!-- FOOTER -->
-    <footer class="bg-[#050505] text-white pt-24 pb-8 relative overflow-hidden border-t border-white/10">
-        <div class="absolute bottom-0 left-0 w-full flex justify-center pointer-events-none opacity-[0.03] translate-y-1/4 select-none">
-            <h2 class="font-serif font-black text-[15vw] whitespace-nowrap">Glamora</h2>
-        </div>
-        <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
-                <div class="lg:col-span-5">
-                    <div class="flex gap-4 mb-8">
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-salon-rose hover:text-salon-rose transition"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-salon-rose hover:text-salon-rose transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-salon-rose hover:text-salon-rose transition"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-salon-rose hover:text-salon-rose transition"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                    <a href="index.html" class="flex items-center gap-3 group"><span class="text-2xl md:text-3xl font-serif font-bold text-salon-rose tracking-wide transition-colors"><span class="italic">Glamora</span></span></a>
-                    <p class="text-gray-400 text-sm mt-6 max-w-md leading-relaxed">Premium salon &amp; beauty parlour. Expert hair, skin, makeup, nails, and spa treatments. Family-owned since 2010.</p>
-                </div>
-                <div class="lg:col-span-3">
-                    <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Explore</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="services.html" class="hover:text-salon-rose transition">Services</a></li>
-                        <li><a href="gallery.html" class="hover:text-salon-rose transition">Gallery</a></li>
-                        <li><a href="team.html" class="hover:text-salon-rose transition">Our Team</a></li>
-                        <li><a href="pricing.html" class="hover:text-salon-rose transition">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="lg:col-span-4">
-                    <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Connect</h4>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-envelope text-salon-rose shrink-0"></i>
-                            <a href="mailto:hello@glamora.com" class="text-salon-rose hover:text-white transition">hello@glamora.com</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-phone text-salon-rose shrink-0"></i>
-                            <a href="tel:+14242697880" class="hover:text-salon-rose transition">+1 (424) 269-7880</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fa-solid fa-location-dot text-salon-rose shrink-0"></i>
-                            <span>Los Angeles, CA — Ships Nationwide</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-[10px] uppercase tracking-widest">© 2026 Glamora. All rights reserved.</p>
-                <div class="flex gap-8 text-[10px] text-gray-500 uppercase tracking-widest"><a href="#" class="hover:text-salon-rose transition">Privacy</a><a href="#" class="hover:text-salon-rose transition">Terms</a></div>
-            </div>
-        </div>
-    </footer>
+      window.addEventListener('keydown', function (e) {
+        const keys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' ', 'Space', 'PageUp', 'PageDown', 'Home', 'End'];
+        if (keys.includes(e.key) || e.key === 'Space' || e.key === ' ') {
+          e.preventDefault();
+          return false;
+        }
+      });
 
-    <script>
-        (function () {
-            const themeToggle = document.getElementById('theme-toggle'), mobileTheme = document.getElementById('mobile-theme-toggle'), html = document.documentElement;
-            function toggleTheme() { html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); }
-            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-            if (mobileTheme) mobileTheme.addEventListener('click', toggleTheme);
-            if (localStorage.getItem('theme') === 'light') html.classList.remove('dark'); else html.classList.add('dark');
+      function resetScroll() {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
 
-            const rtlBtn = document.getElementById('rtl-toggle'), mobileRtl = document.getElementById('mobile-rtl-toggle');
-            function toggleRTL() { if (html.getAttribute('dir') === 'rtl') html.removeAttribute('dir'); else html.setAttribute('dir', 'rtl'); localStorage.setItem('direction', html.getAttribute('dir') || 'ltr'); }
-            if (rtlBtn) rtlBtn.addEventListener('click', toggleRTL);
-            if (mobileRtl) mobileRtl.addEventListener('click', toggleRTL);
-            if (localStorage.getItem('direction') === 'rtl') html.setAttribute('dir', 'rtl');
+      resetScroll();
+      window.addEventListener('scroll', resetScroll);
 
-            const menuBtn = document.getElementById('mobile-menu-button'), mobileMenu = document.getElementById('mobile-menu'), menuIcon = document.getElementById('menu-icon'), closeIcon = document.getElementById('close-icon'), body = document.body;
-            function closeMobileMenu() { if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); if (menuIcon && closeIcon) { menuIcon.classList.remove('hidden'); closeIcon.classList.add('hidden'); } body.classList.remove('menu-open'); body.style.overflow = ''; } }
-            function openMobileMenu() { if (mobileMenu && mobileMenu.classList.contains('hidden')) { mobileMenu.classList.remove('hidden'); if (menuIcon && closeIcon) { menuIcon.classList.add('hidden'); closeIcon.classList.remove('hidden'); } body.classList.add('menu-open'); body.style.overflow = 'hidden'; } }
-            if (menuBtn && mobileMenu) { menuBtn.addEventListener('click', (e) => { e.stopPropagation(); mobileMenu.classList.contains('hidden') ? openMobileMenu() : closeMobileMenu(); }); document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', closeMobileMenu)); window.addEventListener('resize', () => { if (window.innerWidth >= 1280 && !mobileMenu.classList.contains('hidden')) closeMobileMenu(); }); }
+      const allParents = [document.documentElement, document.body];
+      allParents.forEach(el => {
+        if (el) {
+          el.style.position = 'fixed';
+          el.style.top = '0';
+          el.style.left = '0';
+          el.style.right = '0';
+          el.style.bottom = '0';
+          el.style.width = '100%';
+          el.style.height = '100%';
+          el.style.overflow = 'hidden';
+        }
+      });
 
-            const homeBtn = document.getElementById('mobile-home-dropdown-btn');
-            const homeSub = document.getElementById('mobile-home-submenu');
-            const homeIcon = document.getElementById('mobile-home-icon');
-            if (homeBtn && homeSub) {
-                homeBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    homeSub.classList.toggle('hidden');
-                    if (homeIcon) homeIcon.classList.toggle('rotate');
-                });
-            }
+      // Ensure no stray animations
+      const staticElements = document.querySelectorAll('.glow-text, .decor-dot, .nav-card i, .btn-shine i');
+      staticElements.forEach(el => {
+        el.style.animation = 'none';
+      });
 
-            // Scroll reveal
-            const reveals = document.querySelectorAll('.reveal');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, { threshold: 0.1 });
-            reveals.forEach(el => observer.observe(el));
-        })();
-    </script>
+      window.addEventListener('load', function () {
+        resetScroll();
+        if (window.innerWidth <= 480) {
+          const messageText = document.querySelector('.message-text');
+          if (messageText) messageText.style.lineHeight = '1.4';
+        }
+        const container = document.querySelector('.fixed-container');
+        if (container) {
+          container.style.overflow = 'visible';
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        resetScroll();
+      });
+
+      const metaViewport = document.querySelector('meta[name="viewport"]');
+      if (metaViewport) {
+        metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover');
+      }
+
+      // Additional style to ensure no unexpected animations
+      const style = document.createElement('style');
+      style.textContent = `
+        .glow-text, .decor-dot, .nav-card i, .btn-shine i, .nav-card, .btn-shine {
+          animation: none !important;
+          transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease !important;
+        }
+        * {
+          animation-delay: 0s !important;
+          animation-duration: 0s !important;
+        }
+        .fixed-container, .content-wrapper {
+          transform: translateZ(0);
+          -webkit-transform: translateZ(0);
+        }
+      `;
+      document.head.appendChild(style);
+    })();
+  </script>
+
+  <noscript>
+    <style>
+      body {
+        background: #0A050A;
+      }
+
+      .background-container img {
+        opacity: 0;
+      }
+
+      .glow-text {
+        font-size: 90px;
+      }
+
+      .message-text {
+        font-size: 14px;
+      }
+
+      ::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+      }
+    </style>
+  </noscript>
 </body>
 
 </html>
