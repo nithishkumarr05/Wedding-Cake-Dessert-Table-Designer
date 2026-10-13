@@ -214,7 +214,7 @@
         <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-4">
           <div class="flex items-center gap-1 lg:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
             <div class="relative group">
-              <button class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold transition px-3 py-2 rounded-full flex items-center gap-1 text-[10px] uppercase tracking-widest">
+              <button id="desktop-home-btn" class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold transition px-3 py-2 rounded-full flex items-center gap-1 text-[10px] uppercase tracking-widest">
                 <span>Home</span>
                 <i class="fas fa-chevron-down text-[8px] ms-1"></i>
               </button>
@@ -268,14 +268,14 @@
             <a href="#" onclick="showPage('home2'); closeMobileMenu(); return false;" class="block px-4 py-3 text-gray-600 dark:text-gray-300 text-sm font-medium uppercase">Home 2</a>
           </div>
         </div>
-        <a href="#" onclick="showPage('about'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">About</a>
-        <a href="#" onclick="showPage('services'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Services</a>
-        <a href="#" onclick="showPage('cakes'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Cakes</a>
-        <a href="#" onclick="showPage('desserts'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Desserts</a>
-        <a href="#" onclick="showPage('packages'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Packages</a>
-        <a href="#" onclick="showPage('gallery'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Gallery</a>
-        <a href="#" onclick="showPage('portfolio'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Portfolio</a>
-        <a href="#" onclick="showPage('contact'); closeMobileMenu(); return false;" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Contact</a>
+        <a href="#" onclick="showPage('about'); closeMobileMenu(); return false;" data-mobile-nav="about" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">About</a>
+        <a href="#" onclick="showPage('services'); closeMobileMenu(); return false;" data-mobile-nav="services" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Services</a>
+        <a href="#" onclick="showPage('cakes'); closeMobileMenu(); return false;" data-mobile-nav="cakes" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Cakes</a>
+        <a href="#" onclick="showPage('desserts'); closeMobileMenu(); return false;" data-mobile-nav="desserts" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Desserts</a>
+        <a href="#" onclick="showPage('packages'); closeMobileMenu(); return false;" data-mobile-nav="packages" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Packages</a>
+        <a href="#" onclick="showPage('gallery'); closeMobileMenu(); return false;" data-mobile-nav="gallery" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Gallery</a>
+        <a href="#" onclick="showPage('portfolio'); closeMobileMenu(); return false;" data-mobile-nav="portfolio" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Portfolio</a>
+        <a href="#" onclick="showPage('contact'); closeMobileMenu(); return false;" data-mobile-nav="contact" class="mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Contact</a>
         <div class="pt-5 mt-5 border-t border-gray-200 dark:border-white/10">
           <div class="grid grid-cols-2 gap-3">
             <button id="mobile-rtl-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border">RTL Mode</button>
@@ -602,25 +602,41 @@
           <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 transition-all duration-500">
-            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-blush to-cake-rose flex items-center justify-center mb-6"><i class="fas fa-heart text-3xl text-white"></i></div>
-            <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Made With Love</h3>
-            <p class="text-gray-500 text-sm">Every cake is crafted by hand with the same care we'd give family.</p>
+          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+            <div>
+              <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-blush to-cake-rose flex items-center justify-center mb-6"><i class="fas fa-heart text-3xl text-white"></i></div>
+              <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+                <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Made With Love</h3>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">Every cake is crafted by hand with the same care we'd give family.</p>
           </div>
-          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 transition-all duration-500">
-            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-mint to-cake-sky flex items-center justify-center mb-6"><i class="fas fa-leaf text-3xl text-white"></i></div>
-            <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Finest Ingredients</h3>
-            <p class="text-gray-500 text-sm">Organic butter, free-range eggs, Madagascar vanilla, and more.</p>
+          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+            <div>
+              <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-mint to-cake-sky flex items-center justify-center mb-6"><i class="fas fa-leaf text-3xl text-white"></i></div>
+              <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+                <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Finest Ingredients</h3>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">Organic butter, free-range eggs, Madagascar vanilla, and more.</p>
           </div>
-          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 transition-all duration-500">
-            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-lavender to-cake-deep flex items-center justify-center mb-6"><i class="fas fa-palette text-3xl text-white"></i></div>
-            <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Artistic Vision</h3>
-            <p class="text-gray-500 text-sm">Each cake is a custom piece of edible art, sketched for you.</p>
+          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+            <div>
+              <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-lavender to-cake-deep flex items-center justify-center mb-6"><i class="fas fa-palette text-3xl text-white"></i></div>
+              <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+                <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Artistic Vision</h3>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">Each cake is a custom piece of edible art, sketched for you.</p>
           </div>
-          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 transition-all duration-500">
-            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-gold to-cake-coral flex items-center justify-center mb-6"><i class="fas fa-hand-holding-heart text-3xl text-white"></i></div>
-            <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Personal Service</h3>
-            <p class="text-gray-500 text-sm">You work directly with our lead designer from start to finish.</p>
+          <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+            <div>
+              <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-gold to-cake-coral flex items-center justify-center mb-6"><i class="fas fa-hand-holding-heart text-3xl text-white"></i></div>
+              <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+                <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Personal Service</h3>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">You work directly with our lead designer from start to finish.</p>
           </div>
         </div>
       </div>
@@ -1765,7 +1781,33 @@
       document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('nav-active'));
       const activeNav = document.querySelector(`.nav-btn[data-nav="${pageId}"]`);
       if (activeNav) activeNav.classList.add('nav-active');
-      
+
+      const desktopHomeBtn = document.getElementById('desktop-home-btn');
+      if (desktopHomeBtn) {
+        if (pageId === 'home' || pageId === 'home2') {
+          desktopHomeBtn.className = "bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold transition px-3 py-2 rounded-full flex items-center gap-1 text-[10px] uppercase tracking-widest";
+        } else {
+          desktopHomeBtn.className = "text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium transition px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 flex items-center gap-1 text-[10px] uppercase tracking-widest";
+        }
+      }
+
+      // Update mobile nav active state
+      document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+        btn.className = "mobile-nav-btn block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition";
+      });
+      const activeMobileNav = document.querySelector(`.mobile-nav-btn[data-mobile-nav="${pageId}"]`);
+      if (activeMobileNav) {
+        activeMobileNav.className = "mobile-nav-btn block px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold uppercase";
+      }
+      const mobileHomeBtn = document.getElementById('mobile-home-dropdown-btn');
+      if (mobileHomeBtn) {
+        if (pageId === 'home' || pageId === 'home2') {
+          mobileHomeBtn.className = "w-full flex justify-between items-center px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold tracking-wider uppercase";
+        } else {
+          mobileHomeBtn.className = "w-full flex justify-between items-center px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium tracking-wider uppercase transition";
+        }
+      }
+
       // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }

@@ -145,7 +145,7 @@
         <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-4">
           <div class="flex items-center gap-1 lg:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
             <div class="relative group">
-              <button class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold transition px-3 py-2 rounded-full flex items-center gap-1 text-[10px] uppercase tracking-widest">
+              <button class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium transition px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 flex items-center gap-1 text-[10px] uppercase tracking-widest">
                 <span>Home</span>
                 <i class="fas fa-chevron-down text-[8px] ms-1"></i>
               </button>
@@ -155,7 +155,7 @@
               </div>
             </div>
             <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">About</a>
-            <a href="services.html" class="text-cake-deep bg-gray-50 dark:bg-white/5 font-bold px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">Services</a>
+            <a href="services.html" class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">Services</a>
             <a href="cakes.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Cakes</a>
             <a href="desserts.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Desserts</a>
             <a href="packages.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Packages</a>
@@ -191,7 +191,7 @@
     <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-[#1A101A] border-t border-gray-200 dark:border-white/10 absolute w-full shadow-2xl z-50" style="top: 64px;">
       <div class="px-5 py-5 pb-8 space-y-1 max-h-[calc(100vh-64px)] overflow-y-auto">
         <div class="w-full">
-          <button id="mobile-home-dropdown-btn" class="w-full flex justify-between items-center px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold tracking-wider uppercase">
+          <button id="mobile-home-dropdown-btn" class="w-full flex justify-between items-center px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium tracking-wider uppercase transition">
             <span>Home</span>
             <i id="mobile-home-icon" class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
           </button>
@@ -277,11 +277,6 @@
               alt="Artisan wedding cake and pastry setup with fresh florals"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="eager">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/60 via-transparent to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 bg-white/90 dark:bg-cake-plum/90 backdrop-blur-md rounded-2xl px-5 py-4 shadow-xl border border-cake-gold/30">
-              <p class="text-[10px] uppercase tracking-widest font-bold text-cake-gold">Signature Experience</p>
-              <p class="text-sm font-bold text-dark-gray dark:text-white">Bespoke Wedding Cake &amp; Dessert Table Styling</p>
-            </div>
           </div>
         </div>
       </div>
@@ -306,20 +301,22 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Service 1: Bespoke Wedding Cakes -->
-        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between">
+        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between h-full">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cake-rose to-cake-deep flex items-center justify-center mb-6 shadow-md">
               <i class="fas fa-cake-candles text-2xl text-white"></i>
             </div>
-            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Flagship Craft</span>
-            <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white mb-3">Bespoke Wedding Cakes</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light">
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Flagship Craft</span>
+            <div class="min-h-[3.75rem] flex items-start mb-3">
+              <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white leading-tight">Bespoke Wedding Cakes</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light min-h-[8.5rem] flex items-start">
               Multi-tiered wedding centerpieces hand-sculpted to reflect your floral palette, gown lace, and venue ambiance. Features internal doweling, organic curds, and pristine ganache or fondant finishes.
             </p>
-            <ul class="space-y-2 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> 2 to 6 tier custom architecture</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Fondant, buttercream &amp; naked styles</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Handcrafted edible sugar floristry</li>
+            <ul class="space-y-2.5 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium min-h-[5.5rem]">
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>2 to 6 tier custom architecture</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Fondant, buttercream &amp; naked styles</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Handcrafted edible sugar floristry</span></li>
             </ul>
           </div>
           <div class="pt-6 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
@@ -331,20 +328,22 @@
         </div>
 
         <!-- Service 2: Styled Dessert Tables -->
-        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between">
+        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between h-full">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cake-mint to-cake-sky flex items-center justify-center mb-6 shadow-md">
               <i class="fas fa-table-cells-large text-2xl text-white"></i>
             </div>
-            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Full Table Curation</span>
-            <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white mb-3">Dessert Table Styling</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light">
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Full Table Curation</span>
+            <div class="min-h-[3.75rem] flex items-start mb-3">
+              <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white leading-tight">Dessert Table Styling</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light min-h-[8.5rem] flex items-start">
               A visually lavish spread curated to complement your cake. Includes elevated pedestals, brass risers, floral garnishes, custom flavor signage, and an array of bite-sized artisanal delicacies.
             </p>
-            <ul class="space-y-2 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> French macarons, tarts &amp; mousse shooters</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Cake pops, mini cupcakes &amp; madeleines</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Complete platter &amp; stand rentals included</li>
+            <ul class="space-y-2.5 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium min-h-[5.5rem]">
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>French macarons, tarts &amp; shooters</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Cake pops, mini cupcakes &amp; madeleines</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Complete platter &amp; stand rentals</span></li>
             </ul>
           </div>
           <div class="pt-6 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
@@ -356,20 +355,22 @@
         </div>
 
         <!-- Service 3: Private Tasting Flight -->
-        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between">
+        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between h-full">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cake-lavender to-cake-deep flex items-center justify-center mb-6 shadow-md">
               <i class="fas fa-wine-glass-alt text-2xl text-white"></i>
             </div>
-            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Consultation &amp; Sampling</span>
-            <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white mb-3">Private Tasting Flights</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light">
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Consultation &amp; Sampling</span>
+            <div class="min-h-[3.75rem] flex items-start mb-3">
+              <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white leading-tight">Private Tasting Flights</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light min-h-[8.5rem] flex items-start">
               An intimate studio tasting session for two. Experience six signature cake sponges, handcrafted curds, and Swiss meringue buttercreams paired with complimentary bubbly and sketch reviews.
             </p>
-            <ul class="space-y-2 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> 6 flavor pairings of your choice</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Live custom tier sketching session</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Tasting fee credited towards bookings</li>
+            <ul class="space-y-2.5 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium min-h-[5.5rem]">
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>6 flavor pairings of your choice</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Live custom tier sketching session</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Tasting fee credited towards bookings</span></li>
             </ul>
           </div>
           <div class="pt-6 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
@@ -381,20 +382,22 @@
         </div>
 
         <!-- Service 4: Sugar Flowers & Botanical Sculpting -->
-        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between">
+        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between h-full">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cake-gold to-cake-coral flex items-center justify-center mb-6 shadow-md">
               <i class="fas fa-seedling text-2xl text-white"></i>
             </div>
-            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Artisan Detailing</span>
-            <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white mb-3">Botanical Sugar Floristry</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light">
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Artisan Detailing</span>
+            <div class="min-h-[3.75rem] flex items-start mb-3">
+              <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white leading-tight">Botanical Sugar Floristry</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light min-h-[8.5rem] flex items-start">
               Life-like edible garden roses, peonies, ranunculus, and sweet peas sculpted petal-by-petal from gumpaste. Enhanced with 24k gold leaf, bas-relief textures, and food-safe stem glazing.
             </p>
-            <ul class="space-y-2 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Matched to your bridal florist blooms</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Everlasting keepsake floral preservation</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Hand-painted edible luster accents</li>
+            <ul class="space-y-2.5 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium min-h-[5.5rem]">
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Matched to your bridal florist blooms</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Everlasting keepsake preservation</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Hand-painted edible luster accents</span></li>
             </ul>
           </div>
           <div class="pt-6 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
@@ -406,20 +409,22 @@
         </div>
 
         <!-- Service 5: White-Glove Delivery & Venue Setup -->
-        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between">
+        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between h-full">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cake-rose to-cake-plum flex items-center justify-center mb-6 shadow-md">
               <i class="fas fa-truck-ramp-box text-2xl text-white"></i>
             </div>
-            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Flawless Logistics</span>
-            <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white mb-3">White-Glove Delivery</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light">
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Flawless Logistics</span>
+            <div class="min-h-[3.75rem] flex items-start mb-3">
+              <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white leading-tight">White-Glove Delivery</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light min-h-[8.5rem] flex items-start">
               Climate-controlled refrigerated transport directly to your reception venue. Our team coordinates with your planner and catering captain, handles on-site stacking, and styles final florals.
             </p>
-            <ul class="space-y-2 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Climate-controlled vehicle transit</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> On-site tier stacking &amp; touch-ups</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Cutting guide provided for venue staff</li>
+            <ul class="space-y-2.5 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium min-h-[5.5rem]">
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Climate-controlled vehicle transit</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>On-site tier stacking &amp; touch-ups</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Cutting guide for venue catering</span></li>
             </ul>
           </div>
           <div class="pt-6 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
@@ -431,20 +436,22 @@
         </div>
 
         <!-- Service 6: Individual Guest Favors & Petit Fours -->
-        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between">
+        <div class="service-card bg-warm-gray dark:bg-[#1A101A] rounded-[2rem] p-8 border border-cake-blush dark:border-cake-plum/50 shadow-lg hover:shadow-2xl flex flex-col justify-between h-full">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cake-peach to-cake-coral flex items-center justify-center mb-6 shadow-md">
               <i class="fas fa-gift text-2xl text-white"></i>
             </div>
-            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Guest Favors</span>
-            <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white mb-3">Artisan Wedding Favors</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light">
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Guest Favors</span>
+            <div class="min-h-[3.75rem] flex items-start mb-3">
+              <h3 class="font-serif font-bold text-2xl text-dark-gray dark:text-white leading-tight">Artisan Wedding Favors</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 font-light min-h-[8.5rem] flex items-start">
               Send your guests home with exquisitely packaged edible tokens of appreciation. Custom monogrammed cookie boxes, two-piece French macaron sleeves, and mini jarred cake preserves.
             </p>
-            <ul class="space-y-2 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Custom silk ribbon &amp; monogram tags</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Dietary friendly (Gluten-Free, Vegan)</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-cake-gold"></i> Perfectly scaled per place-setting</li>
+            <ul class="space-y-2.5 mb-8 text-xs text-gray-500 dark:text-gray-400 font-medium min-h-[5.5rem]">
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Custom silk ribbon &amp; monogram tags</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Dietary friendly (Gluten-Free, Vegan)</span></li>
+              <li class="flex items-start gap-2.5 min-h-[1.5rem]"><i class="fas fa-check text-cake-gold text-[10px] mt-1 shrink-0"></i> <span>Perfect for each place-setting</span></li>
             </ul>
           </div>
           <div class="pt-6 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">

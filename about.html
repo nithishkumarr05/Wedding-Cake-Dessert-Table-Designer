@@ -163,7 +163,7 @@
         <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-4">
           <div class="flex items-center gap-1 lg:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
             <div class="relative group">
-              <button class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold transition px-3 py-2 rounded-full flex items-center gap-1 text-[10px] uppercase tracking-widest">
+              <button class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium transition px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 flex items-center gap-1 text-[10px] uppercase tracking-widest">
                 <span>Home</span>
                 <i class="fas fa-chevron-down text-[8px] ms-1"></i>
               </button>
@@ -172,7 +172,7 @@
                 <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest rounded-b-2xl">Home 2</a>
               </div>
             </div>
-            <a href="about.html" class="text-cake-deep bg-gray-50 dark:bg-white/5 font-bold px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">About</a>
+            <a href="about.html" class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">About</a>
             <a href="services.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Services</a>
             <a href="cakes.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Cakes</a>
             <a href="desserts.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Desserts</a>
@@ -208,7 +208,7 @@
     <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-[#1A101A] border-t border-gray-200 dark:border-white/10 absolute w-full shadow-2xl z-50" style="top: 64px;">
       <div class="px-5 py-5 pb-8 space-y-1 max-h-[calc(100vh-64px)] overflow-y-auto">
         <div class="w-full">
-          <button id="mobile-home-dropdown-btn" class="w-full flex justify-between items-center px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold tracking-wider uppercase">
+          <button id="mobile-home-dropdown-btn" class="w-full flex justify-between items-center px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium tracking-wider uppercase transition">
             <span>Home</span>
             <i id="mobile-home-icon" class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
           </button>
@@ -354,39 +354,55 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
         <!-- Value 1 -->
-        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500">
-          <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-blush to-cake-rose flex items-center justify-center mb-6 shadow-lg">
-            <i class="fas fa-heart text-3xl text-white"></i>
+        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+          <div>
+            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-blush to-cake-rose flex items-center justify-center mb-6 shadow-lg">
+              <i class="fas fa-heart text-3xl text-white"></i>
+            </div>
+            <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+              <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Made With Love</h3>
+            </div>
           </div>
-          <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Made With Love</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Every cake is crafted by hand, with the same care we'd give our own family's celebration.</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">Every cake is crafted by hand, with the same care we'd give our own family's celebration.</p>
         </div>
 
         <!-- Value 2 -->
-        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500">
-          <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-mint to-cake-sky flex items-center justify-center mb-6 shadow-lg">
-            <i class="fas fa-leaf text-3xl text-white"></i>
+        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+          <div>
+            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-mint to-cake-sky flex items-center justify-center mb-6 shadow-lg">
+              <i class="fas fa-leaf text-3xl text-white"></i>
+            </div>
+            <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+              <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Finest Ingredients</h3>
+            </div>
           </div>
-          <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Finest Ingredients</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Organic butter, free-range eggs, Madagascar vanilla, and locally-sourced seasonal fruits.</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">Organic butter, free-range eggs, Madagascar vanilla, and locally-sourced seasonal fruits.</p>
         </div>
 
         <!-- Value 3 -->
-        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500">
-          <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-lavender to-cake-deep flex items-center justify-center mb-6 shadow-lg">
-            <i class="fas fa-palette text-3xl text-white"></i>
+        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+          <div>
+            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-lavender to-cake-deep flex items-center justify-center mb-6 shadow-lg">
+              <i class="fas fa-palette text-3xl text-white"></i>
+            </div>
+            <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+              <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Artistic Vision</h3>
+            </div>
           </div>
-          <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Artistic Vision</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Each cake is a custom piece of edible art, sketched and designed just for you.</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">Each cake is a custom piece of edible art, sketched and designed just for you.</p>
         </div>
 
         <!-- Value 4 -->
-        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500">
-          <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-gold to-cake-coral flex items-center justify-center mb-6 shadow-lg">
-            <i class="fas fa-hand-holding-heart text-3xl text-white"></i>
+        <div class="value-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 sm:p-8 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+          <div>
+            <div class="value-icon w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cake-gold to-cake-coral flex items-center justify-center mb-6 shadow-lg">
+              <i class="fas fa-hand-holding-heart text-3xl text-white"></i>
+            </div>
+            <div class="min-h-[3.5rem] flex items-center justify-center mb-3">
+              <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white leading-snug">Personal Service</h3>
+            </div>
           </div>
-          <h3 class="text-xl font-serif font-bold text-dark-gray dark:text-white mb-3">Personal Service</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">From first consultation to final delivery, you work directly with our lead designer.</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed min-h-[5.5rem] flex items-center justify-center">From first consultation to final delivery, you work directly with our lead designer.</p>
         </div>
       </div>
     </div>
@@ -410,16 +426,22 @@
       <!-- Artisanship & Disciplines Theory Grid (No Images) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         <!-- Artisan Pillar 1 -->
-        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-cake-blush dark:bg-cake-plum/50 text-cake-deep dark:text-cake-rose flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <i class="fas fa-compass-drafting"></i>
+        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-6 sm:p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cake-blush dark:bg-cake-plum/50 text-cake-deep dark:text-cake-rose flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+              <i class="fas fa-compass-drafting"></i>
+            </div>
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Master Design</span>
+            <div class="min-h-[1.75rem] flex items-center mb-1">
+              <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white leading-tight">Creative Direction</h3>
+            </div>
+            <div class="min-h-[2.5rem] flex items-start mb-4">
+              <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold leading-snug">Isabella Hart • Lead Designer</p>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6 min-h-[8.5rem] flex items-start">
+              Translating couple narratives, couture bridal gowns, and wedding color palettes into balanced architectural tier sketches and bespoke design blueprints.
+            </p>
           </div>
-          <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Master Design</span>
-          <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white mb-2">Creative Direction</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold mb-4">Isabella Hart • Lead Designer</p>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6">
-            Translating couple narratives, couture bridal gowns, and wedding color palettes into balanced architectural tier sketches and bespoke design blueprints.
-          </p>
           <div class="pt-4 border-t border-gray-100 dark:border-white/10 flex flex-wrap gap-2 text-[10px] font-bold text-cake-plum dark:text-gray-400">
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">Bespoke Sketching</span>
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">Palette Matching</span>
@@ -427,16 +449,22 @@
         </div>
 
         <!-- Artisan Pillar 2 -->
-        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-cake-mint/30 dark:bg-cake-plum/50 text-cake-deep dark:text-cake-rose flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <i class="fas fa-fire-burner"></i>
+        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-6 sm:p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cake-mint/30 dark:bg-cake-plum/50 text-cake-deep dark:text-cake-rose flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+              <i class="fas fa-fire-burner"></i>
+            </div>
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Culinary Chemistry</span>
+            <div class="min-h-[1.75rem] flex items-center mb-1">
+              <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white leading-tight">Pastry Science</h3>
+            </div>
+            <div class="min-h-[2.5rem] flex items-start mb-4">
+              <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold leading-snug">Marco Vitale • Head Pastry Chef</p>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6 min-h-[8.5rem] flex items-start">
+              Perfecting texture density, moisture retention, and balanced flavor pairings utilizing scratch-curated curds, single-estate vanillas, and organic fruit compotes.
+            </p>
           </div>
-          <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Culinary Chemistry</span>
-          <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white mb-2">Pastry Science</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold mb-4">Marco Vitale • Head Pastry Chef</p>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6">
-            Perfecting texture density, moisture retention, and balanced flavor pairings utilizing scratch-curated curds, single-estate vanillas, and organic fruit compotes.
-          </p>
           <div class="pt-4 border-t border-gray-100 dark:border-white/10 flex flex-wrap gap-2 text-[10px] font-bold text-cake-plum dark:text-gray-400">
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">Scratch Baking</span>
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">Moisture Balance</span>
@@ -444,16 +472,22 @@
         </div>
 
         <!-- Artisan Pillar 3 -->
-        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-cake-lavender/40 dark:bg-cake-plum/50 text-cake-deep dark:text-cake-rose flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <i class="fas fa-fan"></i>
+        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-6 sm:p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cake-lavender/40 dark:bg-cake-plum/50 text-cake-deep dark:text-cake-rose flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+              <i class="fas fa-fan"></i>
+            </div>
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Botanical Sculpture</span>
+            <div class="min-h-[1.75rem] flex items-center mb-1">
+              <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white leading-tight">Sugar Artistry</h3>
+            </div>
+            <div class="min-h-[2.5rem] flex items-start mb-4">
+              <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold leading-snug">Sophia Chen • Sugar Flower Artist</p>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6 min-h-[8.5rem] flex items-start">
+              Handcrafting micro-thin gumpaste petals, edible wafer-paper butterflies, and 24-karat gold leaf detailing that mirror fresh flowers down to natural veins.
+            </p>
           </div>
-          <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Botanical Sculpture</span>
-          <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white mb-2">Sugar Artistry</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold mb-4">Sophia Chen • Sugar Flower Artist</p>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6">
-            Handcrafting micro-thin gumpaste petals, edible wafer-paper butterflies, and 24-karat gold leaf detailing that mirror fresh flowers down to natural veins.
-          </p>
           <div class="pt-4 border-t border-gray-100 dark:border-white/10 flex flex-wrap gap-2 text-[10px] font-bold text-cake-plum dark:text-gray-400">
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">Gumpaste Florals</span>
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">24k Gold Foil</span>
@@ -461,16 +495,22 @@
         </div>
 
         <!-- Artisan Pillar 4 -->
-        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 rounded-2xl bg-cake-gold/20 dark:bg-cake-plum/50 text-cake-deep dark:text-cake-gold flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <i class="fas fa-truck-ramp-box"></i>
+        <div class="group bg-gradient-to-br from-cake-blush/20 via-white to-warm-gray/30 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 p-6 sm:p-8 rounded-[2rem] border border-cake-rose/20 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between h-full">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cake-gold/20 dark:bg-cake-plum/50 text-cake-deep dark:text-cake-gold flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
+              <i class="fas fa-truck-ramp-box"></i>
+            </div>
+            <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2 min-h-[1.25rem] flex items-center">Delivery & Setup</span>
+            <div class="min-h-[1.75rem] flex items-center mb-1">
+              <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white leading-tight">Precision Logistics</h3>
+            </div>
+            <div class="min-h-[2.5rem] flex items-start mb-4">
+              <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold leading-snug">David Okafor • Logistics Lead</p>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6 min-h-[8.5rem] flex items-start">
+              Overseeing climate-controlled transit, structural internal reinforcements, and seamless venue coordination to guarantee flawless on-site centerpiece assembly.
+            </p>
           </div>
-          <span class="text-[9px] uppercase tracking-widest font-black text-cake-gold block mb-2">Delivery & Setup</span>
-          <h3 class="font-serif font-bold text-xl text-dark-gray dark:text-white mb-2">Precision Logistics</h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold mb-4">David Okafor • Logistics Lead</p>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light mb-6">
-            Overseeing climate-controlled transit, structural internal reinforcements, and seamless venue coordination to guarantee flawless on-site centerpiece assembly.
-          </p>
           <div class="pt-4 border-t border-gray-100 dark:border-white/10 flex flex-wrap gap-2 text-[10px] font-bold text-cake-plum dark:text-gray-400">
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">Climate Transit</span>
             <span class="bg-white/80 dark:bg-white/5 px-2.5 py-1 rounded-lg">On-Site Staging</span>
