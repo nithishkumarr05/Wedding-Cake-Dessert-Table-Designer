@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact | Sweet Serenity — Wedding Cake & Dessert Designer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📞</text></svg>">
+  <meta name="description" content="Contact Sweet Serenity — Book a consultation, request a quote, or ask us anything about your wedding cake & dessert table.">
+
+  <!-- Tailwind CSS + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Lato:wght@300;400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'cake-blush': '#FFD1DC',
+            'cake-rose': '#F7B2B7',
+            'cake-deep': '#A64D79',
+            'cake-gold': '#D4AF37',
+            'cake-plum': '#4A2C4A',
+            'cake-cream': '#FFF0E6',
+            'cake-mint': '#B7E4D0',
+            'cake-lavender': '#E0B7D6',
+            'cake-coral': '#FF7B7B',
+            'cake-sky': '#A8D8FF',
+            'cake-peach': '#FFD4B3',
+            'dark-gray': '#1A101A',
+            'warm-gray': '#FFF9FB'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Lato"', 'sans-serif'],
+            script: ['"Great Vibes"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    [dir="rtl"] { direction: rtl; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeInUp 1.2s ease-out forwards; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-15px) scale(1.02); }
+    }
+    .animate-float { animation: float 8s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+    .animate-shimmer {
+      background: linear-gradient(90deg, transparent, rgba(247, 178, 183, 0.15), transparent);
+      background-size: 1000px 100%;
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+      50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+      100% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+    }
+    .animate-float-heart { animation: floatHeart 5s ease-in-out infinite; }
+
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 1; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+    .animate-pulse-ring { animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; }
+
+    #mobile-menu {
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      transition: all 0.3s ease;
+      transform: translateZ(0);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-dropdown-icon { transition: transform 0.3s ease; }
+    .mobile-dropdown-icon.rotate { transform: rotate(180deg); }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #A64D79, #D46B8C, #D4AF37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-text-gold {
+      background: linear-gradient(135deg, #D4AF37, #F7B2B7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .bg-grain {
+      background-image: radial-gradient(rgba(247, 178, 183, 0.05) 1.5px, transparent 1.5px);
+      background-size: 28px 28px;
+    }
+
+    .dark p, .dark li, .dark span:not(.text-cake-gold):not(.text-cake-rose) { color: #cbd5e1 !important; }
+    .dark h1, .dark h2, .dark h3, .dark h4, .dark .font-serif { color: #ffffff !important; }
+    .dark .text-cake-gold { color: #D4AF37 !important; }
+    .dark .text-cake-rose { color: #F7B2B7 !important; }
+    .dark .text-cake-deep { color: #F7B2B7 !important; }
+    .dark .bg-white\/80, .dark .bg-white\/95 { background-color: #1A101A !important; }
+    .dark .border-gray-200 { border-color: rgba(255, 255, 255, 0.1) !important; }
+    .dark .bg-gray-50 { background-color: #2A1A2A !important; }
+    .dark .bg-white { background-color: #2A1A2A !important; }
+
+    @media (max-width: 1280px) { .nav-menu-container { display: none; } }
+    body.menu-open { overflow: hidden; position: fixed; width: 100%; height: 100%; }
+    button:active { transform: scale(0.97); }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #FFF5F0; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(#F7B2B7, #D46B8C); border-radius: 10px; }
+    .dark ::-webkit-scrollbar-track { background: #1A101A; }
+    .dark ::-webkit-scrollbar-thumb { background: linear-gradient(#D46B8C, #A64D79); }
+
+    /* Calendar picker icon visibility & styling */
+    input[type="date"] {
+      color-scheme: light;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      opacity: 0.85;
+      filter: brightness(0) saturate(100%) invert(38%) sepia(28%) saturate(1478%) hue-rotate(279deg) brightness(88%) contrast(88%);
+      transition: filter 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+      padding: 4px;
+      border-radius: 6px;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      opacity: 1;
+      transform: scale(1.15);
+      filter: brightness(0) saturate(100%) invert(76%) sepia(55%) saturate(543%) hue-rotate(4deg) brightness(97%) contrast(93%);
+    }
+    .dark input[type="date"] {
+      color-scheme: dark;
+    }
+    .dark input[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 1;
+      filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.6));
+      cursor: pointer;
+    }
+    .dark input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      filter: brightness(0) saturate(100%) invert(76%) sepia(55%) saturate(543%) hue-rotate(4deg) brightness(110%) contrast(95%) drop-shadow(0 0 6px rgba(212, 175, 55, 0.8));
+    }
+
+    .contact-card {
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .contact-card:hover {
+      transform: translateY(-8px);
+    }
+    .contact-card:hover .contact-icon {
+      transform: scale(1.15) rotate(-8deg);
+    }
+    .contact-icon {
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      opacity: 1;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      opacity: 0;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    /* Map placeholder gradient */
+    .map-container {
+      background: 
+        radial-gradient(circle at 30% 40%, rgba(247, 178, 183, 0.5) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(224, 183, 214, 0.5) 0%, transparent 40%),
+        linear-gradient(135deg, #FFF0E6, #FFD1DC);
+    }
+    .dark .map-container {
+      background: 
+        radial-gradient(circle at 30% 40%, rgba(166, 77, 121, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(74, 44, 74, 0.5) 0%, transparent 40%),
+        linear-gradient(135deg, #1A101A, #2A1A2A);
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased transition-colors duration-300 bg-warm-gray dark:bg-dark-gray dark:text-gray-100 bg-grain">
+
+  <!-- HEADER -->
+  <nav class="bg-white/95 dark:bg-[#1A101A]/95 backdrop-blur-xl fixed w-full top-0 z-50 border-b border-gray-200/50 dark:border-white/10 transition-all duration-500 shadow-lg">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <span class="text-xl md:text-2xl font-serif font-bold tracking-wide transition-colors">
+              <span class="text-cake-deep italic font-script text-3xl">Sweet</span> <span class="text-cake-gold italic font-script text-3xl">Serenity</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-4">
+          <div class="flex items-center gap-1 lg:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
+            <div class="relative group">
+              <button class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold transition px-3 py-2 rounded-full flex items-center gap-1 text-[10px] uppercase tracking-widest">
+                <span>Home</span>
+                <i class="fas fa-chevron-down text-[8px] ms-1"></i>
+              </button>
+              <div class="absolute start-0 mt-3 w-36 bg-white dark:bg-[#2A1A2A] border border-gray-200 dark:border-white/10 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                <a href="index.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest rounded-t-2xl">Home 1</a>
+                <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest rounded-b-2xl">Home 2</a>
+              </div>
+            </div>
+            <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">About</a>
+            <a href="services.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Services</a>
+            <a href="cakes.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Cakes</a>
+            <a href="desserts.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Desserts</a>
+            <a href="packages.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Packages</a>
+            <a href="gallery.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Gallery</a>
+            <a href="portfolio.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Portfolio</a>
+            <a href="contact.html" class="text-cake-deep bg-gray-50 dark:bg-white/5 font-bold px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">Contact</a>
+          </div>
+        </div>
+
+        <div class="hidden xl:flex items-center gap-3 shrink-0">
+          <div class="flex items-center gap-2">
+            <button id="rtl-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold transition-all"><span class="text-[9px] font-black">RTL</span></button>
+            <button id="theme-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold transition-all">
+              <i class="fas fa-moon dark:hidden text-xs"></i>
+              <i class="fas fa-sun hidden dark:inline text-xs"></i>
+            </button>
+          </div>
+          <a href="contact.html#contact-form" class="bg-cake-coral hover:bg-cake-deep text-white px-5 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-lg hover:-translate-y-0.5 transition duration-300 whitespace-nowrap flex items-center gap-2">
+            <i class="fas fa-shopping-bag"></i> Order Now
+          </a>
+        </div>
+
+        <div class="xl:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-dark-gray dark:text-white p-2 focus:outline-none active:scale-95 transition hover:text-cake-deep">
+            <i id="menu-icon" class="fas fa-bars text-lg"></i>
+            <i id="close-icon" class="fas fa-times text-lg hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-[#1A101A] border-t border-gray-200 dark:border-white/10 absolute w-full shadow-2xl z-50" style="top: 64px;">
+      <div class="px-5 py-5 pb-8 space-y-1 max-h-[calc(100vh-64px)] overflow-y-auto">
+        <div class="w-full">
+          <button id="mobile-home-dropdown-btn" class="w-full flex justify-between items-center px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold tracking-wider uppercase">
+            <span>Home</span>
+            <i id="mobile-home-icon" class="fas fa-chevron-down text-[10px] transition-transform duration-300"></i>
+          </button>
+          <div id="mobile-home-submenu" class="hidden pl-4 space-y-1 mt-1 bg-gray-50/50 dark:bg-white/5 rounded-xl py-2">
+            <a href="index.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 text-sm font-medium uppercase">Home 1</a>
+            <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 text-sm font-medium uppercase">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">About</a>
+        <a href="services.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Services</a>
+        <a href="cakes.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Cakes</a>
+        <a href="desserts.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Desserts</a>
+        <a href="packages.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Packages</a>
+        <a href="gallery.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Gallery</a>
+        <a href="portfolio.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Portfolio</a>
+        <a href="contact.html" class="block px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold uppercase">Contact</a>
+        <div class="pt-5 mt-5 border-t border-gray-200 dark:border-white/10">
+          <div class="grid grid-cols-2 gap-3">
+            <button id="mobile-rtl-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border">RTL Mode</button>
+            <button id="mobile-theme-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border">Dark Mode</button>
+          </div>
+          <a href="contact.html#contact-form" class="block mt-4 bg-cake-coral text-white text-center px-4 py-4 rounded-xl text-sm uppercase font-black">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: HERO WITH IMAGE -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-cake-cream via-warm-gray to-cake-blush dark:from-cake-plum/30 dark:via-[#1A101A] dark:to-cake-deep/20">
+    <div class="absolute top-20 -left-20 w-96 h-96 bg-cake-lavender/40 dark:bg-cake-deep/20 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-0 -right-20 w-[28rem] h-[28rem] bg-cake-rose/40 dark:bg-cake-plum/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Left: Text -->
+        <div class="text-center lg:text-left animate-fade-in opacity-0" style="animation-delay: 0.2s;">
+          <h1 class="font-serif font-black text-dark-gray dark:text-white leading-[1.25] overflow-visible mb-6 tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            Let's <br>
+            <span class="italic font-script gradient-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl inline-block mt-3 leading-normal py-2 px-2 pr-8 sm:pr-10">Talk Cake</span>
+          </h1>
+
+          <p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 text-base md:text-lg font-light mb-10 leading-relaxed">
+            Whether you're ready to book or just have a few questions, we'd love to hear from you. Reach out and let's design something beautiful together.
+          </p>
+
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
+            <a href="#contact-form" class="bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-3">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </a>
+            <a href="tel:+15551234567" class="border-2 border-cake-deep dark:border-cake-rose text-cake-deep dark:text-cake-rose hover:bg-cake-blush dark:hover:bg-cake-plum px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold transition duration-300 flex items-center gap-3">
+              <i class="fas fa-phone"></i> Call Us Now
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+            <div class="text-center lg:text-left">
+              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">24h</div>
+              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Reply Time</p>
+            </div>
+            <div class="text-center lg:text-left border-x border-cake-blush dark:border-cake-plum px-2">
+              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">Free</div>
+              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Consultation</p>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">7 Days</div>
+              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: IMAGE -->
+        <div class="relative animate-fade-in opacity-0" style="animation-delay: 0.4s;">
+          <div class="relative mx-auto max-w-md lg:max-w-lg">
+            <div class="absolute -inset-6 bg-gradient-to-br from-cake-gold/40 via-cake-rose/40 to-cake-lavender/40 rounded-[3rem] blur-3xl animate-shimmer"></div>
+
+            <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white dark:border-cake-plum/50 aspect-[4/5] max-h-[460px]">
+              <img
+                src="assets/c.jpg"
+                alt="Consultation and cake planning discussion - contact Sweet Serenity"
+                class="w-full h-full object-cover"
+                loading="eager">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CONTACT INFO CARDS -->
+  <section class="py-20 lg:py-32 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 lg:mb-20">
+        <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/50 dark:bg-cake-deep/20 border border-cake-rose/30 mb-6">
+          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Get In Touch</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
+          Multiple Ways to <span class="italic gradient-text-gold">Reach Us</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Pick the way that works best for you — we're always happy to chat.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Contact Card 1 -->
+        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
+          <div>
+            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-blush to-cake-rose flex items-center justify-center mb-5 shadow-lg">
+              <i class="fas fa-phone text-xl text-white"></i>
+            </div>
+            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Call Us</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Mon – Sun, 9AM – 6PM</p>
+          </div>
+          <a href="tel:+15551234567" class="text-cake-deep dark:text-cake-gold font-bold hover:text-cake-rose transition text-xs sm:text-sm whitespace-nowrap">+1 (555) 123-4567</a>
+        </div>
+
+        <!-- Contact Card 2 -->
+        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
+          <div>
+            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-mint to-cake-sky flex items-center justify-center mb-5 shadow-lg">
+              <i class="fas fa-envelope text-xl text-white"></i>
+            </div>
+            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Email Us</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">We reply within 24h</p>
+          </div>
+          <a href="mailto:hello@sweetserenity.com" class="text-cake-deep dark:text-cake-gold font-bold hover:text-cake-rose transition text-[11px] sm:text-xs xl:text-sm truncate block px-1" title="hello@sweetserenity.com">hello@sweetserenity.com</a>
+        </div>
+
+        <!-- Contact Card 3 -->
+        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
+          <div>
+            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-lavender to-cake-deep flex items-center justify-center mb-5 shadow-lg">
+              <i class="fas fa-map-marker-alt text-xl text-white"></i>
+            </div>
+            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Visit Studio</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">By appointment only</p>
+          </div>
+          <p class="text-cake-deep dark:text-cake-gold font-bold text-xs sm:text-sm leading-tight">123 Lane, LA, CA 90001</p>
+        </div>
+
+        <!-- Contact Card 4 -->
+        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
+          <div>
+            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-gold to-cake-coral flex items-center justify-center mb-5 shadow-lg">
+              <i class="fab fa-instagram text-xl text-white"></i>
+            </div>
+            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Follow Us</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Daily inspiration & BTS</p>
+          </div>
+          <a href="#" class="text-cake-deep dark:text-cake-gold font-bold hover:text-cake-rose transition text-xs sm:text-sm whitespace-nowrap">@sweetserenity</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CONTACT FORM (MAIN) -->
+  <section id="contact-form" class="py-20 lg:py-32 bg-gradient-to-br from-cake-lavender/30 via-warm-gray to-cake-blush/40 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 transition-colors overflow-hidden">
+    <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 lg:mb-20">
+        <div class="inline-block px-4 py-1 rounded-full bg-white/60 dark:bg-cake-plum/30 border border-cake-rose/30 mb-6">
+          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Send a Message</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
+          Let's Start a <span class="italic gradient-text">Conversation</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Fill out the form below and we'll get back to you within 24 hours.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+        <!-- Left: Side info -->
+        <div class="lg:col-span-2 space-y-6">
+          <div class="bg-gradient-to-br from-cake-deep to-cake-plum rounded-[2rem] p-8 shadow-xl text-white">
+            <h3 class="font-serif text-2xl font-bold mb-4">Why Reach Out?</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
+                <div>
+                  <p class="font-bold text-sm">Free Consultation</p>
+                  <p class="text-white/70 text-xs mt-1">No obligation, just great ideas</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
+                <div>
+                  <p class="font-bold text-sm">Tasting Appointment</p>
+                  <p class="text-white/70 text-xs mt-1">Try 6 seasonal flavors</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
+                <div>
+                  <p class="font-bold text-sm">Custom Quote</p>
+                  <p class="text-white/70 text-xs mt-1">Detailed pricing within 24h</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
+                <div>
+                  <p class="font-bold text-sm">Design Sketch</p>
+                  <p class="text-white/70 text-xs mt-1">See your cake before we bake</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white/80 dark:bg-[#1A101A]/80 backdrop-blur-xl rounded-[2rem] p-8 shadow-xl border border-white/50 dark:border-white/10">
+            <h3 class="font-serif text-xl font-bold text-cake-plum dark:text-white mb-4">Business Hours</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex justify-between text-gray-600 dark:text-gray-300">
+                <span>Mon – Fri</span>
+                <span class="font-bold text-cake-deep dark:text-cake-gold">9AM – 6PM</span>
+              </li>
+              <li class="flex justify-between text-gray-600 dark:text-gray-300">
+                <span>Saturday</span>
+                <span class="font-bold text-cake-deep dark:text-cake-gold">10AM – 4PM</span>
+              </li>
+              <li class="flex justify-between text-gray-600 dark:text-gray-300">
+                <span>Sunday</span>
+                <span class="font-bold text-cake-deep dark:text-cake-gold">By Appointment</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="lg:col-span-3 bg-white/90 dark:bg-[#1A101A]/90 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl border border-white/50 dark:border-white/10">
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-2">
+              <label for="name" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
+                <i class="fas fa-user me-2 text-cake-deep"></i>Full Name *
+              </label>
+              <input type="text" id="name" placeholder="Emma & James" required
+                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
+                <i class="fas fa-envelope me-2 text-cake-deep"></i>Email *
+              </label>
+              <input type="email" id="email" placeholder="hello@example.com" required
+                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="phone" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
+                <i class="fas fa-phone me-2 text-cake-deep"></i>Phone
+              </label>
+              <input type="tel" id="phone" placeholder="+1 (555) 000-0000"
+                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="date" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
+                <i class="fas fa-calendar me-2 text-cake-deep"></i>Event Date
+              </label>
+              <input type="date" id="date" required onclick="this.showPicker && this.showPicker()"
+                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm cursor-pointer">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="guests" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
+                <i class="fas fa-users me-2 text-cake-deep"></i>Guest Count
+              </label>
+              <input type="number" id="guests" placeholder="120" min="10"
+                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="service" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
+                <i class="fas fa-tag me-2 text-cake-deep"></i>Service Needed
+              </label>
+              <select id="service"
+                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
+                <option>Wedding Cake</option>
+                <option>Dessert Table</option>
+                <option>Both Cake & Desserts</option>
+                <option>Tasting Appointment</option>
+                <option>Custom Quote</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2 flex flex-col gap-2">
+              <label for="message" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
+                <i class="fas fa-comment me-2 text-cake-deep"></i>Tell Us About Your Vision *
+              </label>
+              <textarea id="message" rows="5" placeholder="Colors, style, dessert table ideas, special requests..." required
+                class="px-5 py-4 rounded-[2rem] border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition resize-none text-sm"></textarea>
+            </div>
+
+            <div class="md:col-span-2 flex flex-col sm:flex-row justify-between items-center gap-4 mt-2">
+              <p class="text-xs text-gray-500 dark:text-gray-400">
+                <i class="fas fa-lock text-cake-gold me-1"></i> Your information is safe with us.
+              </p>
+              <button type="submit"
+                class="w-full sm:w-auto bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-10 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300 flex items-center justify-center gap-3">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: MAP / STUDIO LOCATION -->
+  <section class="py-20 lg:py-32 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 lg:mb-20">
+        <div class="inline-block px-4 py-1 rounded-full bg-cake-mint/50 dark:bg-cake-deep/20 border border-cake-rose/30 mb-6">
+          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Visit Our Studio</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
+          Find Us in <span class="italic gradient-text-gold">Los Angeles</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Our studio is open by appointment only. Book a tasting or design session and come say hello!</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+        <!-- Map visual: Real Google Maps -->
+        <div class="lg:col-span-2 relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-cake-plum/50 min-h-[420px] h-full flex flex-col group">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105828.32936232532!2d-118.3435489!3d34.0522342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+            class="w-full h-full min-h-[420px] border-0"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Sweet Serenity Cake Studio Location">
+          </iframe>
+
+          <!-- Floating Studio Card Overlay -->
+          <div class="absolute top-6 left-6 pointer-events-none">
+            <div class="bg-white/95 dark:bg-cake-plum/95 backdrop-blur-md rounded-2xl px-5 py-3.5 shadow-xl border border-cake-gold/40 flex items-center gap-3 pointer-events-auto">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cake-rose to-cake-deep flex items-center justify-center text-white shadow-md">
+                <i class="fas fa-map-marker-alt text-base"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-widest font-bold text-cake-gold">Sweet Serenity Studio</p>
+                <p class="text-xs font-bold text-dark-gray dark:text-white">123 Sugar Lane, Los Angeles, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info side -->
+        <div class="space-y-6">
+          <div class="bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 shadow-xl border border-cake-blush dark:border-cake-plum/50">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-cake-blush flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-cake-deep"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-cake-plum dark:text-white mb-1">Address</h4>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">123 Sugar Lane<br>Los Angeles, CA 90001</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 shadow-xl border border-cake-blush dark:border-cake-plum/50">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-cake-mint flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-clock text-cake-deep"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-cake-plum dark:text-white mb-1">Studio Hours</h4>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Mon – Fri: 9AM – 6PM<br>Sat: 10AM – 4PM<br>Sun: By Appointment</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 shadow-xl border border-cake-blush dark:border-cake-plum/50">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-cake-lavender flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-parking text-cake-deep"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-cake-plum dark:text-white mb-1">Parking</h4>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Free parking available in the studio lot behind the building.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=Los+Angeles,+CA" target="_blank" rel="noopener noreferrer" class="block text-center bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300">
+            <i class="fas fa-directions"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: FAQ (FLIP CARDS) -->
+  <section class="py-20 lg:py-32 bg-gradient-to-br from-cake-lavender/30 via-warm-gray to-cake-blush/40 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 transition-colors overflow-hidden">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 lg:mb-20">
+        <div class="inline-block px-4 py-1 rounded-full bg-white/60 dark:bg-cake-plum/30 border border-cake-rose/30 mb-6">
+          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">FAQ</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
+          Questions? <span class="italic gradient-text">We've Got Answers</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Hover (or tap) on each card to reveal the answer.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="flip-card h-72 cursor-pointer">
+          <div class="flip-card-inner relative w-full h-full">
+            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-blush to-cake-rose p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
+              <i class="fas fa-question text-4xl text-cake-plum"></i>
+              <div class="my-auto w-full">
+                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">How far in advance should I book?</h3>
+              </div>
+              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
+            </div>
+            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
+              <i class="fas fa-calendar-check text-3xl text-cake-gold mb-4"></i>
+              <p class="text-gray-300 text-sm leading-relaxed">We recommend booking 6–12 months in advance for peak wedding season (May–October). For off-season dates, 3–4 months is usually plenty.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card h-72 cursor-pointer">
+          <div class="flip-card-inner relative w-full h-full">
+            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-mint to-cake-sky p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
+              <i class="fas fa-question text-4xl text-cake-plum"></i>
+              <div class="my-auto w-full">
+                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">Do you offer gluten-free or vegan cakes?</h3>
+              </div>
+              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
+            </div>
+            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
+              <i class="fas fa-leaf text-3xl text-cake-gold mb-4"></i>
+              <p class="text-gray-300 text-sm leading-relaxed">Absolutely! We offer gluten-free, vegan, and nut-free options for every flavor. Just let us know during your consultation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card h-72 cursor-pointer">
+          <div class="flip-card-inner relative w-full h-full">
+            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-lavender to-cake-deep p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
+              <i class="fas fa-question text-4xl text-white"></i>
+              <div class="my-auto w-full">
+                <h3 class="text-base sm:text-lg font-serif font-bold text-white px-2 min-h-[3.5rem] flex items-center justify-center">Can I have a tasting before I decide?</h3>
+              </div>
+              <p class="text-white/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
+            </div>
+            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
+              <i class="fas fa-wine-glass-alt text-3xl text-cake-gold mb-4"></i>
+              <p class="text-gray-300 text-sm leading-relaxed">Yes! Every package includes a complimentary tasting session where you can sample up to 6 flavors. Additional tastings can be arranged.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card h-72 cursor-pointer">
+          <div class="flip-card-inner relative w-full h-full">
+            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-gold to-cake-coral p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
+              <i class="fas fa-question text-4xl text-cake-plum"></i>
+              <div class="my-auto w-full">
+                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">How much do cakes cost?</h3>
+              </div>
+              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
+            </div>
+            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
+              <i class="fas fa-dollar-sign text-3xl text-cake-gold mb-4"></i>
+              <p class="text-gray-300 text-sm leading-relaxed">Our packages start at $450 for intimate weddings. Final pricing depends on design complexity, servings, and season. Custom quotes within 24h.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card h-72 cursor-pointer">
+          <div class="flip-card-inner relative w-full h-full">
+            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-peach to-cake-rose p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
+              <i class="fas fa-question text-4xl text-cake-plum"></i>
+              <div class="my-auto w-full">
+                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">Do you deliver to my venue?</h3>
+              </div>
+              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
+            </div>
+            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
+              <i class="fas fa-truck-fast text-3xl text-cake-gold mb-4"></i>
+              <p class="text-gray-300 text-sm leading-relaxed">Yes! We deliver throughout Los Angeles and Southern California. Nationwide shipping available for some items. Delivery is free with Grand & Luxe packages.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card h-72 cursor-pointer">
+          <div class="flip-card-inner relative w-full h-full">
+            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-sky to-cake-mint p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
+              <i class="fas fa-question text-4xl text-cake-plum"></i>
+              <div class="my-auto w-full">
+                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">Can I customize a package?</h3>
+              </div>
+              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
+            </div>
+            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
+              <i class="fas fa-magic text-3xl text-cake-gold mb-4"></i>
+              <p class="text-gray-300 text-sm leading-relaxed">Of course! Every package can be customized to your exact needs. Mix and match services, add extras, or start from scratch — we love a challenge.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CTA / FINAL CONSULTATION -->
+  <section class="py-14 lg:py-20 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
+    <div class="max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="relative rounded-[2rem] bg-gradient-to-br from-cake-deep via-cake-plum to-cake-deep p-6 sm:p-8 md:p-10 shadow-xl text-center overflow-hidden">
+
+        <div class="absolute -top-16 -left-16 w-48 h-48 bg-cake-rose/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-cake-gold/20 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-cake-gold/40 mb-4">
+            <i class="fas fa-sparkles text-cake-gold text-xs"></i>
+            <span class="text-cake-gold text-[9px] uppercase tracking-widest font-bold">Your Dream Cake Awaits</span>
+          </div>
+
+          <h2 class="font-serif font-bold text-white text-2xl sm:text-3xl md:text-4xl mb-4 leading-snug">
+            Ready to Book Your <span class="italic text-cake-gold">Free Consultation?</span>
+          </h2>
+
+          <p class="text-gray-300 max-w-lg mx-auto text-sm md:text-base mb-8 leading-relaxed font-light">
+            Take the first step towards the wedding cake of your dreams. We'll guide you through every detail — flavors, design, and delivery — with zero obligation.
+          </p>
+
+          <div class="flex flex-wrap gap-3.5 justify-center">
+            <a href="tel:+15551234567" class="bg-cake-gold hover:bg-white text-cake-plum px-7 py-3 rounded-full text-[11px] uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300 flex items-center gap-2.5">
+              <i class="fas fa-phone text-xs"></i> Call (555) 123-4567
+            </a>
+            <a href="mailto:hello@sweetserenity.com" class="border border-white/40 text-white hover:bg-white/10 px-7 py-3 rounded-full text-[11px] uppercase tracking-widest font-bold transition duration-300 flex items-center gap-2.5">
+              <i class="fas fa-envelope text-xs"></i> Email Us
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 mt-8 max-w-sm mx-auto pt-6 border-t border-white/10">
+            <div class="text-center">
+              <div class="text-xl md:text-2xl font-serif font-black text-cake-gold">500+</div>
+              <p class="text-[8px] uppercase tracking-widest font-bold text-gray-300 mt-0.5">Weddings</p>
+            </div>
+            <div class="text-center border-x border-white/10">
+              <div class="text-xl md:text-2xl font-serif font-black text-cake-gold">12</div>
+              <p class="text-[8px] uppercase tracking-widest font-bold text-gray-300 mt-0.5">Years</p>
+            </div>
+            <div class="text-center">
+              <div class="text-xl md:text-2xl font-serif font-black text-cake-gold">5.0</div>
+              <p class="text-[8px] uppercase tracking-widest font-bold text-gray-300 mt-0.5">Rated</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0A050A] text-white pt-24 pb-8 relative overflow-hidden border-t border-white/10">
+    <div class="absolute bottom-0 left-0 w-full flex justify-center pointer-events-none opacity-[0.03] translate-y-1/4 select-none">
+      <h2 class="font-script font-black text-[15vw] whitespace-nowrap">Sweet Serenity</h2>
+    </div>
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <span class="text-2xl font-script text-white tracking-wide">
+              <span class="text-cake-rose italic">Sweet</span> <span class="text-cake-gold italic">Serenity</span>
+            </span>
+          </a>
+          <p class="text-gray-400 text-sm mt-6 mb-8 max-w-md leading-relaxed">Elegant wedding cakes and dessert tables designed to reflect your love story. Handcrafted with love in Los Angeles.</p>
+          <div class="flex gap-4">
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Explore</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="cakes.html" class="hover:text-cake-gold transition">Cakes</a></li>
+            <li><a href="desserts.html" class="hover:text-cake-gold transition">Desserts</a></li>
+            <li><a href="packages.html" class="hover:text-cake-gold transition">Packages</a></li>
+            <li><a href="gallery.html" class="hover:text-cake-gold transition">Gallery</a></li>
+            <li><a href="portfolio.html" class="hover:text-cake-gold transition">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Legal</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-cake-gold transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-cake-gold transition">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-cake-gold transition">Shipping Policy</a></li>
+            <li><a href="#" class="hover:text-cake-gold transition">Returns & Refunds</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Connect</h4>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-cake-gold shrink-0"></i>
+              <a href="mailto:hello@sweetserenity.com" class="text-cake-gold hover:text-white transition">hello@sweetserenity.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-cake-gold shrink-0"></i>
+              <a href="tel:+15551234567" class="hover:text-cake-gold transition">+1 (555) 123-4567</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-cake-gold shrink-0"></i>
+              <span>Los Angeles, CA — Ships Nationwide</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-[10px] uppercase tracking-widest">© 2026 Sweet Serenity. All rights reserved.</p>
+        <div class="flex gap-8 text-[10px] text-gray-500 uppercase tracking-widest">
+          <a href="#" class="hover:text-cake-gold transition">Privacy</a>
+          <a href="#" class="hover:text-cake-gold transition">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const themeToggle = document.getElementById('theme-toggle'), mobileTheme = document.getElementById('mobile-theme-toggle'), html = document.documentElement;
+      function toggleTheme() { html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); }
+      if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+      if (mobileTheme) mobileTheme.addEventListener('click', toggleTheme);
+      if (localStorage.getItem('theme') === 'light') html.classList.remove('dark'); else html.classList.add('dark');
+
+      const rtlBtn = document.getElementById('rtl-toggle'), mobileRtl = document.getElementById('mobile-rtl-toggle');
+      function toggleRTL() { if (html.getAttribute('dir') === 'rtl') html.removeAttribute('dir'); else html.setAttribute('dir', 'rtl'); localStorage.setItem('direction', html.getAttribute('dir') || 'ltr'); }
+      if (rtlBtn) rtlBtn.addEventListener('click', toggleRTL);
+      if (mobileRtl) mobileRtl.addEventListener('click', toggleRTL);
+      if (localStorage.getItem('direction') === 'rtl') html.setAttribute('dir', 'rtl');
+
+      const menuBtn = document.getElementById('mobile-menu-button'), mobileMenu = document.getElementById('mobile-menu'), menuIcon = document.getElementById('menu-icon'), closeIcon = document.getElementById('close-icon'), body = document.body;
+      function closeMobileMenu() { if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); if (menuIcon && closeIcon) { menuIcon.classList.remove('hidden'); closeIcon.classList.add('hidden'); } body.classList.remove('menu-open'); body.style.overflow = ''; } }
+      function openMobileMenu() { if (mobileMenu && mobileMenu.classList.contains('hidden')) { mobileMenu.classList.remove('hidden'); if (menuIcon && closeIcon) { menuIcon.classList.add('hidden'); closeIcon.classList.remove('hidden'); } body.classList.add('menu-open'); body.style.overflow = 'hidden'; } }
+      if (menuBtn && mobileMenu) { menuBtn.addEventListener('click', (e) => { e.stopPropagation(); mobileMenu.classList.contains('hidden') ? openMobileMenu() : closeMobileMenu(); }); document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', closeMobileMenu)); window.addEventListener('resize', () => { if (window.innerWidth >= 1280 && !mobileMenu.classList.contains('hidden')) closeMobileMenu(); }); }
+
+      const homeBtn = document.getElementById('mobile-home-dropdown-btn');
+      const homeSub = document.getElementById('mobile-home-submenu');
+      const homeIcon = document.getElementById('mobile-home-icon');
+      if (homeBtn && homeSub) {
+        homeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          homeSub.classList.toggle('hidden');
+          if (homeIcon) homeIcon.classList.toggle('rotate');
+        });
+      }
+
+      // Form submission
+      const form = document.querySelector('#contact-form form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const btn = form.querySelector('button[type="submit"]');
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+          btn.classList.add('bg-green-500');
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.classList.remove('bg-green-500');
+            form.reset();
+          }, 2500);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
