@@ -110,6 +110,38 @@
     .dark .bg-gray-50 { background-color: #2A1A2A !important; }
     .dark .bg-white { background-color: #2A1A2A !important; }
 
+    /* Preserve high-contrast text on light & pastel containers in dark mode */
+    .dark [style*="background: linear-gradient"] h3,
+    .dark [style*="background: linear-gradient"] h4,
+    .dark [style*="background: linear-gradient"] .font-serif,
+    .dark .flip-card-front h3,
+    .dark .flip-card-front h4,
+    .dark .flip-card-front .font-serif {
+      color: #2D1129 !important;
+      -webkit-text-fill-color: #2D1129 !important;
+    }
+    .dark [style*="background: linear-gradient"] p,
+    .dark [style*="background: linear-gradient"] span:not(.text-cake-gold):not(.text-cake-rose),
+    .dark .flip-card-front p,
+    .dark .flip-card-front span:not(.text-cake-gold):not(.text-cake-rose) {
+      color: #4A2545 !important;
+      -webkit-text-fill-color: #4A2545 !important;
+      opacity: 0.95 !important;
+    }
+    .dark .text-cake-plum:not([class*="dark:text-"]) {
+      color: #2D1129 !important;
+      -webkit-text-fill-color: #2D1129 !important;
+    }
+    .dark [class*="text-cake-plum/"]:not([class*="dark:text-"]) {
+      color: #4A2545 !important;
+      -webkit-text-fill-color: #4A2545 !important;
+      opacity: 0.95 !important;
+    }
+    .dark select option {
+      background-color: #2A1A2A !important;
+      color: #ffffff !important;
+    }
+
     @media (max-width: 1280px) { .nav-menu-container { display: none; } }
     body.menu-open { overflow: hidden; position: fixed; width: 100%; height: 100%; }
     button:active { transform: scale(0.97); }
