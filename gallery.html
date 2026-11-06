@@ -1,18 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Gallery | Sweet Serenity — Wedding Cake & Dessert Designer</title>
-<link rel="icon" href="assets/fav.png" type="image/jpeg">
-
-  <meta name="description" content="Sweet Serenity Gallery — Browse our collection of wedding cakes, dessert tables, and celebration moments.">
+  <title>Gallery | Sweet Serenity — Wedding Cake &amp; Dessert Table Designer</title>
+  <link rel="icon" href="assets/fav.png" type="image/png">
+  <meta name="description" content="Sweet Serenity Photo Gallery — Explore our bespoke wedding cakes, luxury dessert tables, hand-sculpted sugar florals, and real wedding moments.">
 
   <!-- Tailwind CSS + Fonts -->
-      <script src="tailwind.js"></script>
-
+  <script src="tailwind.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Lato:wght@300;400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -20,19 +18,17 @@
       theme: {
         extend: {
           colors: {
-            'cake-blush': '#FFD1DC',
+            'cake-blush': '#FDE8ED',
             'cake-rose': '#F7B2B7',
             'cake-deep': '#A64D79',
             'cake-gold': '#D4AF37',
-            'cake-plum': '#4A2C4A',
-            'cake-cream': '#FFF0E6',
-            'cake-mint': '#B7E4D0',
-            'cake-lavender': '#E0B7D6',
+            'cake-plum': '#3E1F3E',
+            'cake-cream': '#FFFDF9',
+            'cake-mint': '#C2E8D8',
+            'cake-lavender': '#E5CEE2',
             'cake-coral': '#FF7B7B',
-            'cake-sky': '#A8D8FF',
-            'cake-peach': '#FFD4B3',
-            'dark-gray': '#1A101A',
-            'warm-gray': '#FFF9FB'
+            'dark-gray': '#181018',
+            'warm-gray': '#FDFBF9'
           },
           fontFamily: {
             serif: ['"Playfair Display"', 'serif'],
@@ -46,198 +42,45 @@
 
   <style>
     [dir="rtl"] { direction: rtl; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in { animation: fadeInUp 1.2s ease-out forwards; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-15px) scale(1.02); }
-    }
-    .animate-float { animation: float 8s ease-in-out infinite; }
-
-    @keyframes shimmer {
-      0% { background-position: -1000px 0; }
-      100% { background-position: 1000px 0; }
-    }
-    .animate-shimmer {
-      background: linear-gradient(90deg, transparent, rgba(247, 178, 183, 0.15), transparent);
-      background-size: 1000px 100%;
-      animation: shimmer 3s infinite;
-    }
-
-    @keyframes floatHeart {
-      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
-      50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
-      100% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
-    }
-    .animate-float-heart { animation: floatHeart 5s ease-in-out infinite; }
-
-    @keyframes spin-slow {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    .animate-spin-slow { animation: spin-slow 20s linear infinite; }
-
-    html { scroll-behavior: smooth; overflow-x: hidden; }
-    body { overflow-x: hidden; }
-
-    #mobile-menu {
-      max-height: calc(100vh - 80px);
-      overflow-y: auto;
-      transition: all 0.3s ease;
-      transform: translateZ(0);
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .mobile-dropdown-icon { transition: transform 0.3s ease; }
-    .mobile-dropdown-icon.rotate { transform: rotate(180deg); }
-
+    html { scroll-behavior: smooth; }
     .gradient-text {
       background: linear-gradient(135deg, #A64D79, #D46B8C, #D4AF37);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      display: inline-block;
-      padding-top: 0.15em;
-      padding-bottom: 0.15em;
-      padding-right: 0.35em;
-      padding-left: 0.05em;
-      overflow: visible;
     }
-
     .gradient-text-gold {
       background: linear-gradient(135deg, #D4AF37, #F7B2B7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      display: inline-block;
-      padding-top: 0.15em;
-      padding-bottom: 0.15em;
-      padding-right: 0.35em;
-      padding-left: 0.05em;
-      overflow: visible;
     }
-
-    .bg-grain {
-      background-image: radial-gradient(rgba(247, 178, 183, 0.05) 1.5px, transparent 1.5px);
-      background-size: 28px 28px;
-    }
-
-    .dark p, .dark li, .dark span:not(.text-cake-gold):not(.text-cake-rose) { color: #cbd5e1 !important; }
-    .dark h1, .dark h2, .dark h3, .dark h4, .dark .font-serif { color: #ffffff !important; }
-    .dark .text-cake-gold { color: #D4AF37 !important; }
-    .dark .text-cake-rose { color: #F7B2B7 !important; }
-    .dark .text-cake-deep { color: #F7B2B7 !important; }
-    .dark .bg-white\/80, .dark .bg-white\/95 { background-color: #1A101A !important; }
-    .dark .border-gray-200 { border-color: rgba(255, 255, 255, 0.1) !important; }
-    .dark .bg-gray-50 { background-color: #2A1A2A !important; }
-    .dark .bg-white { background-color: #2A1A2A !important; }
-
-    /* Preserve high-contrast text on light & pastel containers in dark mode */
-    .dark [style*="background: linear-gradient"] h3,
-    .dark [style*="background: linear-gradient"] h4,
-    .dark [style*="background: linear-gradient"] .font-serif,
-    .dark .flip-card-front h3,
-    .dark .flip-card-front h4,
-    .dark .flip-card-front .font-serif {
-      color: #2D1129 !important;
-      -webkit-text-fill-color: #2D1129 !important;
-    }
-    .dark [style*="background: linear-gradient"] p,
-    .dark [style*="background: linear-gradient"] span:not(.text-cake-gold):not(.text-cake-rose),
-    .dark .flip-card-front p,
-    .dark .flip-card-front span:not(.text-cake-gold):not(.text-cake-rose) {
-      color: #4A2545 !important;
-      -webkit-text-fill-color: #4A2545 !important;
-      opacity: 0.95 !important;
-    }
-    .dark .text-cake-plum:not([class*="dark:text-"]) {
-      color: #2D1129 !important;
-      -webkit-text-fill-color: #2D1129 !important;
-    }
-    .dark [class*="text-cake-plum/"]:not([class*="dark:text-"]) {
-      color: #4A2545 !important;
-      -webkit-text-fill-color: #4A2545 !important;
-      opacity: 0.95 !important;
-    }
-    .dark select option {
-      background-color: #2A1A2A !important;
-      color: #ffffff !important;
-    }
-
-    @media (max-width: 1280px) { .nav-menu-container { display: none; } }
-    body.menu-open { overflow: hidden; position: fixed; width: 100%; height: 100%; }
-    button:active { transform: scale(0.97); }
-
-    ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: #FFF5F0; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(#F7B2B7, #D46B8C); border-radius: 10px; }
-    .dark ::-webkit-scrollbar-track { background: #1A101A; }
-    .dark ::-webkit-scrollbar-thumb { background: linear-gradient(#D46B8C, #A64D79); }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .gallery-item img {
-      transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-    .gallery-item:hover img {
-      transform: scale(1.15);
-    }
-    .gallery-item .overlay {
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .gallery-item:hover .overlay {
-      opacity: 1;
-    }
-    .gallery-item .overlay-content {
-      transform: translateY(20px);
-      transition: transform 0.5s ease;
-    }
-    .gallery-item:hover .overlay-content {
-      transform: translateY(0);
-    }
-
-    .filter-btn {
-      transition: all 0.3s ease;
-    }
-    .filter-btn.active {
-      background: linear-gradient(135deg, #A64D79, #D46B8C);
-      color: white;
-      box-shadow: 0 10px 20px rgba(166, 77, 121, 0.3);
-    }
-
-    .masonry-item {
-      break-inside: avoid;
+    .gallery-item.hidden-filter {
+      display: none;
     }
   </style>
 </head>
 
-<body class="font-sans text-gray-800 antialiased transition-colors duration-300 bg-warm-gray dark:bg-dark-gray dark:text-gray-100 bg-grain">
+<body class="font-sans antialiased bg-warm-gray dark:bg-[#120B13] text-gray-800 dark:text-gray-100 selection:bg-cake-rose/30 transition-colors duration-300">
 
+  <!-- UNIFIED HEADER -->
   <!-- HEADER -->
   <nav class="bg-white/95 dark:bg-[#1A101A]/95 backdrop-blur-xl fixed w-full top-0 z-50 border-b border-gray-200/50 dark:border-white/10 transition-all duration-500 shadow-lg">
-    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1400px] mx-auto nav-container px-4 sm:px-6 lg:px-8 xl:px-10">
       <div class="flex justify-between items-center h-16 md:h-20">
         <div class="flex-shrink-0">
           <a href="index.html" class="flex items-center gap-3 group">
-            <span class="text-xl md:text-2xl font-serif font-bold tracking-wide transition-colors">
+            <span class="text-xl md:text-2xl font-serif font-bold text-dark-gray dark:text-white tracking-wide transition-colors">
               <span class="text-cake-deep italic font-script text-3xl">Sweet</span> <span class="text-cake-gold italic font-script text-3xl">Serenity</span>
             </span>
           </a>
         </div>
 
-        <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-4">
-          <div class="flex items-center gap-1 lg:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
+        <!-- Desktop Navigation -->
+        <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-2 2xl:mx-6">
+          <div class="flex items-center gap-0.5 2xl:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
             <div class="relative group">
-              <button class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium transition px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 flex items-center gap-1 text-[10px] uppercase tracking-widest">
+              <button class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium transition px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 flex items-center gap-1 text-[10px] uppercase tracking-widest">
                 <span>Home</span>
                 <i class="fas fa-chevron-down text-[8px] ms-1"></i>
               </button>
@@ -246,32 +89,44 @@
                 <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest rounded-b-2xl">Home 2</a>
               </div>
             </div>
-            <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">About</a>
-            <a href="services.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Services</a>
-            <a href="cakes.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Cakes</a>
-            <a href="desserts.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Desserts</a>
-            <a href="packages.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Packages</a>
-            <a href="gallery.html" class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">Gallery</a>
-            <a href="portfolio.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Portfolio</a>
-            <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Contact</a>
+            <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">About</a>
+            <a href="services.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Services</a>
+            <a href="cakes.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Cakes</a>
+            <a href="desserts.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Desserts</a>
+            <a href="packages.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Packages</a>
+            <a href="gallery.html" class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold px-3 py-1.5 rounded-full text-[10px] uppercase tracking-widest">Gallery</a>
+            <a href="portfolio.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Portfolio</a>
+            <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Contact</a>
+            
           </div>
         </div>
 
-        <div class="hidden xl:flex items-center gap-3 shrink-0">
-          <div class="flex items-center gap-2">
-            <button id="rtl-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold transition-all"><span class="text-[9px] font-black">RTL</span></button>
-            <button id="theme-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold transition-all">
+        <div class="hidden xl:flex items-center gap-2.5 2xl:gap-3 shrink-0">
+          <div class="flex items-center gap-1.5">
+            <button id="rtl-toggle" class="w-9 h-9 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold text-cake-deep dark:text-cake-gold transition-all" aria-label="Toggle text direction"><span class="text-[9px] font-black">RTL</span></button>
+            <button id="theme-toggle" class="w-9 h-9 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold text-cake-deep dark:text-cake-gold transition-all" aria-label="Toggle dark mode">
               <i class="fas fa-moon dark:hidden text-xs"></i>
               <i class="fas fa-sun hidden dark:inline text-xs"></i>
             </button>
           </div>
-          <a href="contact.html#contact-form" class="bg-cake-coral hover:bg-cake-deep text-white px-5 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-lg hover:-translate-y-0.5 transition duration-300 whitespace-nowrap flex items-center gap-2">
-            <i class="fas fa-shopping-bag"></i> Order Now
+
+          <!-- Visible Login / Sign In Option -->
+          <button class="open-login-btn flex items-center gap-2 text-cake-plum dark:text-white hover:text-cake-deep dark:hover:text-cake-gold font-bold text-[10px] 2xl:text-[11px] uppercase tracking-wider px-3.5 py-2 rounded-full border border-cake-rose/40 dark:border-white/15 hover:border-cake-gold hover:bg-cake-blush/20 dark:hover:bg-white/5 transition-all duration-300 shadow-sm">
+            <i class="fas fa-user-circle text-cake-gold text-sm"></i>
+            <span>Sign In</span>
+          </button>
+
+          <a href="contact.html#contact-form" class="bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-5 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-md hover:-translate-y-0.5 transition duration-300 whitespace-nowrap flex items-center gap-2">
+            <i class="fas fa-shopping-bag text-xs"></i> Order Now
           </a>
         </div>
 
-        <div class="xl:hidden flex items-center">
-          <button id="mobile-menu-button" class="text-dark-gray dark:text-white p-2 focus:outline-none active:scale-95 transition hover:text-cake-deep">
+        <div class="xl:hidden flex items-center gap-2">
+          <!-- Mobile Quick Sign In Button -->
+          <button class="open-login-btn w-9 h-9 rounded-full border border-cake-rose/40 dark:border-white/10 flex items-center justify-center text-cake-deep dark:text-cake-gold hover:border-cake-gold transition" aria-label="Sign in">
+            <i class="fas fa-user-circle text-base"></i>
+          </button>
+          <button id="mobile-menu-button" class="text-dark-gray dark:text-white p-2 focus:outline-none active:scale-95 transition hover:text-cake-deep" aria-label="Toggle mobile menu">
             <i id="menu-icon" class="fas fa-bars text-lg"></i>
             <i id="close-icon" class="fas fa-times text-lg hidden"></i>
           </button>
@@ -279,8 +134,25 @@
       </div>
     </div>
 
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-[#1A101A] border-t border-gray-200 dark:border-white/10 absolute w-full shadow-2xl z-50" style="top: 64px;">
       <div class="px-5 py-5 pb-8 space-y-1 max-h-[calc(100vh-64px)] overflow-y-auto">
+        <!-- Client Portal Quick Banner -->
+        <div class="p-3.5 bg-gradient-to-r from-cake-blush/30 via-warm-gray to-cake-lavender/30 dark:from-cake-plum/20 dark:to-cake-deep/10 rounded-2xl border border-cake-rose/30 mb-3 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-cake-deep text-cake-gold flex items-center justify-center font-bold text-sm shadow">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-cake-plum dark:text-white">Client Portal</p>
+              <p class="text-[10px] text-gray-500 dark:text-gray-400">Order tracker & tasting notes</p>
+            </div>
+          </div>
+          <button class="open-login-btn bg-white dark:bg-[#2A1A2A] text-cake-deep dark:text-cake-gold font-bold text-xs px-3.5 py-1.5 rounded-full border border-cake-gold/40 shadow-sm uppercase tracking-wider hover:bg-cake-rose/20 transition">
+            Sign In
+          </button>
+        </div>
+
         <div class="w-full">
           <button id="mobile-home-dropdown-btn" class="w-full flex justify-between items-center px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium tracking-wider uppercase transition">
             <span>Home</span>
@@ -288,7 +160,7 @@
           </button>
           <div id="mobile-home-submenu" class="hidden pl-4 space-y-1 mt-1 bg-gray-50/50 dark:bg-white/5 rounded-xl py-2">
             <a href="index.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 text-sm font-medium uppercase">Home 1</a>
-            <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 text-sm font-medium uppercase">Home 2</a>
+            <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:text-cake-deep text-sm font-medium uppercase">Home 2</a>
           </div>
         </div>
         <a href="about.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">About</a>
@@ -299,530 +171,736 @@
         <a href="gallery.html" class="block px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold uppercase">Gallery</a>
         <a href="portfolio.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Portfolio</a>
         <a href="contact.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Contact</a>
+        
         <div class="pt-5 mt-5 border-t border-gray-200 dark:border-white/10">
-          <div class="grid grid-cols-2 gap-3">
-            <button id="mobile-rtl-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border">RTL Mode</button>
-            <button id="mobile-theme-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border">Dark Mode</button>
+          <div class="grid grid-cols-2 gap-3 mb-3">
+            <button id="mobile-rtl-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border border-gray-200 dark:border-white/10">RTL Mode</button>
+            <button id="mobile-theme-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border border-gray-200 dark:border-white/10">Dark Mode</button>
           </div>
-          <a href="contact.html#contact-form" class="block mt-4 bg-cake-coral text-white text-center px-4 py-4 rounded-xl text-sm uppercase font-black">Order Now</a>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="open-login-btn border border-cake-deep/40 dark:border-cake-gold/40 text-cake-deep dark:text-cake-gold text-center px-4 py-3.5 rounded-xl text-xs uppercase font-bold hover:bg-cake-blush/20 transition flex items-center justify-center gap-2">
+              <i class="fas fa-user-circle text-xs"></i> Sign In
+            </button>
+            <a href="contact.html#contact-form" class="bg-cake-coral text-white text-center px-4 py-3.5 rounded-xl text-xs uppercase font-black shadow hover:bg-cake-deep transition flex items-center justify-center gap-2">
+              <i class="fas fa-shopping-bag text-xs"></i> Order Now
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- SECTION 1: HERO WITH IMAGE -->
-  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-cake-cream via-warm-gray to-cake-blush dark:from-cake-plum/30 dark:via-[#1A101A] dark:to-cake-deep/20">
-    <div class="absolute top-20 -left-20 w-96 h-96 bg-cake-lavender/40 dark:bg-cake-deep/20 rounded-full blur-3xl animate-float"></div>
-    <div class="absolute bottom-0 -right-20 w-[28rem] h-[28rem] bg-cake-rose/40 dark:bg-cake-plum/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+  <!-- CLIENT LOGIN / SIGN IN MODAL -->
+  <div id="login-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/65 backdrop-blur-md transition-opacity duration-300">
+    <div class="relative w-full max-w-lg bg-white dark:bg-[#1A101A] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-cake-rose/30 dark:border-cake-gold/25 transform transition-all duration-300 scale-95 opacity-0 modal-content max-h-[92vh] overflow-y-auto">
+      
+      <!-- Close button -->
+      <button id="close-login-modal" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-300 hover:text-cake-deep dark:hover:text-cake-gold flex items-center justify-center transition" aria-label="Close modal">
+        <i class="fas fa-times text-sm"></i>
+      </button>
 
-    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Modal Header -->
+      <div class="text-center mb-5">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cake-blush to-cake-rose text-cake-deep dark:from-cake-plum dark:to-cake-deep dark:text-cake-gold shadow-md mb-2.5">
+          <i class="fas fa-cake-candles text-lg"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-dark-gray dark:text-white">
+          Client <span class="italic font-script text-3xl gradient-text">Portal</span>
+        </h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Access your cake sketches, tasting palette & orders</p>
+      </div>
 
-        <!-- Left: Text -->
-        <div class="text-center lg:text-left animate-fade-in opacity-0" style="animation-delay: 0.2s;">
-          <h1 class="font-serif font-black text-dark-gray dark:text-white leading-[1.25] mb-6 tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl overflow-visible">
-            Our <br>
-            <span class="italic font-script gradient-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl inline-block mt-3 leading-normal py-2 px-2 pr-8 sm:pr-10">Gallery</span>
-          </h1>
+      <!-- Tabs -->
+      <div class="flex rounded-full bg-gray-100 dark:bg-white/5 p-1 mb-5 border border-gray-200 dark:border-white/10 max-w-xs mx-auto">
+        <button id="tab-signin" class="flex-1 py-2 text-xs font-bold uppercase tracking-wider rounded-full bg-white dark:bg-[#2A1A2A] text-cake-deep dark:text-cake-gold shadow-sm transition">
+          Sign In
+        </button>
+        <button id="tab-signup" class="flex-1 py-2 text-xs font-bold uppercase tracking-wider rounded-full text-gray-500 dark:text-gray-400 hover:text-cake-deep transition">
+          Register
+        </button>
+      </div>
 
-          <p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 text-base md:text-lg font-light mb-10 leading-relaxed">
-            A visual journey through our most-loved cakes, dessert tables, and unforgettable celebration moments. Every image tells a story.
+      <!-- Sign In Form -->
+      <form id="signin-form" class="space-y-3.5">
+        <div>
+          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Email Address</label>
+          <div class="relative">
+            <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="email" required placeholder="bride.groom@example.com" class="w-full ps-10 pe-4 py-2.5 sm:py-3 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-1 ms-2 me-2">
+            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">Password</label>
+            <a href="#" class="text-[10px] text-cake-deep dark:text-cake-gold hover:underline">Forgot?</a>
+          </div>
+          <div class="relative">
+            <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="password" required placeholder="••••••••" class="w-full ps-10 pe-4 py-2.5 sm:py-3 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 px-2 pt-0.5">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" class="rounded text-cake-deep focus:ring-cake-rose accent-cake-deep">
+            <span>Remember me</span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300">
+          Sign In to Portal
+        </button>
+
+        <!-- Footer note (SignIn only) -->
+        <div class="mt-4 pt-3 border-t border-gray-100 dark:border-white/10 text-center">
+          <p class="text-[11px] text-gray-400">
+            Need assistance? Call our atelier at <a href="tel:+15551234567" class="text-cake-gold font-bold hover:underline">+1 (555) 123-4567</a>
           </p>
+        </div>
+      </form>
 
-          <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
-            <a href="#gallery" class="bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-3">
-              <i class="fas fa-images"></i> Browse Gallery
-            </a>
-            <a href="portfolio.html" class="border-2 border-cake-deep dark:border-cake-rose text-cake-deep dark:text-cake-rose hover:bg-cake-blush dark:hover:bg-cake-plum px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold transition duration-300 flex items-center gap-3">
-              <i class="fas fa-briefcase"></i> View Portfolio
-            </a>
+      <!-- Register Form -->
+      <form id="signup-form" class="space-y-3 hidden">
+        <div>
+          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Full Names</label>
+          <div class="relative">
+            <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="text" placeholder="Emma & James" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Email Address</label>
+          <div class="relative">
+            <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="email" placeholder="hello@example.com" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Wedding Date</label>
+            <div class="relative">
+              <i class="fas fa-calendar absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+              <input type="date" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition cursor-pointer">
+            </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
-            <div class="text-center lg:text-left">
-              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">500+</div>
-              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Cakes Made</p>
-            </div>
-            <div class="text-center lg:text-left border-x border-cake-blush dark:border-cake-plum px-2">
-              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">1000+</div>
-              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Photos</p>
-            </div>
-            <div class="text-center lg:text-left">
-              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">12</div>
-              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Years</p>
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Password</label>
+            <div class="relative">
+              <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+              <input type="password" placeholder="Min. 8 chars" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
             </div>
           </div>
         </div>
 
-        <!-- Right: IMAGE -->
-        <div class="flex-1 relative animate-fade-in opacity-0 w-full flex justify-center lg:justify-end" style="animation-delay: 0.4s;">
-          <div class="relative group w-full max-w-md lg:max-w-lg h-[320px] sm:h-[380px] lg:h-[420px] rounded-[2rem] overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.1)] dark:shadow-[0_0_40px_rgba(212,175,55,0.15)] border border-gray-200 dark:border-[#D4AF37]/20 transition-all">
-            <img
-              src="assets/g.jpg"
-              alt="Beautiful wedding cake gallery display"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              loading="eager">
-          </div>
-        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300 mt-1">
+          Create Client Account
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden bg-gradient-to-b from-cake-blush/40 via-warm-gray to-transparent dark:from-cake-plum/20 dark:via-[#120B13] dark:to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 dark:bg-white/5 border border-rose-200/80 dark:border-white/10 mb-6 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-cake-deep animate-pulse"></span>
+        <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">Visual Archive</span>
+      </div>
+
+      <h1 class="font-serif font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dark-gray dark:text-white leading-[1.15] mb-6">
+        Moments of <span class="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic gradient-text inline-block py-1">Sweetness</span>
+      </h1>
+
+      <p class="text-gray-600 dark:text-gray-300 text-base md:text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+        Explore our curated collection of couture tier architecture, artisanal dessert tablescapes, botanical sugar craft, and studio moments. Click any image to view in high resolution.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 max-w-3xl mx-auto" id="gallery-filters">
+        <button data-filter="all" class="filter-tab px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold transition-all duration-200 bg-cake-deep text-white shadow-md">
+          All Works
+        </button>
+        <button data-filter="cake" class="filter-tab px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-200 bg-white dark:bg-white/5 border border-rose-100 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:border-cake-gold">
+          Wedding Cakes
+        </button>
+        <button data-filter="dessert" class="filter-tab px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-200 bg-white dark:bg-white/5 border border-rose-100 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:border-cake-gold">
+          Dessert Tables
+        </button>
+        <button data-filter="detail" class="filter-tab px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-200 bg-white dark:bg-white/5 border border-rose-100 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:border-cake-gold">
+          Sugar Florals &amp; Details
+        </button>
+        <button data-filter="tasting" class="filter-tab px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-200 bg-white dark:bg-white/5 border border-rose-100 dark:border-white/10 text-gray-700 dark:text-gray-300 hover:border-cake-gold">
+          Tastings &amp; Atelier
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: FILTER + MAIN GALLERY GRID -->
-  <section id="gallery" class="py-20 lg:py-32 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
-    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 lg:mb-20">
-        <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/50 dark:bg-cake-deep/20 border border-cake-rose/30 mb-6">
-          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Photo Gallery</span>
+  <!-- SECTION 2: INTERACTIVE GALLERY GRID (WITH REAL LIGHTBOX) -->
+  <section class="py-12 pb-28 bg-white dark:bg-[#160D17] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery-grid">
+        
+        <!-- Item 1: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/gallery-botanical.jpg" data-title="The Botanical Blossom" data-desc="Sugar garden roses, trailing sweet peas, and velvet buttercream.">
+          <img src="assets/gallery-botanical.jpg" alt="Botanical Blossom Wedding Cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">The Botanical Blossom</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-          Moments of <span class="italic gradient-text-gold">Sweetness</span>
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Filter by category to explore our collection of cakes, desserts, and celebration moments.</p>
+
+        <!-- Item 2: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/g2.jpg" data-title="French Macaron Tower" data-desc="Raspberry, pistachio, and salted caramel macarons.">
+          <img src="assets/g2.jpg" alt="French Macaron Table Display" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">French Macaron Tower</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 3: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/gallery-luxegold.jpg" data-title="The Gilded Grandeur" data-desc="Sheets of 24k edible gold leaf over razor sharp fondant.">
+          <img src="assets/gallery-luxegold.jpg" alt="Luxe 24k Gold Leaf Cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">The Gilded Grandeur</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 4: Detail -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="detail" data-src="assets/g8.jpg" data-title="Sculpted Sugar Peony Detail" data-desc="Petal-by-petal sugar sculpting with food-safe botanical dusting.">
+          <img src="assets/g8.jpg" alt="Sugar flower delicate petal details" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Artisan Detail</span>
+            <h3 class="font-serif text-xl font-bold text-white">Sculpted Sugar Peony</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 5: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/dessert-table.jpg" data-title="Grand Estate Dessert Table" data-desc="Tiered stands, vintage compotes, and custom place cards.">
+          <img src="assets/dessert-table.jpg" alt="Grand Estate Wedding Dessert Table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">Grand Estate Display</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 6: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/gallery-romantic.jpg" data-title="Pearl & Chantilly Lace" data-desc="Piped royal icing lace and confectionery sugar pearls.">
+          <img src="assets/gallery-romantic.jpg" alt="Pearl and Chantilly Lace Cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">Pearl &amp; Chantilly Lace</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 7: Tasting -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="tasting" data-src="assets/tasting-session.jpg" data-title="Private Tasting Flight" data-desc="Couples sampling 6 signature cake sponges and buttercream curds.">
+          <img src="assets/tasting-session.jpg" alt="Private wedding cake tasting flight in atelier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Tasting Session</span>
+            <h3 class="font-serif text-xl font-bold text-white">Private Tasting Flight</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 8: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/g5.jpg" data-title="Artisan Mini Cupcakes" data-desc="Rosewater Swiss meringue swirls with edible gold pearls.">
+          <img src="assets/g5.jpg" alt="Artisan mini cupcakes with pearls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">Artisan Mini Cupcakes</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 9: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/gallery-modern.jpg" data-title="The Sculptural Minimalist" data-desc="Clean architectural lines and textured monochrome stone.">
+          <img src="assets/gallery-modern.jpg" alt="Modern Minimalist Tiered Cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">Sculptural Minimalist</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 10: Detail -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="detail" data-src="assets/p8.jpg" data-title="Gourmet Fruit Tartlet Array" data-desc="Crisp French sablé shells with fresh blackberries and crème pâtissière.">
+          <img src="assets/p8.jpg" alt="Blackberry and raspberry fruit tartlets" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Artisan Detail</span>
+            <h3 class="font-serif text-xl font-bold text-white">Gourmet Fruit Tartlets</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 11: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/gallery-royal.jpg" data-title="The Royal Opulence" data-desc="Five grand tiers with bas-relief moldings and regal crests.">
+          <img src="assets/gallery-royal.jpg" alt="Royal opulence grand wedding cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">The Royal Opulence</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 12: Tasting -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="tasting" data-src="assets/about-journey.jpg" data-title="Atelier Studio Finishing" data-desc="Master decorator applying final sugar petals in our studio.">
+          <img src="assets/about-journey.jpg" alt="Cake artist decorating tier in atelier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Atelier Craft</span>
+            <h3 class="font-serif text-xl font-bold text-white">Studio Finishing</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 13: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/g.jpg" data-title="Modern Luxe Metallic Display" data-desc="Mirrored trays, gold pedestals, and black marble slabs.">
+          <img src="assets/g.jpg" alt="Modern Luxe Metallic Dessert Table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">Modern Luxe Metallic</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 14: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/gallery-artistic.jpg" data-title="The Watercolor Atelier" data-desc="Hand-painted edible watercolor washes with gold leaf splatters.">
+          <img src="assets/gallery-artistic.jpg" alt="Watercolor Atelier hand-painted wedding cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">Watercolor Atelier</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 15: Detail -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="detail" data-src="assets/p9.jpg" data-title="Gilded Chocolate Bonbons" data-desc="70% Valrhona ganache coated in dark cocoa velvet and gold luster.">
+          <img src="assets/p9.jpg" alt="Gilded dark chocolate ganache bonbons" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Artisan Detail</span>
+            <h3 class="font-serif text-xl font-bold text-white">Gilded Chocolate Bonbons</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 16: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/g3.jpg" data-title="Garden Romance Dessert Bar" data-desc="Lush floral garlands, cut-crystal stands, and pastel confections.">
+          <img src="assets/g3.jpg" alt="Garden Romance Wedding Dessert Table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">Garden Romance Bar</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 17: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/hero-cake.jpg" data-title="Imperial Grand Tier" data-desc="Four statuesque tiers crowned with pressed edible flowers and gold leaf.">
+          <img src="assets/hero-cake.jpg" alt="Imperial Grand Tiered Wedding Cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">Imperial Grand Tier</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 18: Tasting -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="tasting" data-src="assets/home2-tasting.jpg" data-title="Gourmet Flavor Flight" data-desc="Scratch-made curds, Swiss buttercreams, and artisan sponge pairings.">
+          <img src="assets/home2-tasting.jpg" alt="Gourmet cake flavor flight presentation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Tasting Session</span>
+            <h3 class="font-serif text-xl font-bold text-white">Gourmet Flavor Flight</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 19: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/g6.jpg" data-title="Baroque Grandeur Tablescape" data-desc="Multi-tiered gold stands, velvet linens, and tall floral urns.">
+          <img src="assets/g6.jpg" alt="Baroque Grandeur Luxury Dessert Table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">Baroque Grandeur</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 20: Cake -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="cake" data-src="assets/home2-portfolio-whimsical.jpg" data-title="Whimsical Wildflower Tier" data-desc="Hand-sculpted sugar daisies, buttercups, and textured buttercream.">
+          <img src="assets/home2-portfolio-whimsical.jpg" alt="Whimsical Wildflower Tiered Wedding Cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Wedding Cake</span>
+            <h3 class="font-serif text-xl font-bold text-white">Whimsical Wildflower</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 21: Detail -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="detail" data-src="assets/d.jpg" data-title="Bespoke Favor Keepsakes" data-desc="Monogrammed favor boxes tied with imported French silk ribbons.">
+          <img src="assets/d.jpg" alt="Wedding guest favor boxes with silk ribbons" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Artisan Detail</span>
+            <h3 class="font-serif text-xl font-bold text-white">Bespoke Favor Boxes</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 22: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/g7.jpg" data-title="Rustic Vineyard Table" data-desc="Reclaimed olive wood boards, copper compotes, and wild figs.">
+          <img src="assets/g7.jpg" alt="Rustic vineyard wedding dessert display" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">Rustic Vineyard Table</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 23: Tasting -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="tasting" data-src="assets/about-hero.jpg" data-title="Artisan Pastry Atelier" data-desc="Our master decorators styling couture centerpieces in Los Angeles.">
+          <img src="assets/about-hero.jpg" alt="Artisan pastry chefs at work in studio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Atelier Craft</span>
+            <h3 class="font-serif text-xl font-bold text-white">Artisan Pastry Atelier</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
+        <!-- Item 24: Dessert -->
+        <div class="gallery-item group relative rounded-[2rem] overflow-hidden border border-rose-100/60 dark:border-white/10 shadow-sm cursor-pointer aspect-[3/4]" data-category="dessert" data-src="assets/p3.jpg" data-title="Petite Pâtisserie Platter" data-desc="Assorted French macarons, chocolate truffles, and glazed choux puffs.">
+          <img src="assets/p3.jpg" alt="Petite French patisserie platter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-cake-gold text-[10px] uppercase font-bold tracking-widest">Dessert Table</span>
+            <h3 class="font-serif text-xl font-bold text-white">Petite Pâtisserie Platter</h3>
+            <span class="text-xs text-white/80 mt-1 flex items-center gap-1.5"><i class="fas fa-expand text-[10px]"></i> View Full Image</span>
+          </div>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <!-- Filter buttons -->
-      <div class="flex flex-wrap justify-center gap-3 mb-12">
-        <button class="filter-btn active px-6 py-3 rounded-full border-2 border-cake-blush dark:border-cake-plum text-cake-deep dark:text-cake-rose text-[10px] uppercase tracking-widest font-bold bg-cake-blush/50 dark:bg-cake-plum/30">All Photos</button>
-        <button class="filter-btn px-6 py-3 rounded-full border-2 border-cake-blush dark:border-cake-plum text-gray-600 dark:text-gray-300 text-[10px] uppercase tracking-widest font-bold hover:bg-cake-blush/50 dark:hover:bg-cake-plum/30">Cakes</button>
-        <button class="filter-btn px-6 py-3 rounded-full border-2 border-cake-blush dark:border-cake-plum text-gray-600 dark:text-gray-300 text-[10px] uppercase tracking-widest font-bold hover:bg-cake-blush/50 dark:hover:bg-cake-plum/30">Desserts</button>
-        <button class="filter-btn px-6 py-3 rounded-full border-2 border-cake-blush dark:border-cake-plum text-gray-600 dark:text-gray-300 text-[10px] uppercase tracking-widest font-bold hover:bg-cake-blush/50 dark:hover:bg-cake-plum/30">Weddings</button>
-        <button class="filter-btn px-6 py-3 rounded-full border-2 border-cake-blush dark:border-cake-plum text-gray-600 dark:text-gray-300 text-[10px] uppercase tracking-widest font-bold hover:bg-cake-blush/50 dark:hover:bg-cake-plum/30">Details</button>
-      </div>
-
-      <!-- Gallery Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-
-        <!-- Item 1 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g1.jpg" alt="Elegant white wedding cake" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 2 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g2.jpg" alt="Colorful macarons dessert table" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 3 (tall) -->
-        <div class="gallery-item rounded-3xl row-span-2 shadow-xl">
-          <img src="assets/g3.jpg" alt="Wedding cake setup" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 4 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g4.jpg" alt="Three tier wedding cake" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 5 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g5.jpg" alt="Cupcakes closeup" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 6 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/p5.jpg" alt="Cake details" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 7 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/p6.jpg" alt="Dessert table" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 8 (tall) -->
-        <div class="gallery-item rounded-3xl row-span-2 shadow-xl">
-          <img src="assets/p3.jpg" alt="Tall wedding cake" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 9 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/p8.jpg" alt="Dessert closeup" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 10 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/p9.jpg" alt="Wedding cake detail" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 11 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g4.jpg" alt="Wedding cake close up" class="w-full h-full object-cover">
-        </div>
-
-        <!-- Item 12 -->
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g5.jpg" alt="Cake table setup" class="w-full h-full object-cover">
-        </div>
-
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="#" class="inline-flex items-center gap-3 bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-10 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300">
-          <i class="fas fa-plus"></i> Load More Photos
+  <!-- SECTION 3: CTA CONSULTATION BANNER -->
+  <section class="py-20 lg:py-24 bg-gradient-to-r from-cake-deep via-cake-plum to-[#251025] text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <span class="text-cake-gold text-xs uppercase tracking-[0.3em] font-bold block mb-4">Commission Your Centerpiece</span>
+      <h2 class="text-3xl sm:text-5xl font-serif font-bold mb-6">
+        Inspired by Our <span class="font-script text-5xl sm:text-7xl italic text-cake-rose block mt-2">Atelier Portfolio?</span>
+      </h2>
+      <p class="text-white/80 max-w-xl mx-auto text-sm sm:text-base leading-relaxed mb-8 font-light">
+        Every wedding cake and dessert spread is customized from scratch to align with your venue, florals, and color story. Schedule your private tasting to design your showpiece.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html#contact-form" class="bg-gradient-to-r from-cake-gold to-amber-400 hover:from-amber-400 hover:to-cake-gold text-gray-900 px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-0.5 transition duration-300">
+          Book Private Tasting
+        </a>
+        <a href="packages.html" class="border border-white/40 hover:bg-white/10 text-white px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold transition duration-300">
+          Explore Packages &amp; Pricing
         </a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: FEATURED WEDDINGS (ALTERNATING LAYOUT) -->
-  <section class="py-20 lg:py-32 bg-gradient-to-br from-cake-lavender/30 via-warm-gray to-cake-blush/40 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 transition-colors overflow-hidden">
-    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 lg:mb-20">
-        <div class="inline-block px-4 py-1 rounded-full bg-white/60 dark:bg-cake-plum/30 border border-cake-rose/30 mb-6">
-          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Featured Weddings</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-          Real <span class="italic gradient-text">Love Stories</span>
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
-      </div>
-
-      <!-- Featured Story (1 Image + In-Depth Story & Theory Content) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-        <!-- Visual (1 Image - Medium Card) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-sm sm:max-w-md">
-            <div class="absolute -inset-4 bg-gradient-to-br from-cake-blush to-cake-lavender rounded-[2.5rem] blur-2xl opacity-60 dark:opacity-30"></div>
-            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-cake-plum/50 aspect-[4/5] max-h-[420px]">
-              <img src="assets/g6.jpg" alt="Elena and Marcus wedding celebration cake" class="w-full h-full object-cover">
-            </div>
-          </div>
-        </div>
-
-        <!-- Theory & Narrative Content -->
-        <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cake-blush/60 dark:bg-cake-plum/40 border border-cake-rose/30 mb-4">
-            <span class="w-2 h-2 rounded-full bg-cake-rose animate-pulse"></span>
-            <span class="text-cake-deep dark:text-cake-rose text-[10px] uppercase tracking-[0.25em] font-bold">The Art of Story-Driven Design</span>
-          </div>
-          <h3 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6 leading-tight">
-            How Every Love Story Shapes a <span class="italic gradient-text-gold">Bespoke Masterpiece</span>
-          </h3>
-          
-          <div class="space-y-4 text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed font-light mb-8">
-            <p>
-              At Sweet Serenity, we believe a wedding cake is far more than a confectionary centerpiece — it is a visual embodiment of a couple's shared journey, personalities, and wedding aesthetic. Our design theory is rooted in translating abstract romance into edible sculpture.
-            </p>
-            <p>
-              Take Elena & Marcus’s celebration at an Italianate garden estate: their mutual adoration for Mediterranean botanicals and minimalist architecture inspired a balanced three-tier structure with subtle stone-textured buttercream, offset by soft cascading ivory garden roses and 24-karat edible gold accents.
-            </p>
-          </div>
-
-          <!-- Theory Pillars / Story Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-            <div class="p-5 rounded-2xl bg-white/70 dark:bg-white/5 border border-cake-rose/20 dark:border-white/10 shadow-sm">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="w-8 h-8 rounded-xl bg-cake-blush dark:bg-cake-plum/50 flex items-center justify-center text-cake-deep dark:text-cake-rose text-sm">
-                  <i class="fas fa-palette"></i>
-                </div>
-                <h4 class="font-serif font-bold text-base text-dark-gray dark:text-white">Color Harmony</h4>
-              </div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                Color palettes are matched precisely to florals, linens, and venue lighting to create total aesthetic cohesion across the room.
-              </p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-white/70 dark:bg-white/5 border border-cake-rose/20 dark:border-white/10 shadow-sm">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="w-8 h-8 rounded-xl bg-cake-mint/30 dark:bg-cake-plum/50 flex items-center justify-center text-cake-deep dark:text-cake-rose text-sm">
-                  <i class="fas fa-layer-group"></i>
-                </div>
-                <h4 class="font-serif font-bold text-base text-dark-gray dark:text-white">Flavor Narrative</h4>
-              </div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                Tier flavors are curated to mirror personal memories, combining Madagascar vanilla bean, Meyer lemon curd, and wild raspberry coulis.
-              </p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-white/70 dark:bg-white/5 border border-cake-rose/20 dark:border-white/10 shadow-sm">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="w-8 h-8 rounded-xl bg-cake-gold/20 dark:bg-cake-plum/50 flex items-center justify-center text-cake-deep dark:text-cake-gold text-sm">
-                  <i class="fas fa-feather-pointed"></i>
-                </div>
-                <h4 class="font-serif font-bold text-base text-dark-gray dark:text-white">Artisanal Detailing</h4>
-              </div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                Every petal, wafer ruffle, and delicate gold foil leaf is individually placed by hand over 20+ studio preparation hours.
-              </p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-white/70 dark:bg-white/5 border border-cake-rose/20 dark:border-white/10 shadow-sm">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="w-8 h-8 rounded-xl bg-cake-lavender/40 dark:bg-cake-plum/50 flex items-center justify-center text-cake-deep dark:text-cake-rose text-sm">
-                  <i class="fas fa-champagne-glasses"></i>
-                </div>
-                <h4 class="font-serif font-bold text-base text-dark-gray dark:text-white">Guest Experience</h4>
-              </div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">
-                The cake and dessert table create a memorable photo focal point that leaves a lasting sensory impression on every guest.
-              </p>
-            </div>
-          </div>
-
-          <!-- Bottom Quote / CTA -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-cake-blush dark:border-white/10">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl text-cake-gold">“</span>
-              <p class="text-xs italic text-gray-600 dark:text-gray-300">
-                A centerpiece that looked like high sculpture and tasted beyond our dreams.
-              </p>
-            </div>
-            <a href="contact.html" class="inline-flex items-center gap-2 text-cake-deep dark:text-cake-rose text-xs uppercase tracking-widest font-bold hover:gap-3 transition-all whitespace-nowrap">
-              <span>Tell Us Your Story</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+  <!-- LIGHTBOX MODAL POPUP -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden flex items-center justify-center p-4 sm:p-8 transition-opacity duration-300">
+    <button id="lightbox-close" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl transition z-10" aria-label="Close Lightbox">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="relative max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[70vh] rounded-2xl object-contain shadow-2xl border border-white/10">
+      <div class="text-center mt-4">
+        <h3 id="lightbox-title" class="font-serif text-2xl font-bold text-white"></h3>
+        <p id="lightbox-desc" class="text-gray-400 text-sm mt-1"></p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- SECTION 4: BEHIND THE SCENES -->
-  <section class="py-20 lg:py-32 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
-    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 lg:mb-20">
-        <div class="inline-block px-4 py-1 rounded-full bg-cake-mint/50 dark:bg-cake-deep/20 border border-cake-rose/30 mb-6">
-          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Behind the Scenes</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-          Inside Our <span class="italic gradient-text-gold">Studio</span>
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">A peek into the artistry and care that goes into every single cake.</p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/p2.jpg" alt="Baker hands decorating cake" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-hand-sparkles text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Hand Decorating</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/tasting-session.jpg" alt="Cake batter being mixed" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-blender text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Fresh Batter</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/p8.jpg" alt="Sugar flowers" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-seedling text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Sugar Florals</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/p9.jpg" alt="Cake assembly" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-layer-group text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Tier Assembly</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g8.jpg" alt="Cake detail work" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-paintbrush text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Hand Painting</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/gallery-royal.jpg" alt="Cake delivery" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-truck text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Safe Delivery</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/home2-portfolio-luxe.jpg" alt="Cake topper placement" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-gem text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Final Touches</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-item rounded-3xl aspect-square shadow-xl">
-          <img src="assets/g7.jpg" alt="Table setup" class="w-full h-full object-cover">
-          <div class="overlay absolute inset-0 bg-cake-plum/70 flex items-center justify-center">
-            <div class="overlay-content text-center">
-              <i class="fas fa-crown text-4xl text-cake-gold mb-2"></i>
-              <p class="text-white font-serif font-bold text-sm">Venue Setup</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
- 
-  <!-- SECTION 6: CTA / CONSULTATION -->
-  <section class="py-20 lg:py-32 bg-gradient-to-br from-cake-blush/40 via-warm-gray to-cake-lavender/40 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 transition-colors overflow-hidden">
-    <div class="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="relative rounded-[3rem] bg-white/80 dark:bg-[#1A101A]/80 backdrop-blur-xl p-8 sm:p-12 md:p-16 shadow-2xl border border-white/50 dark:border-white/10 text-center overflow-hidden">
-
-        <div class="absolute -top-20 -left-20 w-64 h-64 bg-cake-blush/60 dark:bg-cake-deep/20 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-cake-lavender/60 dark:bg-cake-plum/20 rounded-full blur-3xl"></div>
-
-        <div class="relative z-10">
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cake-blush/50 dark:bg-cake-plum/40 border border-cake-rose/40 mb-6">
-            <i class="fas fa-camera-retro text-cake-gold"></i>
-            <span class="text-cake-deep dark:text-cake-rose text-[10px] uppercase tracking-widest font-bold">Your Turn!</span>
-          </div>
-
-          <h2 class="font-serif font-bold text-dark-gray dark:text-white text-3xl sm:text-4xl md:text-6xl mb-6 leading-tight">
-            Let's Create Your <span class="italic gradient-text">Gallery Moment</span>
-          </h2>
-
-          <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-base md:text-lg mb-10 leading-relaxed">
-            Your wedding deserves a cake as beautiful as the photos in this gallery. Book a free consultation and let's design something unforgettable together.
-          </p>
-
-          <div class="flex flex-wrap gap-4 justify-center">
-            <a href="contact.html" class="bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-10 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-3">
-              <i class="fas fa-calendar-check"></i> Book Free Consultation
-            </a>
-            <a href="packages.html" class="border-2 border-cake-deep dark:border-cake-rose text-cake-deep dark:text-cake-rose hover:bg-cake-blush dark:hover:bg-cake-plum px-10 py-4 rounded-full text-xs uppercase tracking-widest font-bold transition duration-300 flex items-center gap-3">
-              <i class="fas fa-box"></i> View Packages
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#0A050A] text-white pt-24 pb-8 relative overflow-hidden border-t border-white/10">
-    <div class="absolute bottom-0 left-0 w-full flex justify-center pointer-events-none opacity-[0.03] translate-y-1/4 select-none">
-      <h2 class="font-script font-black text-[15vw] whitespace-nowrap">Sweet Serenity</h2>
-    </div>
-    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+  <!-- UNIFIED FOOTER -->
+  <footer class="bg-[#0A050A] text-white pt-20 pb-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-16">
         <div class="lg:col-span-4">
-          <a href="index.html" class="flex items-center gap-3 group">
-            <span class="text-3xl font-script text-white tracking-wide">
-              <span class="text-cake-rose italic font-script text-3xl">Sweet</span> <span class="text-cake-gold italic font-script text-3xl">Serenity</span>
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <span class="font-serif text-2xl font-bold tracking-tight text-white leading-none">
+              <span class="font-script text-3xl text-cake-rose">Sweet</span> <span class="font-script text-3xl text-cake-gold">Serenity</span>
             </span>
           </a>
-          <p class="text-gray-400 text-sm mt-6 mb-8 max-w-md leading-relaxed">Elegant wedding cakes and dessert tables designed to reflect your love story. Handcrafted with love in Los Angeles.</p>
-          <div class="flex gap-4">
-            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition"><i class="fab fa-tiktok"></i></a>
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 max-w-sm">
+            Bespoke wedding cakes and luxury dessert tables hand-crafted with botanical florals, 24k gold leaf, and organic ingredients.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition text-xs"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition text-xs"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-cake-gold hover:text-cake-gold transition text-xs"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
         <div class="lg:col-span-2">
-          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Explore</h4>
-          <ul class="space-y-3 text-sm text-gray-400">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-gray-400">Navigation</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="index.html" class="hover:text-cake-gold transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-cake-gold transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-cake-gold transition">Services</a></li>
             <li><a href="cakes.html" class="hover:text-cake-gold transition">Cakes</a></li>
-            <li><a href="desserts.html" class="hover:text-cake-gold transition">Desserts</a></li>
-            <li><a href="packages.html" class="hover:text-cake-gold transition">Packages</a></li>
-            <li><a href="gallery.html" class="hover:text-cake-gold transition">Gallery</a></li>
-            <li><a href="portfolio.html" class="hover:text-cake-gold transition">Portfolio</a></li>
+            <li><a href="desserts.html" class="hover:text-cake-gold transition">Dessert Tables</a></li>
           </ul>
         </div>
-        <div class="lg:col-span-3">
-          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Legal</h4>
-          <ul class="space-y-3 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-cake-gold transition">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-cake-gold transition">Terms of Service</a></li>
-            <li><a href="#" class="hover:text-cake-gold transition">Shipping Policy</a></li>
-            <li><a href="#" class="hover:text-cake-gold transition">Returns & Refunds</a></li>
+        <div class="lg:col-span-2">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-gray-400">Portfolio</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="packages.html" class="hover:text-cake-gold transition">Packages &amp; Pricing</a></li>
+            <li><a href="gallery.html" class="text-cake-gold font-bold">Photo Gallery</a></li>
+            <li><a href="portfolio.html" class="hover:text-cake-gold transition">Real Weddings</a></li>
+            <li><a href="contact.html" class="hover:text-cake-gold transition">Book Tasting</a></li>
           </ul>
         </div>
-        <div class="lg:col-span-3">
-          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-8 text-gray-400">Connect</h4>
-          <ul class="space-y-3 text-gray-400 text-sm">
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-envelope text-cake-gold shrink-0"></i>
-              <a href="mailto:hello@sweetserenity.com" class="text-cake-gold hover:text-white transition">hello@sweetserenity.com</a>
+        <div class="lg:col-span-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4 text-gray-400">Atelier Studio</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li class="flex items-start gap-2.5">
+              <i class="fas fa-location-dot text-cake-gold mt-1"></i>
+              <span>742 Evergreen Terrace, Suite 100, Los Angeles, CA</span>
             </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-cake-gold shrink-0"></i>
+            <li class="flex items-center gap-2.5">
+              <i class="fas fa-envelope text-cake-gold"></i>
+              <a href="mailto:hello@sweetserenity.com" class="hover:text-cake-gold transition">hello@sweetserenity.com</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fas fa-phone text-cake-gold"></i>
               <a href="tel:+15551234567" class="hover:text-cake-gold transition">+1 (555) 123-4567</a>
             </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-location-dot text-cake-gold shrink-0"></i>
-              <span>Los Angeles, CA — Ships Nationwide</span>
+            <li class="flex items-center gap-2.5 text-gray-500">
+              <i class="fas fa-clock text-cake-gold"></i>
+              <span>Tastings by Appointment · Tue - Sun</span>
             </li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-gray-500 text-[10px] uppercase tracking-widest">© 2026 Sweet Serenity. All rights reserved.</p>
-        <div class="flex gap-8 text-[10px] text-gray-500 uppercase tracking-widest">
-          <a href="#" class="hover:text-cake-gold transition">Privacy</a>
-          <a href="#" class="hover:text-cake-gold transition">Terms</a>
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
+        <p>© 2026 Sweet Serenity Atelier. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-cake-gold transition">Privacy Policy</a>
+          <a href="#" class="hover:text-cake-gold transition">Terms of Service</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
     (function() {
+      // Theme Toggle
       const themeToggle = document.getElementById('theme-toggle'), mobileTheme = document.getElementById('mobile-theme-toggle'), html = document.documentElement;
       function toggleTheme() { html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); }
       if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
       if (mobileTheme) mobileTheme.addEventListener('click', toggleTheme);
       if (localStorage.getItem('theme') === 'light') html.classList.remove('dark'); else html.classList.add('dark');
 
+      // RTL Toggle
       const rtlBtn = document.getElementById('rtl-toggle'), mobileRtl = document.getElementById('mobile-rtl-toggle');
       function toggleRTL() { if (html.getAttribute('dir') === 'rtl') html.removeAttribute('dir'); else html.setAttribute('dir', 'rtl'); localStorage.setItem('direction', html.getAttribute('dir') || 'ltr'); }
       if (rtlBtn) rtlBtn.addEventListener('click', toggleRTL);
       if (mobileRtl) mobileRtl.addEventListener('click', toggleRTL);
       if (localStorage.getItem('direction') === 'rtl') html.setAttribute('dir', 'rtl');
 
-      const menuBtn = document.getElementById('mobile-menu-button'), mobileMenu = document.getElementById('mobile-menu'), menuIcon = document.getElementById('menu-icon'), closeIcon = document.getElementById('close-icon'), body = document.body;
-      function closeMobileMenu() { if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); if (menuIcon && closeIcon) { menuIcon.classList.remove('hidden'); closeIcon.classList.add('hidden'); } body.classList.remove('menu-open'); body.style.overflow = ''; } }
-      function openMobileMenu() { if (mobileMenu && mobileMenu.classList.contains('hidden')) { mobileMenu.classList.remove('hidden'); if (menuIcon && closeIcon) { menuIcon.classList.add('hidden'); closeIcon.classList.remove('hidden'); } body.classList.add('menu-open'); body.style.overflow = 'hidden'; } }
-      if (menuBtn && mobileMenu) { menuBtn.addEventListener('click', (e) => { e.stopPropagation(); mobileMenu.classList.contains('hidden') ? openMobileMenu() : closeMobileMenu(); }); document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', closeMobileMenu)); window.addEventListener('resize', () => { if (window.innerWidth >= 1280 && !mobileMenu.classList.contains('hidden')) closeMobileMenu(); }); }
-
-      const homeBtn = document.getElementById('mobile-home-dropdown-btn');
-      const homeSub = document.getElementById('mobile-home-submenu');
-      const homeIcon = document.getElementById('mobile-home-icon');
-      if (homeBtn && homeSub) {
-        homeBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          homeSub.classList.toggle('hidden');
-          if (homeIcon) homeIcon.classList.toggle('rotate');
+      // Mobile Menu
+      const menuBtn = document.getElementById('mobile-menu-button'), mobileMenu = document.getElementById('mobile-menu'), menuIcon = document.getElementById('menu-icon'), closeIcon = document.getElementById('close-icon');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          if (menuIcon && closeIcon) {
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+          }
         });
       }
 
-      // Filter functionality
-      const filterButtons = document.querySelectorAll('.filter-btn');
-      filterButtons.forEach(btn => {
+      // Mobile Home Submenu
+      const homeBtn = document.getElementById('mobile-home-dropdown-btn'), homeSub = document.getElementById('mobile-home-submenu'), homeIcon = document.getElementById('mobile-home-icon');
+      if (homeBtn && homeSub) {
+        homeBtn.addEventListener('click', () => {
+          homeSub.classList.toggle('hidden');
+          if (homeIcon) homeIcon.classList.toggle('rotate-180');
+        });
+      }
+
+      // Real Filtering Logic
+      const filterBtns = document.querySelectorAll('.filter-tab');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-          filterButtons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          // Style tabs
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-cake-deep', 'text-white', 'shadow-md');
+            b.classList.add('bg-white', 'dark:bg-white/5', 'text-gray-700', 'dark:text-gray-300', 'border');
+          });
+          btn.classList.add('bg-cake-deep', 'text-white', 'shadow-md');
+          btn.classList.remove('bg-white', 'dark:bg-white/5', 'text-gray-700', 'dark:text-gray-300', 'border');
+
+          // Filter elements
+          galleryItems.forEach(item => {
+            const cat = item.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              item.classList.remove('gallery-item', 'hidden-filter');
+              item.classList.add('gallery-item');
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
         });
       });
+
+      // Lightbox Modal Logic
+      const modal = document.getElementById('lightbox-modal');
+      const modalImg = document.getElementById('lightbox-img');
+      const modalTitle = document.getElementById('lightbox-title');
+      const modalDesc = document.getElementById('lightbox-desc');
+      const modalClose = document.getElementById('lightbox-close');
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const src = item.getAttribute('data-src');
+          const title = item.getAttribute('data-title');
+          const desc = item.getAttribute('data-desc');
+
+          modalImg.src = src;
+          modalImg.alt = title;
+          modalTitle.textContent = title;
+          modalDesc.textContent = desc;
+
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (modalClose) modalClose.addEventListener('click', closeModal);
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+          // Login Modal Logic
+      const loginModal = document.getElementById('login-modal');
+      const openLoginBtns = document.querySelectorAll('.open-login-btn');
+      const closeLoginBtn = document.getElementById('close-login-modal');
+      const tabSignIn = document.getElementById('tab-signin');
+      const tabSignUp = document.getElementById('tab-signup');
+      const signInForm = document.getElementById('signin-form');
+      const signUpForm = document.getElementById('signup-form');
+
+      function openModal() {
+        if (!loginModal) return;
+        loginModal.classList.remove('hidden');
+        loginModal.classList.add('flex');
+        setTimeout(() => {
+          const content = loginModal.querySelector('.modal-content');
+          if (content) {
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+          }
+        }, 10);
+        if (typeof closeMobileMenu === 'function') closeMobileMenu();
+        else {
+          const m = document.getElementById('mobile-menu');
+          if (m && !m.classList.contains('hidden')) m.classList.add('hidden');
+        }
+      }
+
+      function closeModal() {
+        if (!loginModal) return;
+        const content = loginModal.querySelector('.modal-content');
+        if (content) {
+          content.classList.remove('scale-100', 'opacity-100');
+          content.classList.add('scale-95', 'opacity-0');
+        }
+        setTimeout(() => {
+          loginModal.classList.add('hidden');
+          loginModal.classList.remove('flex');
+        }, 200);
+      }
+
+      openLoginBtns.forEach(btn => btn.addEventListener('click', openModal));
+      if (closeLoginBtn) closeLoginBtn.addEventListener('click', closeModal);
+      if (loginModal) {
+        loginModal.addEventListener('click', (e) => {
+          if (e.target === loginModal) closeModal();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && loginModal && !loginModal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+
+      if (tabSignIn && tabSignUp && signInForm && signUpForm) {
+        tabSignIn.addEventListener('click', () => {
+          tabSignIn.classList.add('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignIn.classList.remove('text-gray-500', 'dark:text-gray-400');
+          tabSignUp.classList.remove('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignUp.classList.add('text-gray-500', 'dark:text-gray-400');
+          signInForm.classList.remove('hidden');
+          signUpForm.classList.add('hidden');
+        });
+        tabSignUp.addEventListener('click', () => {
+          tabSignUp.classList.add('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignUp.classList.remove('text-gray-500', 'dark:text-gray-400');
+          tabSignIn.classList.remove('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignIn.classList.add('text-gray-500', 'dark:text-gray-400');
+          signUpForm.classList.remove('hidden');
+          signInForm.classList.add('hidden');
+        });
+
+        signInForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const submitBtn = signInForm.querySelector('button[type="submit"]');
+          const original = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fas fa-check me-2"></i> Signed In!';
+          submitBtn.classList.add('bg-green-600');
+          setTimeout(() => {
+            submitBtn.innerHTML = original;
+            submitBtn.classList.remove('bg-green-600');
+            closeModal();
+          }, 1500);
+        });
+
+        signUpForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const submitBtn = signUpForm.querySelector('button[type="submit"]');
+          const original = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fas fa-check me-2"></i> Account Created!';
+          submitBtn.classList.add('bg-green-600');
+          setTimeout(() => {
+            submitBtn.innerHTML = original;
+            submitBtn.classList.remove('bg-green-600');
+            closeModal();
+          }, 1500);
+        });
+      }
     })();
   </script>
+
 </body>
 </html>

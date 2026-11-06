@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -271,21 +271,23 @@
 <body class="font-sans text-gray-800 antialiased transition-colors duration-300 bg-warm-gray dark:bg-dark-gray dark:text-gray-100 bg-grain">
 
   <!-- HEADER -->
+  <!-- HEADER -->
   <nav class="bg-white/95 dark:bg-[#1A101A]/95 backdrop-blur-xl fixed w-full top-0 z-50 border-b border-gray-200/50 dark:border-white/10 transition-all duration-500 shadow-lg">
-    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1400px] mx-auto nav-container px-4 sm:px-6 lg:px-8 xl:px-10">
       <div class="flex justify-between items-center h-16 md:h-20">
         <div class="flex-shrink-0">
           <a href="index.html" class="flex items-center gap-3 group">
-            <span class="text-xl md:text-2xl font-serif font-bold tracking-wide transition-colors">
+            <span class="text-xl md:text-2xl font-serif font-bold text-dark-gray dark:text-white tracking-wide transition-colors">
               <span class="text-cake-deep italic font-script text-3xl">Sweet</span> <span class="text-cake-gold italic font-script text-3xl">Serenity</span>
             </span>
           </a>
         </div>
 
-        <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-4">
-          <div class="flex items-center gap-1 lg:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
+        <!-- Desktop Navigation -->
+        <div class="hidden xl:flex items-center justify-center flex-1 nav-menu-container mx-2 2xl:mx-6">
+          <div class="flex items-center gap-0.5 2xl:gap-1 bg-gray-50/50 dark:bg-white/5 p-1.5 rounded-full border border-gray-100 dark:border-white/5">
             <div class="relative group">
-              <button class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium transition px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 flex items-center gap-1 text-[10px] uppercase tracking-widest">
+              <button class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium transition px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 flex items-center gap-1 text-[10px] uppercase tracking-widest">
                 <span>Home</span>
                 <i class="fas fa-chevron-down text-[8px] ms-1"></i>
               </button>
@@ -294,32 +296,44 @@
                 <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest rounded-b-2xl">Home 2</a>
               </div>
             </div>
-            <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">About</a>
-            <a href="services.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Services</a>
-            <a href="cakes.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Cakes</a>
-            <a href="desserts.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Desserts</a>
-            <a href="packages.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Packages</a>
-            <a href="gallery.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Gallery</a>
-            <a href="portfolio.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-3 py-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest">Portfolio</a>
-            <a href="contact.html" class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold px-3 py-2 rounded-full text-[10px] uppercase tracking-widest">Contact</a>
+            <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">About</a>
+            <a href="services.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Services</a>
+            <a href="cakes.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Cakes</a>
+            <a href="desserts.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Desserts</a>
+            <a href="packages.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Packages</a>
+            <a href="gallery.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Gallery</a>
+            <a href="portfolio.html" class="text-gray-600 dark:text-gray-300 hover:text-cake-deep font-medium px-2.5 2xl:px-3 py-1.5 rounded-full hover:bg-white/50 dark:hover:bg-white/10 text-[10px] uppercase tracking-widest transition">Portfolio</a>
+            <a href="contact.html" class="bg-white dark:bg-[#2A1A2A] shadow-sm text-cake-deep font-bold px-3 py-1.5 rounded-full text-[10px] uppercase tracking-widest">Contact</a>
+            
           </div>
         </div>
 
-        <div class="hidden xl:flex items-center gap-3 shrink-0">
-          <div class="flex items-center gap-2">
-            <button id="rtl-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold transition-all"><span class="text-[9px] font-black">RTL</span></button>
-            <button id="theme-toggle" class="w-9 h-9 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold transition-all">
+        <div class="hidden xl:flex items-center gap-2.5 2xl:gap-3 shrink-0">
+          <div class="flex items-center gap-1.5">
+            <button id="rtl-toggle" class="w-9 h-9 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold text-cake-deep dark:text-cake-gold transition-all" aria-label="Toggle text direction"><span class="text-[9px] font-black">RTL</span></button>
+            <button id="theme-toggle" class="w-9 h-9 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:border-cake-gold text-cake-deep dark:text-cake-gold transition-all" aria-label="Toggle dark mode">
               <i class="fas fa-moon dark:hidden text-xs"></i>
               <i class="fas fa-sun hidden dark:inline text-xs"></i>
             </button>
           </div>
-          <a href="contact.html#contact-form" class="bg-cake-coral hover:bg-cake-deep text-white px-5 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-lg hover:-translate-y-0.5 transition duration-300 whitespace-nowrap flex items-center gap-2">
-            <i class="fas fa-shopping-bag"></i> Order Now
+
+          <!-- Visible Login / Sign In Option -->
+          <button class="open-login-btn flex items-center gap-2 text-cake-plum dark:text-white hover:text-cake-deep dark:hover:text-cake-gold font-bold text-[10px] 2xl:text-[11px] uppercase tracking-wider px-3.5 py-2 rounded-full border border-cake-rose/40 dark:border-white/15 hover:border-cake-gold hover:bg-cake-blush/20 dark:hover:bg-white/5 transition-all duration-300 shadow-sm">
+            <i class="fas fa-user-circle text-cake-gold text-sm"></i>
+            <span>Sign In</span>
+          </button>
+
+          <a href="contact.html#contact-form" class="bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-5 py-2.5 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-md hover:-translate-y-0.5 transition duration-300 whitespace-nowrap flex items-center gap-2">
+            <i class="fas fa-shopping-bag text-xs"></i> Order Now
           </a>
         </div>
 
-        <div class="xl:hidden flex items-center">
-          <button id="mobile-menu-button" class="text-dark-gray dark:text-white p-2 focus:outline-none active:scale-95 transition hover:text-cake-deep">
+        <div class="xl:hidden flex items-center gap-2">
+          <!-- Mobile Quick Sign In Button -->
+          <button class="open-login-btn w-9 h-9 rounded-full border border-cake-rose/40 dark:border-white/10 flex items-center justify-center text-cake-deep dark:text-cake-gold hover:border-cake-gold transition" aria-label="Sign in">
+            <i class="fas fa-user-circle text-base"></i>
+          </button>
+          <button id="mobile-menu-button" class="text-dark-gray dark:text-white p-2 focus:outline-none active:scale-95 transition hover:text-cake-deep" aria-label="Toggle mobile menu">
             <i id="menu-icon" class="fas fa-bars text-lg"></i>
             <i id="close-icon" class="fas fa-times text-lg hidden"></i>
           </button>
@@ -327,8 +341,25 @@
       </div>
     </div>
 
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-[#1A101A] border-t border-gray-200 dark:border-white/10 absolute w-full shadow-2xl z-50" style="top: 64px;">
       <div class="px-5 py-5 pb-8 space-y-1 max-h-[calc(100vh-64px)] overflow-y-auto">
+        <!-- Client Portal Quick Banner -->
+        <div class="p-3.5 bg-gradient-to-r from-cake-blush/30 via-warm-gray to-cake-lavender/30 dark:from-cake-plum/20 dark:to-cake-deep/10 rounded-2xl border border-cake-rose/30 mb-3 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-cake-deep text-cake-gold flex items-center justify-center font-bold text-sm shadow">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-cake-plum dark:text-white">Client Portal</p>
+              <p class="text-[10px] text-gray-500 dark:text-gray-400">Order tracker & tasting notes</p>
+            </div>
+          </div>
+          <button class="open-login-btn bg-white dark:bg-[#2A1A2A] text-cake-deep dark:text-cake-gold font-bold text-xs px-3.5 py-1.5 rounded-full border border-cake-gold/40 shadow-sm uppercase tracking-wider hover:bg-cake-rose/20 transition">
+            Sign In
+          </button>
+        </div>
+
         <div class="w-full">
           <button id="mobile-home-dropdown-btn" class="w-full flex justify-between items-center px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium tracking-wider uppercase transition">
             <span>Home</span>
@@ -336,7 +367,7 @@
           </button>
           <div id="mobile-home-submenu" class="hidden pl-4 space-y-1 mt-1 bg-gray-50/50 dark:bg-white/5 rounded-xl py-2">
             <a href="index.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 text-sm font-medium uppercase">Home 1</a>
-            <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 text-sm font-medium uppercase">Home 2</a>
+            <a href="home2.html" class="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:text-cake-deep text-sm font-medium uppercase">Home 2</a>
           </div>
         </div>
         <a href="about.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">About</a>
@@ -347,559 +378,810 @@
         <a href="gallery.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Gallery</a>
         <a href="portfolio.html" class="block px-4 py-3.5 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/10 rounded-xl text-sm font-medium uppercase transition">Portfolio</a>
         <a href="contact.html" class="block px-4 py-3.5 text-cake-deep bg-gray-50/80 dark:bg-white/5 rounded-xl text-sm font-bold uppercase">Contact</a>
+        
         <div class="pt-5 mt-5 border-t border-gray-200 dark:border-white/10">
-          <div class="grid grid-cols-2 gap-3">
-            <button id="mobile-rtl-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border">RTL Mode</button>
-            <button id="mobile-theme-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border">Dark Mode</button>
+          <div class="grid grid-cols-2 gap-3 mb-3">
+            <button id="mobile-rtl-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border border-gray-200 dark:border-white/10">RTL Mode</button>
+            <button id="mobile-theme-toggle" class="bg-gray-50 dark:bg-white/5 px-4 py-3 rounded-xl text-xs uppercase font-bold border border-gray-200 dark:border-white/10">Dark Mode</button>
           </div>
-          <a href="contact.html#contact-form" class="block mt-4 bg-cake-coral text-white text-center px-4 py-4 rounded-xl text-sm uppercase font-black">Order Now</a>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="open-login-btn border border-cake-deep/40 dark:border-cake-gold/40 text-cake-deep dark:text-cake-gold text-center px-4 py-3.5 rounded-xl text-xs uppercase font-bold hover:bg-cake-blush/20 transition flex items-center justify-center gap-2">
+              <i class="fas fa-user-circle text-xs"></i> Sign In
+            </button>
+            <a href="contact.html#contact-form" class="bg-cake-coral text-white text-center px-4 py-3.5 rounded-xl text-xs uppercase font-black shadow hover:bg-cake-deep transition flex items-center justify-center gap-2">
+              <i class="fas fa-shopping-bag text-xs"></i> Order Now
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- SECTION 1: HERO WITH IMAGE -->
-  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-cake-cream via-warm-gray to-cake-blush dark:from-cake-plum/30 dark:via-[#1A101A] dark:to-cake-deep/20">
-    <div class="absolute top-20 -left-20 w-96 h-96 bg-cake-lavender/40 dark:bg-cake-deep/20 rounded-full blur-3xl animate-float"></div>
-    <div class="absolute bottom-0 -right-20 w-[28rem] h-[28rem] bg-cake-rose/40 dark:bg-cake-plum/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+  <!-- CLIENT LOGIN / SIGN IN MODAL -->
+  <div id="login-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/65 backdrop-blur-md transition-opacity duration-300">
+    <div class="relative w-full max-w-lg bg-white dark:bg-[#1A101A] rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-cake-rose/30 dark:border-cake-gold/25 transform transition-all duration-300 scale-95 opacity-0 modal-content max-h-[92vh] overflow-y-auto">
+      
+      <!-- Close button -->
+      <button id="close-login-modal" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-300 hover:text-cake-deep dark:hover:text-cake-gold flex items-center justify-center transition" aria-label="Close modal">
+        <i class="fas fa-times text-sm"></i>
+      </button>
 
-    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Modal Header -->
+      <div class="text-center mb-5">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cake-blush to-cake-rose text-cake-deep dark:from-cake-plum dark:to-cake-deep dark:text-cake-gold shadow-md mb-2.5">
+          <i class="fas fa-cake-candles text-lg"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-dark-gray dark:text-white">
+          Client <span class="italic font-script text-3xl gradient-text">Portal</span>
+        </h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Access your cake sketches, tasting palette & orders</p>
+      </div>
 
+      <!-- Tabs -->
+      <div class="flex rounded-full bg-gray-100 dark:bg-white/5 p-1 mb-5 border border-gray-200 dark:border-white/10 max-w-xs mx-auto">
+        <button id="tab-signin" class="flex-1 py-2 text-xs font-bold uppercase tracking-wider rounded-full bg-white dark:bg-[#2A1A2A] text-cake-deep dark:text-cake-gold shadow-sm transition">
+          Sign In
+        </button>
+        <button id="tab-signup" class="flex-1 py-2 text-xs font-bold uppercase tracking-wider rounded-full text-gray-500 dark:text-gray-400 hover:text-cake-deep transition">
+          Register
+        </button>
+      </div>
+
+      <!-- Sign In Form -->
+      <form id="signin-form" class="space-y-3.5">
+        <div>
+          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Email Address</label>
+          <div class="relative">
+            <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="email" required placeholder="bride.groom@example.com" class="w-full ps-10 pe-4 py-2.5 sm:py-3 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-1 ms-2 me-2">
+            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">Password</label>
+            <a href="#" class="text-[10px] text-cake-deep dark:text-cake-gold hover:underline">Forgot?</a>
+          </div>
+          <div class="relative">
+            <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="password" required placeholder="••••••••" class="w-full ps-10 pe-4 py-2.5 sm:py-3 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 px-2 pt-0.5">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" class="rounded text-cake-deep focus:ring-cake-rose accent-cake-deep">
+            <span>Remember me</span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300">
+          Sign In to Portal
+        </button>
+
+        <!-- Footer note (SignIn only) -->
+        <div class="mt-4 pt-3 border-t border-gray-100 dark:border-white/10 text-center">
+          <p class="text-[11px] text-gray-400">
+            Need assistance? Call our atelier at <a href="tel:+15551234567" class="text-cake-gold font-bold hover:underline">+1 (555) 123-4567</a>
+          </p>
+        </div>
+      </form>
+
+      <!-- Register Form -->
+      <form id="signup-form" class="space-y-3 hidden">
+        <div>
+          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Full Names</label>
+          <div class="relative">
+            <i class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="text" placeholder="Emma & James" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Email Address</label>
+          <div class="relative">
+            <i class="fas fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+            <input type="email" placeholder="hello@example.com" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Wedding Date</label>
+            <div class="relative">
+              <i class="fas fa-calendar absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+              <input type="date" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition cursor-pointer">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-1 ms-2">Password</label>
+            <div class="relative">
+              <i class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-xs text-cake-rose"></i>
+              <input type="password" placeholder="Min. 8 chars" class="w-full ps-10 pe-4 py-2.5 rounded-full border border-gray-200 dark:border-white/10 bg-gray-50/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300 mt-1">
+          Create Client Account
+        </button>
+      </form>
+    </div>
+  </div>
+
+    <!-- SECTION 1: HERO SECTION -->
+  <section class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-cake-blush/40 via-warm-gray to-transparent dark:from-cake-plum/20 dark:via-[#120B13] dark:to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
         <!-- Left: Text -->
-        <div class="text-center lg:text-left animate-fade-in opacity-0" style="animation-delay: 0.2s;">
-          <h1 class="font-serif font-black text-dark-gray dark:text-white leading-[1.25] overflow-visible mb-6 tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-            Let's <br>
-            <span class="italic font-script gradient-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl inline-block mt-3 leading-normal py-2 px-2 pr-8 sm:pr-10">Talk Cake</span>
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 dark:bg-white/5 border border-rose-200/80 dark:border-white/10 mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-cake-deep animate-pulse"></span>
+            <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">Atelier Consultation &amp; Booking</span>
+          </div>
+
+          <h1 class="font-serif font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dark-gray dark:text-white leading-[1.15] mb-6">
+            Let's Plan Your <br>
+            <span class="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic gradient-text inline-block py-1">Dream Celebration</span>
           </h1>
 
-          <p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto lg:mx-0 text-base md:text-lg font-light mb-10 leading-relaxed">
-            Whether you're ready to book or just have a few questions, we'd love to hear from you. Reach out and let's design something beautiful together.
+          <p class="text-gray-600 dark:text-gray-300 text-base md:text-lg font-light leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+            From statuesque multi-tier botanical wedding cakes to opulent dessert tablescapes, our pastry artists craft centerpieces tailored to your love story.
           </p>
 
-          <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
-            <a href="#contact-form" class="bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300 flex items-center gap-3">
-              <i class="fas fa-paper-plane"></i> Send Message
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+            <a href="#inquiry-form" class="bg-gradient-to-r from-cake-deep to-cake-rose hover:from-cake-plum hover:to-cake-deep text-white px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300">
+              Submit Wedding Inquiry
             </a>
-            <a href="tel:+15551234567" class="border-2 border-cake-deep dark:border-cake-rose text-cake-deep dark:text-cake-rose hover:bg-cake-blush dark:hover:bg-cake-plum px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold transition duration-300 flex items-center gap-3">
-              <i class="fas fa-phone"></i> Call Us Now
+            <a href="#tasting-section" class="border-2 border-cake-deep dark:border-cake-gold text-cake-deep dark:text-cake-gold hover:bg-cake-blush/40 dark:hover:bg-white/5 px-7 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold transition duration-300">
+              Book Private Tasting
             </a>
           </div>
 
-          <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
-            <div class="text-center lg:text-left">
-              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">24h</div>
-              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Reply Time</p>
+          <!-- Quick Highlights -->
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-rose-100 dark:border-white/10 max-w-lg mx-auto lg:mx-0">
+            <div>
+              <div class="font-serif text-3xl font-black text-cake-deep dark:text-cake-gold">24h</div>
+              <div class="text-[10px] uppercase tracking-widest text-gray-500 dark:text-gray-400 font-bold mt-1">Proposal Turnaround</div>
             </div>
-            <div class="text-center lg:text-left border-x border-cake-blush dark:border-cake-plum px-2">
-              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">Free</div>
-              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Consultation</p>
+            <div>
+              <div class="font-serif text-3xl font-black text-cake-deep dark:text-cake-gold">100%</div>
+              <div class="text-[10px] uppercase tracking-widest text-gray-500 dark:text-gray-400 font-bold mt-1">Scratch-Baked</div>
             </div>
-            <div class="text-center lg:text-left">
-              <div class="text-2xl md:text-3xl font-serif font-black text-cake-deep dark:text-cake-gold">7 Days</div>
-              <p class="text-[9px] uppercase tracking-widest font-bold text-gray-500 dark:text-gray-400 mt-1">Available</p>
+            <div>
+              <div class="font-serif text-3xl font-black text-cake-deep dark:text-cake-gold">5.0★</div>
+              <div class="text-[10px] uppercase tracking-widest text-gray-500 dark:text-gray-400 font-bold mt-1">Couple Rating</div>
             </div>
           </div>
         </div>
 
-        <!-- Right: IMAGE -->
-        <div class="relative animate-fade-in opacity-0" style="animation-delay: 0.4s;">
-          <div class="relative mx-auto max-w-md lg:max-w-lg">
-            <div class="absolute -inset-6 bg-gradient-to-br from-cake-gold/40 via-cake-rose/40 to-cake-lavender/40 rounded-[3rem] blur-3xl animate-shimmer"></div>
-
-            <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white dark:border-cake-plum/50 aspect-[4/5] max-h-[460px]">
-              <img
-                src="assets/c.jpg"
-                alt="Consultation and cake planning discussion - contact Sweet Serenity"
-                class="w-full h-full object-cover"
-                loading="eager">
+        <!-- Right: Framed Visual -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-cake-rose/30 to-cake-gold/30 rounded-[3rem] blur-2xl opacity-70"></div>
+            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-white/10 aspect-[3/4]">
+              <img src="assets/c.jpg" alt="Sweet Serenity wedding cake design and consultation atelier" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="eager">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent flex items-end p-8">
+                <div>
+                  <span class="text-cake-gold text-[10px] uppercase tracking-widest font-bold">Sweet Serenity Atelier</span>
+                  <h3 class="text-white font-serif text-2xl font-bold">Personalized Design Sessions</h3>
+                  <p class="text-white/80 text-xs mt-1">Tasting flights · Bespoke sketches · Florist coordination</p>
+                </div>
+              </div>
             </div>
-
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 2: CONTACT INFO CARDS -->
-  <section class="py-20 lg:py-32 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
-    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 lg:mb-20">
-        <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/50 dark:bg-cake-deep/20 border border-cake-rose/30 mb-6">
-          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Get In Touch</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-          Multiple Ways to <span class="italic gradient-text-gold">Reach Us</span>
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Pick the way that works best for you — we're always happy to chat.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Contact Card 1 -->
-        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
-          <div>
-            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-blush to-cake-rose flex items-center justify-center mb-5 shadow-lg">
-              <i class="fas fa-phone text-xl text-white"></i>
-            </div>
-            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Call Us</h3>
-            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Mon – Sun, 9AM – 6PM</p>
-          </div>
-          <a href="tel:+15551234567" class="text-cake-deep dark:text-cake-gold font-bold hover:text-cake-rose transition text-xs sm:text-sm whitespace-nowrap">+1 (555) 123-4567</a>
-        </div>
-
-        <!-- Contact Card 2 -->
-        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
-          <div>
-            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-mint to-cake-sky flex items-center justify-center mb-5 shadow-lg">
-              <i class="fas fa-envelope text-xl text-white"></i>
-            </div>
-            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Email Us</h3>
-            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">We reply within 24h</p>
-          </div>
-          <a href="mailto:hello@sweetserenity.com" class="text-cake-deep dark:text-cake-gold font-bold hover:text-cake-rose transition text-[11px] sm:text-xs xl:text-sm truncate block px-1" title="hello@sweetserenity.com">hello@sweetserenity.com</a>
-        </div>
-
-        <!-- Contact Card 3 -->
-        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
-          <div>
-            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-lavender to-cake-deep flex items-center justify-center mb-5 shadow-lg">
-              <i class="fas fa-map-marker-alt text-xl text-white"></i>
-            </div>
-            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Visit Studio</h3>
-            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">By appointment only</p>
-          </div>
-          <p class="text-cake-deep dark:text-cake-gold font-bold text-xs sm:text-sm leading-tight">123 Lane, LA, CA 90001</p>
-        </div>
-
-        <!-- Contact Card 4 -->
-        <div class="contact-card bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 lg:p-7 text-center shadow-xl border border-cake-blush dark:border-cake-plum/50 flex flex-col justify-between h-full">
-          <div>
-            <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cake-gold to-cake-coral flex items-center justify-center mb-5 shadow-lg">
-              <i class="fab fa-instagram text-xl text-white"></i>
-            </div>
-            <h3 class="text-lg lg:text-xl font-serif font-bold text-dark-gray dark:text-white mb-1">Follow Us</h3>
-            <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">Daily inspiration & BTS</p>
-          </div>
-          <a href="#" class="text-cake-deep dark:text-cake-gold font-bold hover:text-cake-rose transition text-xs sm:text-sm whitespace-nowrap">@sweetserenity</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: CONTACT FORM (MAIN) -->
-  <section id="contact-form" class="py-20 lg:py-32 bg-gradient-to-br from-cake-lavender/30 via-warm-gray to-cake-blush/40 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 transition-colors overflow-hidden">
-    <div class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 lg:mb-20">
-        <div class="inline-block px-4 py-1 rounded-full bg-white/60 dark:bg-cake-plum/30 border border-cake-rose/30 mb-6">
-          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Send a Message</span>
+  <!-- SECTION 2: CAKE & DESSERT OPTIONS & PRICING -->
+  <section class="py-20 lg:py-28 bg-white dark:bg-[#160D17] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/60 dark:bg-cake-plum/40 border border-cake-rose/30 mb-4">
+          <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">Curated Options &amp; Investment</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-          Let's Start a <span class="italic gradient-text">Conversation</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-4">
+          Catering Options &amp; <span class="italic gradient-text-gold">Pricing Tiers</span>
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Fill out the form below and we'll get back to you within 24 hours.</p>
+        <p class="text-gray-500 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+          Transparent pricing for custom celebrations. Every booking includes a complimentary tasting appointment, custom design sketches, and dedicated event coordination.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-
-        <!-- Left: Side info -->
-        <div class="lg:col-span-2 space-y-6">
-          <div class="bg-gradient-to-br from-cake-deep to-cake-plum rounded-[2rem] p-8 shadow-xl text-white">
-            <h3 class="font-serif text-2xl font-bold mb-4">Why Reach Out?</h3>
-            <ul class="space-y-4">
-              <li class="flex items-start gap-3">
-                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
-                <div>
-                  <p class="font-bold text-sm">Free Consultation</p>
-                  <p class="text-white/70 text-xs mt-1">No obligation, just great ideas</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
-                <div>
-                  <p class="font-bold text-sm">Tasting Appointment</p>
-                  <p class="text-white/70 text-xs mt-1">Try 6 seasonal flavors</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
-                <div>
-                  <p class="font-bold text-sm">Custom Quote</p>
-                  <p class="text-white/70 text-xs mt-1">Detailed pricing within 24h</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fas fa-check-circle text-cake-gold mt-1"></i>
-                <div>
-                  <p class="font-bold text-sm">Design Sketch</p>
-                  <p class="text-white/70 text-xs mt-1">See your cake before we bake</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bg-white/80 dark:bg-[#1A101A]/80 backdrop-blur-xl rounded-[2rem] p-8 shadow-xl border border-white/50 dark:border-white/10">
-            <h3 class="font-serif text-xl font-bold text-cake-plum dark:text-white mb-4">Business Hours</h3>
-            <ul class="space-y-3 text-sm">
-              <li class="flex justify-between text-gray-600 dark:text-gray-300">
-                <span>Mon – Fri</span>
-                <span class="font-bold text-cake-deep dark:text-cake-gold">9AM – 6PM</span>
-              </li>
-              <li class="flex justify-between text-gray-600 dark:text-gray-300">
-                <span>Saturday</span>
-                <span class="font-bold text-cake-deep dark:text-cake-gold">10AM – 4PM</span>
-              </li>
-              <li class="flex justify-between text-gray-600 dark:text-gray-300">
-                <span>Sunday</span>
-                <span class="font-bold text-cake-deep dark:text-cake-gold">By Appointment</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Right: Form -->
-        <div class="lg:col-span-3 bg-white/90 dark:bg-[#1A101A]/90 backdrop-blur-xl rounded-[2.5rem] p-8 md:p-10 shadow-2xl border border-white/50 dark:border-white/10">
-          <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div class="flex flex-col gap-2">
-              <label for="name" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
-                <i class="fas fa-user me-2 text-cake-deep"></i>Full Name *
-              </label>
-              <input type="text" id="name" placeholder="Emma & James" required
-                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Option 1: Bespoke Wedding Cakes -->
+        <div class="group bg-warm-gray dark:bg-[#1E1320] rounded-[2.2rem] overflow-hidden border border-rose-100 dark:border-white/10 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative w-full aspect-[16/10] overflow-hidden">
+              <img src="assets/gallery-botanical.jpg" alt="Bespoke Tiered Wedding Cake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5">
+                <span class="bg-white/95 dark:bg-[#2A1A2A]/95 backdrop-blur px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold text-cake-deep dark:text-cake-gold">Centerpiece Focus</span>
+              </div>
             </div>
-
-            <div class="flex flex-col gap-2">
-              <label for="email" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
-                <i class="fas fa-envelope me-2 text-cake-deep"></i>Email *
-              </label>
-              <input type="email" id="email" placeholder="hello@example.com" required
-                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <label for="phone" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
-                <i class="fas fa-phone me-2 text-cake-deep"></i>Phone
-              </label>
-              <input type="tel" id="phone" placeholder="+1 (555) 000-0000"
-                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <label for="date" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
-                <i class="fas fa-calendar me-2 text-cake-deep"></i>Event Date
-              </label>
-              <input type="date" id="date" required onclick="this.showPicker && this.showPicker()"
-                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm cursor-pointer">
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <label for="guests" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
-                <i class="fas fa-users me-2 text-cake-deep"></i>Guest Count
-              </label>
-              <input type="number" id="guests" placeholder="120" min="10"
-                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <label for="service" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
-                <i class="fas fa-tag me-2 text-cake-deep"></i>Service Needed
-              </label>
-              <select id="service"
-                class="px-5 py-3.5 rounded-full border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition text-sm">
-                <option>Wedding Cake</option>
-                <option>Dessert Table</option>
-                <option>Both Cake & Desserts</option>
-                <option>Tasting Appointment</option>
-                <option>Custom Quote</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="md:col-span-2 flex flex-col gap-2">
-              <label for="message" class="text-[10px] uppercase tracking-widest font-bold text-cake-plum dark:text-cake-rose ms-3">
-                <i class="fas fa-comment me-2 text-cake-deep"></i>Tell Us About Your Vision *
-              </label>
-              <textarea id="message" rows="5" placeholder="Colors, style, dessert table ideas, special requests..." required
-                class="px-5 py-4 rounded-[2rem] border-2 border-cake-blush dark:border-cake-plum bg-white dark:bg-[#2A1A2A] text-cake-plum dark:text-white font-semibold outline-none focus:border-cake-deep focus:ring-4 focus:ring-cake-rose/20 transition resize-none text-sm"></textarea>
-            </div>
-
-            <div class="md:col-span-2 flex flex-col sm:flex-row justify-between items-center gap-4 mt-2">
-              <p class="text-xs text-gray-500 dark:text-gray-400">
-                <i class="fas fa-lock text-cake-gold me-1"></i> Your information is safe with us.
+            <div class="p-7">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-serif text-2xl font-bold text-dark-gray dark:text-white">Bespoke Wedding Cakes</h3>
+                <span class="font-serif text-xl font-black text-cake-deep dark:text-cake-gold">From $450</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 text-sm font-light leading-relaxed mb-6">
+                Tailored 2-to-6 tier wedding cakes with artisanal sugar floral sprays, gold leaf leafing, textured ganaches, or semi-naked organic finishes.
               </p>
-              <button type="submit"
-                class="w-full sm:w-auto bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-10 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300 flex items-center justify-center gap-3">
-                <i class="fas fa-paper-plane"></i> Send Message
-              </button>
+              <ul class="space-y-3 text-xs text-gray-500 dark:text-gray-400">
+                <li class="flex items-center justify-between py-1 border-b border-rose-100/60 dark:border-white/5">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Portion Range</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">30 – 350+ Servings</span>
+                </li>
+                <li class="flex items-center justify-between py-1 border-b border-rose-100/60 dark:border-white/5">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Tier Finishes</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">Buttercream / Fondant</span>
+                </li>
+                <li class="flex items-center justify-between py-1">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Includes</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">Tasting + Cake Stand</span>
+                </li>
+              </ul>
             </div>
-          </form>
+          </div>
+          <div class="p-7 pt-0">
+            <a href="#inquiry-form" class="block w-full text-center bg-cake-deep hover:bg-cake-plum text-white py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow transition">
+              Inquire for Wedding Cake
+            </a>
+          </div>
         </div>
+
+        <!-- Option 2: Luxury Dessert Tables -->
+        <div class="group bg-warm-gray dark:bg-[#1E1320] rounded-[2.2rem] overflow-hidden border border-rose-100 dark:border-white/10 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="relative w-full aspect-[16/10] overflow-hidden">
+              <img src="assets/dessert-table.jpg" alt="Curated Wedding Dessert Table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5">
+                <span class="bg-white/95 dark:bg-[#2A1A2A]/95 backdrop-blur px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold text-cake-deep dark:text-cake-gold">Full Guest Experience</span>
+              </div>
+            </div>
+            <div class="p-7">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-serif text-2xl font-bold text-dark-gray dark:text-white">Artisanal Dessert Tables</h3>
+                <span class="font-serif text-xl font-black text-cake-deep dark:text-cake-gold">From $650</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 text-sm font-light leading-relaxed mb-6">
+                A visually lavish spread of bite-sized pâtisserie confections. Includes complete styling, vintage brass/crystal risers, and floral styling.
+              </p>
+              <ul class="space-y-3 text-xs text-gray-500 dark:text-gray-400">
+                <li class="flex items-center justify-between py-1 border-b border-rose-100/60 dark:border-white/5">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Piece Count</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">150 – 400+ Treats</span>
+                </li>
+                <li class="flex items-center justify-between py-1 border-b border-rose-100/60 dark:border-white/5">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Varieties</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">4 to 7 Petite Sweets</span>
+                </li>
+                <li class="flex items-center justify-between py-1">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Includes</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">Pedestals &amp; Setup</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-7 pt-0">
+            <a href="#inquiry-form" class="block w-full text-center bg-cake-deep hover:bg-cake-plum text-white py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow transition">
+              Inquire for Dessert Table
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 3: Combined Grand Gala Suite -->
+        <div class="group bg-warm-gray dark:bg-[#1E1320] rounded-[2.2rem] overflow-hidden border-2 border-cake-gold/60 dark:border-cake-gold/40 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between relative">
+          <div class="absolute top-4 right-4 z-10 bg-gradient-to-r from-cake-gold to-amber-400 text-gray-900 px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold shadow">
+            Most Popular
+          </div>
+          <div>
+            <div class="relative w-full aspect-[16/10] overflow-hidden">
+              <img src="assets/hero-cake.jpg" alt="Combined Wedding Cake and Dessert Suite" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-5">
+                <span class="bg-white/95 dark:bg-[#2A1A2A]/95 backdrop-blur px-3 py-1 rounded-full text-[9px] uppercase tracking-widest font-bold text-cake-deep dark:text-cake-gold">Complete Sweet Suite</span>
+              </div>
+            </div>
+            <div class="p-7">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-serif text-2xl font-bold text-dark-gray dark:text-white">Grand Gala Suite</h3>
+                <span class="font-serif text-xl font-black text-cake-deep dark:text-cake-gold">From $1,250</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 text-sm font-light leading-relaxed mb-6">
+                The pinnacle wedding experience: a custom multi-tiered focal cake paired with a coordinated dessert bar and packaged favor boxes.
+              </p>
+              <ul class="space-y-3 text-xs text-gray-500 dark:text-gray-400">
+                <li class="flex items-center justify-between py-1 border-b border-rose-100/60 dark:border-white/5">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Coverage</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">Cake + 250 Treats + Favors</span>
+                </li>
+                <li class="flex items-center justify-between py-1 border-b border-rose-100/60 dark:border-white/5">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Styling</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">Full On-Site Styling Team</span>
+                </li>
+                <li class="flex items-center justify-between py-1">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">Delivery</span>
+                  <span class="font-bold text-cake-deep dark:text-cake-gold">Free within 50 Miles</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-7 pt-0">
+            <a href="#inquiry-form" class="block w-full text-center bg-gradient-to-r from-cake-deep to-cake-rose hover:from-cake-plum hover:to-cake-deep text-white py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow-lg transition">
+              Inquire for Grand Gala Suite
+            </a>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- SECTION 4: MAP / STUDIO LOCATION -->
-  <section class="py-20 lg:py-32 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
-    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 lg:mb-20">
-        <div class="inline-block px-4 py-1 rounded-full bg-cake-mint/50 dark:bg-cake-deep/20 border border-cake-rose/30 mb-6">
-          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">Visit Our Studio</span>
+  <!-- SECTION 3: SIGNATURE FLAVOR LIBRARY -->
+  <section class="py-20 lg:py-28 bg-warm-gray dark:bg-[#120B13] border-y border-rose-100 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/60 dark:bg-cake-plum/40 border border-cake-rose/30 mb-4">
+          <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">From Scratch With Organic Dairy</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-          Find Us in <span class="italic gradient-text-gold">Los Angeles</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-4">
+          Signature Flavor <span class="italic gradient-text-gold">Palette</span>
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Our studio is open by appointment only. Book a tasting or design session and come say hello!</p>
+        <p class="text-gray-500 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+          Select up to 6 flavors to sample during your private tasting appointment. Each sponge is soaked in light cordial syrups and layered with scratch curd and Swiss meringue buttercream.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Flavor 1 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-[#1C121E] border border-rose-100 dark:border-white/10 hover:shadow-lg transition flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm border border-rose-200/60 dark:border-white/10">
+            <img src="assets/g2.jpg" alt="Sicilian Lemon & Elderflower" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="text-[9px] uppercase tracking-widest font-bold text-cake-gold">Summer Signature</span>
+            <h3 class="font-serif font-bold text-lg text-dark-gray dark:text-white">Sicilian Lemon &amp; Elderflower</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-light mt-1 leading-relaxed">
+              Meyer lemon sponge, St. Germain liqueur syrup, scratch lemon curd, and Swiss elderflower buttercream.
+            </p>
+          </div>
+        </div>
 
-        <!-- Map visual: Real Google Maps -->
-        <div class="lg:col-span-2 relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-cake-plum/50 min-h-[420px] h-full flex flex-col group">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105828.32936232532!2d-118.3435489!3d34.0522342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
-            class="w-full h-full min-h-[420px] border-0"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Sweet Serenity Cake Studio Location">
-          </iframe>
+        <!-- Flavor 2 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-[#1C121E] border border-rose-100 dark:border-white/10 hover:shadow-lg transition flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm border border-rose-200/60 dark:border-white/10">
+            <img src="assets/p8.jpg" alt="Bourbon Vanilla & Raspberry" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="text-[9px] uppercase tracking-widest font-bold text-cake-gold">Atelier Classic</span>
+            <h3 class="font-serif font-bold text-lg text-dark-gray dark:text-white">Bourbon Vanilla &amp; Raspberry</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-light mt-1 leading-relaxed">
+              Madagascar vanilla bean sponge, tart red raspberry Chambord compote, and white chocolate mousse.
+            </p>
+          </div>
+        </div>
 
-          <!-- Floating Studio Card Overlay -->
-          <div class="absolute top-6 left-6 pointer-events-none">
-            <div class="bg-white/95 dark:bg-cake-plum/95 backdrop-blur-md rounded-2xl px-5 py-3.5 shadow-xl border border-cake-gold/40 flex items-center gap-3 pointer-events-auto">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cake-rose to-cake-deep flex items-center justify-center text-white shadow-md">
-                <i class="fas fa-map-marker-alt text-base"></i>
-              </div>
-              <div>
-                <p class="text-[10px] uppercase tracking-widest font-bold text-cake-gold">Sweet Serenity Studio</p>
-                <p class="text-xs font-bold text-dark-gray dark:text-white">123 Sugar Lane, Los Angeles, CA</p>
+        <!-- Flavor 3 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-[#1C121E] border border-rose-100 dark:border-white/10 hover:shadow-lg transition flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm border border-rose-200/60 dark:border-white/10">
+            <img src="assets/p3.jpg" alt="Belgian Chocolate & Espresso" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="text-[9px] uppercase tracking-widest font-bold text-cake-gold">Rich &amp; Decadent</span>
+            <h3 class="font-serif font-bold text-lg text-dark-gray dark:text-white">Belgian Chocolate &amp; Espresso</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-light mt-1 leading-relaxed">
+              70% Valrhona dark chocolate cake, salted espresso ganache, hazelnut praline crunch, and chocolate silk.
+            </p>
+          </div>
+        </div>
+
+        <!-- Flavor 4 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-[#1C121E] border border-rose-100 dark:border-white/10 hover:shadow-lg transition flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm border border-rose-200/60 dark:border-white/10">
+            <img src="assets/g4.jpg" alt="Salted Caramel & Praline" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="text-[9px] uppercase tracking-widest font-bold text-cake-gold">Crowd Pleaser</span>
+            <h3 class="font-serif font-bold text-lg text-dark-gray dark:text-white">Salted Caramel &amp; Praline</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-light mt-1 leading-relaxed">
+              Brown butter sponge, house-cooked sea salt caramel, caramelized pecans, and brown sugar buttercream.
+            </p>
+          </div>
+        </div>
+
+        <!-- Flavor 5 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-[#1C121E] border border-rose-100 dark:border-white/10 hover:shadow-lg transition flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm border border-rose-200/60 dark:border-white/10">
+            <img src="assets/g5.jpg" alt="Pink Champagne & Strawberry" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="text-[9px] uppercase tracking-widest font-bold text-cake-gold">Bridal Signature</span>
+            <h3 class="font-serif font-bold text-lg text-dark-gray dark:text-white">Pink Champagne &amp; Strawberry</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-light mt-1 leading-relaxed">
+              Champagne-infused sponge layers, organic strawberry reduction, and velvet champagne buttercream.
+            </p>
+          </div>
+        </div>
+
+        <!-- Flavor 6 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-[#1C121E] border border-rose-100 dark:border-white/10 hover:shadow-lg transition flex items-start gap-4">
+          <div class="w-16 h-16 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm border border-rose-200/60 dark:border-white/10">
+            <img src="assets/home2-tasting.jpg" alt="Lavender Honey & Earl Grey" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="text-[9px] uppercase tracking-widest font-bold text-cake-gold">Botanical Subtle</span>
+            <h3 class="font-serif font-bold text-lg text-dark-gray dark:text-white">Lavender Honey &amp; Earl Grey</h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400 font-light mt-1 leading-relaxed">
+              Bergamot tea cake infused with wildflower honey, French lavender cream, and lemon thyme glaze.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: TASTING CONSULTATIONS -->
+  <section id="tasting-section" class="py-20 lg:py-28 bg-white dark:bg-[#160D17] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Image -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-cake-rose/30 to-cake-gold/30 rounded-[3rem] blur-2xl opacity-70"></div>
+            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-white/10 aspect-[4/5]">
+              <img src="assets/tasting-session.jpg" alt="Couple enjoying a private wedding cake tasting consultation flight" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                <div>
+                  <span class="text-cake-gold text-[10px] uppercase tracking-widest font-bold">Atelier Experience</span>
+                  <p class="text-white font-serif text-lg font-bold">Sample 6 Flavors in Person</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Info side -->
-        <div class="space-y-6">
-          <div class="bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 shadow-xl border border-cake-blush dark:border-cake-plum/50">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-cake-blush flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-map-marker-alt text-cake-deep"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-cake-plum dark:text-white mb-1">Address</h4>
-                <p class="text-gray-500 dark:text-gray-400 text-sm">123 Sugar Lane<br>Los Angeles, CA 90001</p>
-              </div>
+        <!-- Right: Details -->
+        <div class="lg:col-span-7">
+          <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/60 dark:bg-cake-plum/40 border border-cake-rose/30 mb-4">
+            <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">The Tasting Journey</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6">
+            Private Tasting &amp; <br><span class="italic gradient-text-gold">Design Consultations</span>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 text-base font-light leading-relaxed mb-6">
+            A wedding cake consultation is one of the most delightful milestones of wedding planning. Held inside our private Los Angeles atelier, our master decorator sits down with you over artisan tea and champagne to sample your favorite flavor combinations and sketch your centerpiece.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
+            <div class="p-5 rounded-2xl bg-warm-gray dark:bg-white/5 border border-rose-100/60 dark:border-white/5">
+              <h4 class="font-serif font-bold text-dark-gray dark:text-white text-base mb-1">In-Studio Tasting Session</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+                60-minute private appointment for up to 4 guests. Sample 6 cake pairings, view physical tier dummy displays, and refine design sketches.
+              </p>
+            </div>
+            <div class="p-5 rounded-2xl bg-warm-gray dark:bg-white/5 border border-rose-100/60 dark:border-white/5">
+              <h4 class="font-serif font-bold text-dark-gray dark:text-white text-base mb-1">Curated Tasting Box at Home</h4>
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+                Planning from afar? We package an insulated cold-pack flight of 6 cake slices and confections delivered directly to your doorstep.
+              </p>
             </div>
           </div>
 
-          <div class="bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 shadow-xl border border-cake-blush dark:border-cake-plum/50">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-cake-mint flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-clock text-cake-deep"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-cake-plum dark:text-white mb-1">Studio Hours</h4>
-                <p class="text-gray-500 dark:text-gray-400 text-sm">Mon – Fri: 9AM – 6PM<br>Sat: 10AM – 4PM<br>Sun: By Appointment</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white dark:bg-[#1A101A] rounded-[2rem] p-6 shadow-xl border border-cake-blush dark:border-cake-plum/50">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-cake-lavender flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-parking text-cake-deep"></i>
-              </div>
-              <div>
-                <h4 class="font-bold text-cake-plum dark:text-white mb-1">Parking</h4>
-                <p class="text-gray-500 dark:text-gray-400 text-sm">Free parking available in the studio lot behind the building.</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="https://maps.google.com/?q=Los+Angeles,+CA" target="_blank" rel="noopener noreferrer" class="block text-center bg-gradient-to-r from-cake-rose to-cake-deep hover:from-cake-deep hover:to-cake-plum text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold shadow-xl hover:-translate-y-1 transition duration-300">
-            <i class="fas fa-directions"></i> Get Directions
+          <a href="#inquiry-form" class="inline-flex items-center gap-2 bg-gradient-to-r from-cake-deep to-cake-rose hover:from-cake-plum hover:to-cake-deep text-white px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold shadow-md hover:shadow-lg transition">
+            <span>Schedule Your Tasting Appointment</span>
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: FAQ (FLIP CARDS) -->
-  <section class="py-20 lg:py-32 bg-gradient-to-br from-cake-lavender/30 via-warm-gray to-cake-blush/40 dark:from-cake-plum/20 dark:via-[#1A101A] dark:to-cake-deep/10 transition-colors overflow-hidden">
-    <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div class="text-center mb-16 lg:mb-20">
-        <div class="inline-block px-4 py-1 rounded-full bg-white/60 dark:bg-cake-plum/30 border border-cake-rose/30 mb-6">
-          <span class="text-cake-deep dark:text-cake-rose text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold">FAQ</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-dark-gray dark:text-white mb-6">
-          Questions? <span class="italic gradient-text">We've Got Answers</span>
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cake-gold to-transparent mx-auto"></div>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-base">Hover (or tap) on each card to reveal the answer.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div class="flip-card h-72 cursor-pointer">
-          <div class="flip-card-inner relative w-full h-full">
-            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-blush to-cake-rose p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
-              <i class="fas fa-question text-4xl text-cake-plum"></i>
-              <div class="my-auto w-full">
-                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">How far in advance should I book?</h3>
-              </div>
-              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
-            </div>
-            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
-              <i class="fas fa-calendar-check text-3xl text-cake-gold mb-4"></i>
-              <p class="text-gray-300 text-sm leading-relaxed">We recommend booking 6–12 months in advance for peak wedding season (May–October). For off-season dates, 3–4 months is usually plenty.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card h-72 cursor-pointer">
-          <div class="flip-card-inner relative w-full h-full">
-            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-mint to-cake-sky p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
-              <i class="fas fa-question text-4xl text-cake-plum"></i>
-              <div class="my-auto w-full">
-                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">Do you offer gluten-free or vegan cakes?</h3>
-              </div>
-              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
-            </div>
-            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
-              <i class="fas fa-leaf text-3xl text-cake-gold mb-4"></i>
-              <p class="text-gray-300 text-sm leading-relaxed">Absolutely! We offer gluten-free, vegan, and nut-free options for every flavor. Just let us know during your consultation.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card h-72 cursor-pointer">
-          <div class="flip-card-inner relative w-full h-full">
-            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-lavender to-cake-deep p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
-              <i class="fas fa-question text-4xl text-white"></i>
-              <div class="my-auto w-full">
-                <h3 class="text-base sm:text-lg font-serif font-bold text-white px-2 min-h-[3.5rem] flex items-center justify-center">Can I have a tasting before I decide?</h3>
-              </div>
-              <p class="text-white/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
-            </div>
-            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
-              <i class="fas fa-wine-glass-alt text-3xl text-cake-gold mb-4"></i>
-              <p class="text-gray-300 text-sm leading-relaxed">Yes! Every package includes a complimentary tasting session where you can sample up to 6 flavors. Additional tastings can be arranged.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card h-72 cursor-pointer">
-          <div class="flip-card-inner relative w-full h-full">
-            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-gold to-cake-coral p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
-              <i class="fas fa-question text-4xl text-cake-plum"></i>
-              <div class="my-auto w-full">
-                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">How much do cakes cost?</h3>
-              </div>
-              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
-            </div>
-            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
-              <i class="fas fa-dollar-sign text-3xl text-cake-gold mb-4"></i>
-              <p class="text-gray-300 text-sm leading-relaxed">Our packages start at $450 for intimate weddings. Final pricing depends on design complexity, servings, and season. Custom quotes within 24h.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card h-72 cursor-pointer">
-          <div class="flip-card-inner relative w-full h-full">
-            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-peach to-cake-rose p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
-              <i class="fas fa-question text-4xl text-cake-plum"></i>
-              <div class="my-auto w-full">
-                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">Do you deliver to my venue?</h3>
-              </div>
-              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
-            </div>
-            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
-              <i class="fas fa-truck-fast text-3xl text-cake-gold mb-4"></i>
-              <p class="text-gray-300 text-sm leading-relaxed">Yes! We deliver throughout Los Angeles and Southern California. Nationwide shipping available for some items. Delivery is free with Grand & Luxe packages.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flip-card h-72 cursor-pointer">
-          <div class="flip-card-inner relative w-full h-full">
-            <div class="flip-card-front absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cake-sky to-cake-mint p-8 flex flex-col items-center justify-between text-center shadow-xl border border-white/20">
-              <i class="fas fa-question text-4xl text-cake-plum"></i>
-              <div class="my-auto w-full">
-                <h3 class="text-base sm:text-lg font-serif font-bold text-cake-plum px-2 min-h-[3.5rem] flex items-center justify-center">Can I customize a package?</h3>
-              </div>
-              <p class="text-cake-plum/70 text-[11px] uppercase tracking-widest font-bold">Hover for answer</p>
-            </div>
-            <div class="flip-card-back absolute inset-0 rounded-[2rem] bg-cake-plum p-8 flex flex-col justify-center text-center shadow-xl border border-cake-gold/40">
-              <i class="fas fa-magic text-3xl text-cake-gold mb-4"></i>
-              <p class="text-gray-300 text-sm leading-relaxed">Of course! Every package can be customized to your exact needs. Mix and match services, add extras, or start from scratch — we love a challenge.</p>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6: CTA / FINAL CONSULTATION -->
-  <section class="py-14 lg:py-20 bg-white dark:bg-[#0A050A] transition-colors overflow-hidden">
-    <div class="max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6">
-      <div class="relative rounded-[2rem] bg-gradient-to-br from-cake-deep via-cake-plum to-cake-deep p-6 sm:p-8 md:p-10 shadow-xl text-center overflow-hidden">
-
-        <div class="absolute -top-16 -left-16 w-48 h-48 bg-cake-rose/20 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-16 -right-16 w-48 h-48 bg-cake-gold/20 rounded-full blur-3xl"></div>
-
-        <div class="relative z-10">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-cake-gold/40 mb-4">
-            <i class="fas fa-sparkles text-cake-gold text-xs"></i>
-            <span class="text-cake-gold text-[9px] uppercase tracking-widest font-bold">Your Dream Cake Awaits</span>
+  <!-- SECTION 5: DELIVERY & SETUP DETAILS -->
+  <section class="py-20 lg:py-28 bg-warm-gray dark:bg-[#120B13] border-t border-rose-100 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Text Info -->
+        <div class="lg:col-span-7">
+          <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/60 dark:bg-cake-plum/40 border border-cake-rose/30 mb-4">
+            <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">White-Glove Logistics</span>
           </div>
-
-          <h2 class="font-serif font-bold text-white text-2xl sm:text-3xl md:text-4xl mb-4 leading-snug">
-            Ready to Book Your <span class="italic text-cake-gold">Free Consultation?</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-6">
+            Flawless Venue Delivery &amp; <br><span class="italic gradient-text-gold">Day-Of Installation</span>
           </h2>
-
-          <p class="text-gray-300 max-w-lg mx-auto text-sm md:text-base mb-8 leading-relaxed font-light">
-            Take the first step towards the wedding cake of your dreams. We'll guide you through every detail — flavors, design, and delivery — with zero obligation.
+          <p class="text-gray-600 dark:text-gray-300 text-base font-light leading-relaxed mb-6">
+            Transporting a delicate multi-tiered sugar floral centerpiece requires precision and care. We never ship finished cakes via third-party couriers; every delivery is performed by our in-house atelier team in climate-controlled transport vehicles.
           </p>
 
-          <div class="flex flex-wrap gap-3.5 justify-center">
-            <a href="tel:+15551234567" class="bg-cake-gold hover:bg-white text-cake-plum px-7 py-3 rounded-full text-[11px] uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300 flex items-center gap-2.5">
-              <i class="fas fa-phone text-xs"></i> Call (555) 123-4567
-            </a>
-            <a href="mailto:hello@sweetserenity.com" class="border border-white/40 text-white hover:bg-white/10 px-7 py-3 rounded-full text-[11px] uppercase tracking-widest font-bold transition duration-300 flex items-center gap-2.5">
-              <i class="fas fa-envelope text-xs"></i> Email Us
-            </a>
-          </div>
-
-          <div class="grid grid-cols-3 gap-3 mt-8 max-w-sm mx-auto pt-6 border-t border-white/10">
-            <div class="text-center">
-              <div class="text-xl md:text-2xl font-serif font-black text-cake-gold">500+</div>
-              <p class="text-[8px] uppercase tracking-widest font-bold text-gray-300 mt-0.5">Weddings</p>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-3.5">
+              <span class="w-6 h-6 rounded-full bg-cake-blush dark:bg-cake-plum/60 flex items-center justify-center text-cake-deep dark:text-cake-rose text-xs mt-0.5 font-bold">✓</span>
+              <div>
+                <strong class="text-sm text-gray-800 dark:text-gray-100 block">Climate-Controlled Refrigerated Transport</strong>
+                <span class="text-xs text-gray-500 dark:text-gray-400">Guarantees crisp fondant lines and intact Swiss meringue even on summer afternoons.</span>
+              </div>
             </div>
-            <div class="text-center border-x border-white/10">
-              <div class="text-xl md:text-2xl font-serif font-black text-cake-gold">12</div>
-              <p class="text-[8px] uppercase tracking-widest font-bold text-gray-300 mt-0.5">Years</p>
+            <div class="flex items-start gap-3.5">
+              <span class="w-6 h-6 rounded-full bg-cake-blush dark:bg-cake-plum/60 flex items-center justify-center text-cake-deep dark:text-cake-rose text-xs mt-0.5 font-bold">✓</span>
+              <div>
+                <strong class="text-sm text-gray-800 dark:text-gray-100 block">On-Site Assembly &amp; Florist Placement</strong>
+                <span class="text-xs text-gray-500 dark:text-gray-400">Our decorators arrive 2 hours prior to guest arrival to perform final tier doweling and sugar flower arrangement.</span>
+              </div>
             </div>
-            <div class="text-center">
-              <div class="text-xl md:text-2xl font-serif font-black text-cake-gold">5.0</div>
-              <p class="text-[8px] uppercase tracking-widest font-bold text-gray-300 mt-0.5">Rated</p>
+            <div class="flex items-start gap-3.5">
+              <span class="w-6 h-6 rounded-full bg-cake-blush dark:bg-cake-plum/60 flex items-center justify-center text-cake-deep dark:text-cake-rose text-xs mt-0.5 font-bold">✓</span>
+              <div>
+                <strong class="text-sm text-gray-800 dark:text-gray-100 block">Southern California &amp; Destination Coverage</strong>
+                <span class="text-xs text-gray-500 dark:text-gray-400">Regularly serving Los Angeles, Malibu, Beverly Hills, Pasadena, Santa Barbara, Newport Beach, and Palm Springs.</span>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Right: Image -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-cake-rose/30 to-cake-gold/30 rounded-[3rem] blur-2xl opacity-70"></div>
+            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-white/10 aspect-[4/5]">
+              <img src="assets/about-hero.jpg" alt="Master pastry chef assembling grand wedding cake at venue" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                <div>
+                  <span class="text-cake-gold text-[10px] uppercase tracking-widest font-bold">On-Site Precision</span>
+                  <p class="text-white font-serif text-lg font-bold">Venue Decorator Setup Included</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- SECTION 6: CLIENT REVIEWS (REAL WEDDINGS) -->
+  <section class="py-20 lg:py-28 bg-white dark:bg-[#160D17] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/60 dark:bg-cake-plum/40 border border-cake-rose/30 mb-4">
+          <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">Love Notes</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-4">
+          Words from Our <span class="italic gradient-text-gold">Couples</span>
+        </h2>
+        <p class="text-gray-500 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+          Read real reviews from brides and grooms who trusted Sweet Serenity with their wedding centerpieces and dessert tables.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="p-8 rounded-[2rem] bg-warm-gray dark:bg-[#1E1320] border border-rose-100 dark:border-white/10 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-cake-gold text-sm mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm font-light italic leading-relaxed mb-6">
+              "Our 4-tier botanical cake was the absolute showstopper of our Malibu wedding. Not only was the sugar floristry so realistic guests thought they were fresh flowers, but the Sicilian Lemon &amp; Elderflower flavor was to die for!"
+            </p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-rose-100/60 dark:border-white/5">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-rose-200/60 flex-shrink-0">
+              <img src="assets/home2-portfolio-romantic.jpg" alt="Charlotte and Alexander" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-dark-gray dark:text-white text-sm">Charlotte &amp; Alexander</h4>
+              <span class="text-[10px] text-gray-500 dark:text-gray-400 block">Malibu Rocky Oaks Estate · 160 Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-8 rounded-[2rem] bg-warm-gray dark:bg-[#1E1320] border border-rose-100 dark:border-white/10 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-cake-gold text-sm mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm font-light italic leading-relaxed mb-6">
+              "The dessert table had our guests queuing up before dinner was even over! The French macaron tower and verrine shooters were cleared in 20 minutes. Isabella and her delivery team handled the venue setup seamlessly."
+            </p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-rose-100/60 dark:border-white/5">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-rose-200/60 flex-shrink-0">
+              <img src="assets/home2-portfolio-modern.jpg" alt="Sophia and Liam" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-dark-gray dark:text-white text-sm">Sophia &amp; Liam</h4>
+              <span class="text-[10px] text-gray-500 dark:text-gray-400 block">The Beverly Hills Hotel · 220 Guests</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-8 rounded-[2rem] bg-warm-gray dark:bg-[#1E1320] border border-rose-100 dark:border-white/10 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-cake-gold text-sm mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm font-light italic leading-relaxed mb-6">
+              "The private tasting session was by far the most enjoyable wedding planning task we did. Being able to customize the flavors and see a live sketch of our cake gave us total peace of mind. Worth every single penny."
+            </p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-rose-100/60 dark:border-white/5">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-rose-200/60 flex-shrink-0">
+              <img src="assets/home2-portfolio-royal.jpg" alt="Elena and Marcus" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-dark-gray dark:text-white text-sm">Elena &amp; Marcus</h4>
+              <span class="text-[10px] text-gray-500 dark:text-gray-400 block">Calamigos Ranch, Malibu · 140 Guests</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 7: WEDDING INQUIRY FORM & STUDIO LOCATION -->
+  <section id="contact-form" class="py-20 lg:py-28 bg-warm-gray dark:bg-[#120B13] border-t border-rose-100 dark:border-white/10 transition-colors scroll-mt-20"><div id="inquiry-form"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-block px-4 py-1 rounded-full bg-cake-blush/60 dark:bg-cake-plum/40 border border-cake-rose/30 mb-4">
+          <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">Reserve Your Date</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-dark-gray dark:text-white mb-4">
+          Wedding Inquiry &amp; <span class="italic gradient-text-gold">Consultation Request</span>
+        </h2>
+        <p class="text-gray-500 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+          Please provide details regarding your celebration. We review inquiries within 24 hours to confirm date availability and send an initial proposal.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left: Form -->
+        <div class="lg:col-span-7 bg-white dark:bg-[#1C121E] rounded-[2.5rem] p-8 sm:p-10 shadow-xl border border-rose-100 dark:border-white/10">
+          <form id="wedding-inquiry-form" class="space-y-5">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="couple-names" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Full Names *</label>
+                <input type="text" id="couple-names" required placeholder="Emma &amp; James" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+              </div>
+              <div>
+                <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Email Address *</label>
+                <input type="email" id="contact-email" required placeholder="emma.james@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contact-phone" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Phone Number</label>
+                <input type="tel" id="contact-phone" placeholder="+1 (555) 123-4567" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+              </div>
+              <div>
+                <label for="wedding-date" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Wedding Date *</label>
+                <input type="date" id="wedding-date" required class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition cursor-pointer">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="venue-location" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Venue / City *</label>
+                <input type="text" id="venue-location" required placeholder="Malibu Rocky Oaks, CA" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+              </div>
+              <div>
+                <label for="guest-count" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Expected Guest Count *</label>
+                <input type="number" id="guest-count" min="20" max="600" required placeholder="120 Guests" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="service-type" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Service of Interest</label>
+                <select id="service-type" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+                  <option value="both">Both Wedding Cake &amp; Dessert Table</option>
+                  <option value="cake">Bespoke Wedding Cake Only</option>
+                  <option value="dessert">Curated Dessert Table Only</option>
+                  <option value="tasting">Schedule Tasting Appointment First</option>
+                  <option value="custom">Other / Custom Event</option>
+                </select>
+              </div>
+              <div>
+                <label for="budget-range" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Estimated Budget Range</label>
+                <select id="budget-range" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+                  <option value="450-800">$450 – $800 (Petite Cake / Intimate)</option>
+                  <option value="800-1500" selected>$800 – $1,500 (Classic Multi-Tier Cake)</option>
+                  <option value="1500-2500">$1,500 – $2,500 (Grand Cake &amp; Dessert Bar)</option>
+                  <option value="2500+">$2,500+ (Luxury Gala Suite &amp; Favors)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="preferred-flavors" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Flavors of Interest (Optional)</label>
+              <input type="text" id="preferred-flavors" placeholder="e.g. Sicilian Lemon, Bourbon Vanilla &amp; Raspberry, Chocolate Espresso" class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition">
+            </div>
+
+            <div>
+              <label for="design-vision" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-200 mb-1.5">Your Vision, Theme &amp; Notes</label>
+              <textarea id="design-vision" rows="4" placeholder="Tell us about your wedding color palette, florals, dress style, or specific dessert table ideas..." class="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-warm-gray/50 dark:bg-white/5 text-xs text-dark-gray dark:text-white focus:outline-none focus:border-cake-gold transition resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-cake-deep to-cake-rose hover:from-cake-plum hover:to-cake-deep text-white py-3.5 rounded-full text-xs uppercase tracking-widest font-bold shadow-lg hover:-translate-y-0.5 transition duration-300">
+              Submit Wedding Inquiry
+            </button>
+            <p class="text-[11px] text-gray-400 text-center">We reply to every inquiry within 24 hours. Your event date is held upon deposit.</p>
+
+          </form>
+        </div>
+
+        <!-- Right: Studio Info & Location -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="bg-white dark:bg-[#1C121E] rounded-[2rem] p-7 shadow-xl border border-rose-100 dark:border-white/10">
+            <h3 class="font-serif text-2xl font-bold text-dark-gray dark:text-white mb-4">Los Angeles Atelier</h3>
+            
+            <div class="space-y-4 text-xs text-gray-600 dark:text-gray-300">
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-cake-gold">Address:</span>
+                <span>742 Evergreen Terrace, Suite 100, Los Angeles, CA 90001</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-cake-gold">Telephone:</span>
+                <a href="tel:+15551234567" class="text-cake-deep dark:text-cake-gold font-bold hover:underline">+1 (555) 123-4567</a>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-cake-gold">Email:</span>
+                <a href="mailto:hello@sweetserenity.com" class="text-cake-deep dark:text-cake-gold font-bold hover:underline">hello@sweetserenity.com</a>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-cake-gold">Studio Hours:</span>
+                <span>Tuesday – Sunday, 10:00 AM – 6:00 PM (By Private Appointment)</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="font-bold text-cake-gold">Parking:</span>
+                <span>Dedicated complimentary client parking behind the atelier building.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="rounded-[2rem] overflow-hidden shadow-xl border border-rose-100 dark:border-white/10 aspect-[4/3] bg-gray-100 dark:bg-white/5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105828.32936232532!2d-118.3435489!3d34.0522342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+              class="w-full h-full border-0"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Sweet Serenity Atelier Map">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+<!-- FOOTER -->
   <footer class="bg-[#0A050A] text-white pt-24 pb-8 relative overflow-hidden border-t border-white/10">
     <div class="absolute bottom-0 left-0 w-full flex justify-center pointer-events-none opacity-[0.03] translate-y-1/4 select-none">
       <h2 class="font-script font-black text-[15vw] whitespace-nowrap">Sweet Serenity</h2>
@@ -998,7 +1280,7 @@
       }
 
       // Form submission
-      const form = document.querySelector('#contact-form form');
+      const form = document.querySelector('#wedding-inquiry-form') || document.querySelector('#contact-form form');
       if (form) {
         form.addEventListener('submit', (e) => {
           e.preventDefault();
@@ -1011,6 +1293,103 @@
             btn.classList.remove('bg-green-500');
             form.reset();
           }, 2500);
+        });
+      }
+          // Login Modal Logic
+      const loginModal = document.getElementById('login-modal');
+      const openLoginBtns = document.querySelectorAll('.open-login-btn');
+      const closeLoginBtn = document.getElementById('close-login-modal');
+      const tabSignIn = document.getElementById('tab-signin');
+      const tabSignUp = document.getElementById('tab-signup');
+      const signInForm = document.getElementById('signin-form');
+      const signUpForm = document.getElementById('signup-form');
+
+      function openModal() {
+        if (!loginModal) return;
+        loginModal.classList.remove('hidden');
+        loginModal.classList.add('flex');
+        setTimeout(() => {
+          const content = loginModal.querySelector('.modal-content');
+          if (content) {
+            content.classList.remove('scale-95', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+          }
+        }, 10);
+        if (typeof closeMobileMenu === 'function') closeMobileMenu();
+        else {
+          const m = document.getElementById('mobile-menu');
+          if (m && !m.classList.contains('hidden')) m.classList.add('hidden');
+        }
+      }
+
+      function closeModal() {
+        if (!loginModal) return;
+        const content = loginModal.querySelector('.modal-content');
+        if (content) {
+          content.classList.remove('scale-100', 'opacity-100');
+          content.classList.add('scale-95', 'opacity-0');
+        }
+        setTimeout(() => {
+          loginModal.classList.add('hidden');
+          loginModal.classList.remove('flex');
+        }, 200);
+      }
+
+      openLoginBtns.forEach(btn => btn.addEventListener('click', openModal));
+      if (closeLoginBtn) closeLoginBtn.addEventListener('click', closeModal);
+      if (loginModal) {
+        loginModal.addEventListener('click', (e) => {
+          if (e.target === loginModal) closeModal();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && loginModal && !loginModal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+
+      if (tabSignIn && tabSignUp && signInForm && signUpForm) {
+        tabSignIn.addEventListener('click', () => {
+          tabSignIn.classList.add('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignIn.classList.remove('text-gray-500', 'dark:text-gray-400');
+          tabSignUp.classList.remove('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignUp.classList.add('text-gray-500', 'dark:text-gray-400');
+          signInForm.classList.remove('hidden');
+          signUpForm.classList.add('hidden');
+        });
+        tabSignUp.addEventListener('click', () => {
+          tabSignUp.classList.add('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignUp.classList.remove('text-gray-500', 'dark:text-gray-400');
+          tabSignIn.classList.remove('bg-white', 'dark:bg-[#2A1A2A]', 'text-cake-deep', 'dark:text-cake-gold', 'shadow-sm');
+          tabSignIn.classList.add('text-gray-500', 'dark:text-gray-400');
+          signUpForm.classList.remove('hidden');
+          signInForm.classList.add('hidden');
+        });
+
+        signInForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const submitBtn = signInForm.querySelector('button[type="submit"]');
+          const original = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fas fa-check me-2"></i> Signed In!';
+          submitBtn.classList.add('bg-green-600');
+          setTimeout(() => {
+            submitBtn.innerHTML = original;
+            submitBtn.classList.remove('bg-green-600');
+            closeModal();
+          }, 1500);
+        });
+
+        signUpForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const submitBtn = signUpForm.querySelector('button[type="submit"]');
+          const original = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fas fa-check me-2"></i> Account Created!';
+          submitBtn.classList.add('bg-green-600');
+          setTimeout(() => {
+            submitBtn.innerHTML = original;
+            submitBtn.classList.remove('bg-green-600');
+            closeModal();
+          }, 1500);
         });
       }
     })();
