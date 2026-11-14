@@ -44,13 +44,27 @@
     [dir="rtl"] { direction: rtl; }
     html { scroll-behavior: smooth; }
     .gradient-text {
-      background: linear-gradient(135deg, #A64D79, #D46B8C, #D4AF37);
+      background: linear-gradient(135deg, #7A1E4D, #A62B66, #BD3B68);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 1px 1px rgba(122, 30, 77, 0.12));
+    }
+    .dark .gradient-text {
+      background: linear-gradient(135deg, #F7B2B7, #FFD1DC, #E8C15A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+    }
+    .gradient-text-gold {
+      background: linear-gradient(135deg, #A87910, #B83B68);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .gradient-text-gold {
-      background: linear-gradient(135deg, #D4AF37, #F7B2B7);
+    .dark .gradient-text-gold {
+      background: linear-gradient(135deg, #E8C15A, #F7B2B7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -312,18 +326,18 @@
         
         <!-- Left Text -->
         <div class="lg:col-span-7 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 dark:bg-white/5 border border-rose-200/80 dark:border-white/10 mb-6 shadow-sm">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 dark:bg-white/10 border border-rose-200/90 dark:border-white/15 mb-6 shadow-sm">
             <span class="w-2 h-2 rounded-full bg-cake-deep animate-pulse"></span>
-            <span class="text-cake-deep dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-bold">Haute Pâtisserie &amp; Tier Design</span>
+            <span class="text-cake-plum dark:text-cake-rose text-xs uppercase tracking-[0.3em] font-extrabold">Haute Pâtisserie &amp; Tier Design</span>
           </div>
 
           <h1 class="font-serif font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dark-gray dark:text-white leading-[1.15] mb-6">
             Bespoke <br>
             <span class="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic gradient-text inline-block py-1">Wedding Cake</span>
-            <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-200 font-normal mt-2">Collections Crafted for Unforgettable Moments</span>
+            <span class="block text-2xl sm:text-3xl md:text-4xl text-gray-800 dark:text-gray-100 font-semibold mt-2">Collections Crafted for Unforgettable Moments</span>
           </h1>
 
-          <p class="text-gray-600 dark:text-gray-300 text-base md:text-lg font-light leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+          <p class="text-gray-700 dark:text-gray-200 text-base md:text-lg font-normal leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
             From statuesque multi-tier botanical centerpieces to minimalist gilded silhouettes, every cake is baked from scratch with organic ingredients and styled with couture precision.
           </p>
 
